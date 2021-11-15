@@ -1,6 +1,6 @@
 --- 
-title: "YOUR TITLE HERE"
-author: "YOUR NAMES HERE"
+title: "Golden Cross"
+author: "Vipul H harihar, Zhaoyu Wu, Zhirui Yang"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---

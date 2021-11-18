@@ -29,14 +29,6 @@ So we may sum it as whenever you buy a share of stock on the stock market, you a
 the stock directly from the company, you are buying it from another existing shareholder.
 Likewise, when you want to sell the shares you own , they are not sold to the company—rather
 you sell them to some other investors.
-Project Problem Statement
-There are numerous people in the market who want to invest in the stock market are way too afraid
-to put their life’s savings at stake. Many people pour their life savings and dump their 401K
-(contribution retirement plan) into the stock and option market. They perform various strategies
-and financial maneuvers, hoping to gain massive profits but generally end up losing most of their
-investments or still having underperformance in the general market.
-Thus, our team started thinking if there is an investing strategy that can consistently beat the index
-fund return.
 
 **EDAV Final Project Assignment**
 

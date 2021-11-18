@@ -73,13 +73,14 @@ Traders often use a golden cross as confirmation of a trend or signal in combina
 
 
 
-
 ***How are we going to Proceed?***
 1. Data Sources- data has to be historical
 2. Data Collection from valid resources
 3. Using Accurate metrics to define our problem questions
-4. Plotting exploratory data analytics visuals
+4. Plotting exploratory data analytics visuals, including CAGR (componded annual growth rate) and bootstrap simulation
 5. Using d3.js / plotly.js for better understanding and deeper insights (if time permits)
+
+
 Summary:
 What are we going to do in the primary phase of the project?
 • A financial study on the stock market published last year raised an intriguing theory

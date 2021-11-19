@@ -1,6 +1,10 @@
 # Missing values
 
 ```{r}
+knitr::opts_chunk$set(fig.width=8, fig.height=12)
+```
+
+```{r}
 library(fivethirtyeight)
 library(tidyverse)
 library(patchwork)
@@ -271,14 +275,22 @@ missing_plot_function <- function(data, per = FALSE){
 }
 ```
 
-```{r fig.width=6, fig.height=3}
+
+
+```{r fig.width=15, fig.height=9}
 missing_plot_function(avengers, per = FALSE)
 ```
 
-```{r fig.width=6, fig.height=3}
+
+
+```{r fig.width=15, fig.height=9}
 missing_plot_function(avengers, per = TRUE)
 ```
 
+
 We can see the distribution of missing values by using the function. The result is pretty similar to what we did above. There are only few columns is totally complete and most of missing values are concentrated in "death" and "return" columns. Meanwhile, there is no missing values in some columns including "current", "year", "gender".
+<<<<<<< HEAD
 >>>>>>> Stashed changes
 >>>>>>> 07b14f4bcc72b559dff4a997ba31f1f64cde01c1
+=======
+>>>>>>> 2b7893f12026372d5019bd7e224f9ffdc53594bc

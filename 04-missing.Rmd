@@ -266,7 +266,7 @@ missing_plot_function <- function(data, per = FALSE){
 }
 ```
 
-```{r fig.width=10, fig.height=5}
+```{r}
 missing_plot_function(avengers, per = FALSE)
 ```
 

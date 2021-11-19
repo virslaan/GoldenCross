@@ -268,13 +268,13 @@ missing_plot_function <- function(data, per = FALSE){
 
 
 
-```{r fig.width=12, fig.height=7}
+```{r fig.width=15, fig.height=9}
 missing_plot_function(avengers, per = FALSE)
 ```
 
 
 
-```{r fig.width=12, fig.height=7}
+```{r fig.width=15, fig.height=9}
 missing_plot_function(avengers, per = TRUE)
 ```
 

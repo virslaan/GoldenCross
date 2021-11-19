@@ -278,10 +278,6 @@ missing_plot_function <- function(data, per = FALSE){
 ```
 
 ```{r}
-missing_plot_function(avengers, per = FALSE)
-```
-
-```{r}
 missing_plot_function(avengers, per = TRUE)
 ```
 

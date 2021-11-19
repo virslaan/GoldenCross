@@ -2,6 +2,10 @@ introduction
 data-sources
 data-transformation
 missing-values
+basics-of-avengers-dataset
+check-missing-values
+check-missing-values-by-year
+using-function-from-q2-of-pset4
 results
 interactive-component
 conclusion

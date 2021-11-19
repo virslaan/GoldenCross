@@ -24,7 +24,7 @@
 <meta name="author" content="Vipul H harihar, Zhaoyu Wu, Zhirui Yang" />
 
 
-<meta name="date" content="2021-11-15" />
+<meta name="date" content="2021-11-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
 <link rel="prev" href="data-transformation.html"/>
 <link rel="next" href="results.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -53,6 +53,13 @@
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.10.0/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.5.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.5.1/plotly-latest.min.js"></script>
 
 
 
@@ -76,7 +83,13 @@
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
 <li class="chapter" data-level="2" data-path="data-sources.html"><a href="data-sources.html"><i class="fa fa-check"></i><b>2</b> Data sources</a></li>
 <li class="chapter" data-level="3" data-path="data-transformation.html"><a href="data-transformation.html"><i class="fa fa-check"></i><b>3</b> Data transformation</a></li>
-<li class="chapter" data-level="4" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>4</b> Missing values</a></li>
+<li class="chapter" data-level="4" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>4</b> Missing values</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="missing-values.html"><a href="missing-values.html#basics-of-avengers-dataset"><i class="fa fa-check"></i><b>4.1</b> Basics of avengers Dataset</a></li>
+<li class="chapter" data-level="4.2" data-path="missing-values.html"><a href="missing-values.html#check-missing-values"><i class="fa fa-check"></i><b>4.2</b> Check Missing Values</a></li>
+<li class="chapter" data-level="4.3" data-path="missing-values.html"><a href="missing-values.html#check-missing-values-by-year"><i class="fa fa-check"></i><b>4.3</b> Check missing values by year</a></li>
+<li class="chapter" data-level="4.4" data-path="missing-values.html"><a href="missing-values.html#using-function-from-q2-of-pset4"><i class="fa fa-check"></i><b>4.4</b> Using function from Q2 of Pset4</a></li>
+</ul></li>
 <li class="chapter" data-level="5" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>5</b> Results</a></li>
 <li class="chapter" data-level="6" data-path="interactive-component.html"><a href="interactive-component.html"><i class="fa fa-check"></i><b>6</b> Interactive component</a></li>
 <li class="chapter" data-level="7" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>7</b> Conclusion</a></li>
@@ -101,7 +114,192 @@
             <section class="normal" id="section-">
 <div id="missing-values" class="section level1" number="4">
 <h1><span class="header-section-number">Chapter 4</span> Missing values</h1>
+<p>As what we mentioned in Final Project Data Check, we are working on the financial data, like the open and close prices of stocks. All these data are publicly available, so there is no missing values. Although we can regard non-trading days as missing value, in fact these missing values don’t matter at all because all public marketing behaviors stop at these days. Moreover, we are calculating some technical indicators, like moving average with different time span, so there will be some missing values (Null value) at the beginning of the data because there is not enough data to calculate the sliding window. However, in our trading strategies, we need to drop all Null values at the beginning of our backtesting intervals in order to get accurate technical indicators. Therefore, in this way we don’t have any missing value in our raw data and processed data. We will use “backup” data for this missing value chapter. In this chapter, we will use avengers Dataset.</p>
+<div id="basics-of-avengers-dataset" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Basics of avengers Dataset</h2>
+<p>The first step is to load data and check the basic information about the data. We should know the dimension of the dataset and the meaning of each column.</p>
+<pre><code>## # A tibble: 6 × 21
+##   url    name_alias appearances current gender probationary_in… full_reserve_av…
+##   &lt;chr&gt;  &lt;chr&gt;            &lt;int&gt; &lt;lgl&gt;   &lt;chr&gt;  &lt;chr&gt;            &lt;chr&gt;           
+## 1 http:… &quot;Henry Jo…        1269 TRUE    MALE   &lt;NA&gt;             Sep-63          
+## 2 http:… &quot;Janet va…        1165 TRUE    FEMALE &lt;NA&gt;             Sep-63          
+## 3 http:… &quot;Anthony …        3068 TRUE    MALE   &lt;NA&gt;             Sep-63          
+## 4 http:… &quot;Robert B…        2089 TRUE    MALE   &lt;NA&gt;             Sep-63          
+## 5 http:… &quot;Thor Odi…        2402 TRUE    MALE   &lt;NA&gt;             Sep-63          
+## 6 http:… &quot;Richard …         612 TRUE    MALE   &lt;NA&gt;             Sep-63          
+## # … with 14 more variables: year &lt;int&gt;, years_since_joining &lt;int&gt;,
+## #   honorary &lt;chr&gt;, death1 &lt;lgl&gt;, return1 &lt;lgl&gt;, death2 &lt;lgl&gt;, return2 &lt;lgl&gt;,
+## #   death3 &lt;lgl&gt;, return3 &lt;lgl&gt;, death4 &lt;lgl&gt;, return4 &lt;lgl&gt;, death5 &lt;lgl&gt;,
+## #   return5 &lt;lgl&gt;, notes &lt;chr&gt;</code></pre>
+<pre><code>##  [1] &quot;url&quot;                         &quot;name_alias&quot;                 
+##  [3] &quot;appearances&quot;                 &quot;current&quot;                    
+##  [5] &quot;gender&quot;                      &quot;probationary_intro&quot;         
+##  [7] &quot;full_reserve_avengers_intro&quot; &quot;year&quot;                       
+##  [9] &quot;years_since_joining&quot;         &quot;honorary&quot;                   
+## [11] &quot;death1&quot;                      &quot;return1&quot;                    
+## [13] &quot;death2&quot;                      &quot;return2&quot;                    
+## [15] &quot;death3&quot;                      &quot;return3&quot;                    
+## [17] &quot;death4&quot;                      &quot;return4&quot;                    
+## [19] &quot;death5&quot;                      &quot;return5&quot;                    
+## [21] &quot;notes&quot;</code></pre>
+<pre><code>## [1] 173  21</code></pre>
+</div>
+<div id="check-missing-values" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Check Missing Values</h2>
+<p>We will check the missing values in the whole data.</p>
+<pre><code>##                      death4                     return4 
+##                         172                         172 
+##                      death5                     return5 
+##                         172                         172 
+##                      death3                     return3 
+##                         171                         171 
+##          probationary_intro                     return2 
+##                         158                         157 
+##                      death2                     return1 
+##                         156                         104 
+##                       notes full_reserve_avengers_intro 
+##                          98                          14 
+##                  name_alias                         url 
+##                          10                           0 
+##                 appearances                     current 
+##                           0                           0 
+##                      gender                        year 
+##                           0                           0 
+##         years_since_joining                    honorary 
+##                           0                           0 
+##                      death1 
+##                           0</code></pre>
+<pre><code>##   [1] 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 11 11 11 11 11 11 11 11 11
+##  [26] 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11
+##  [51] 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11
+##  [76] 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 10 10 10 10 10 10 10
+## [101] 10 10 10 10 10 10 10 10  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9
+## [126]  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9  9
+## [151]  9  8  8  8  8  8  8  8  7  7  7  7  7  7  7  7  7  7  7  7  6  5  0</code></pre>
+<p>We can see that there are lots of missing values in the data. To better understand there distribution, we will transfer the missing value into a binary variable “missing”, then plot a heatmap to show the missing value.</p>
+<pre><code>## # A tibble: 3,633 × 4
+##    id    key   value                                                   missing
+##    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;                                                   &lt;chr&gt;  
+##  1 1     url   http://marvel.wikia.com/Henry_Pym_(Earth-616)           no     
+##  2 2     url   http://marvel.wikia.com/Janet_van_Dyne_(Earth-616)      no     
+##  3 3     url   http://marvel.wikia.com/Anthony_Stark_(Earth-616)       no     
+##  4 4     url   http://marvel.wikia.com/Robert_Bruce_Banner_(Earth-616) no     
+##  5 5     url   http://marvel.wikia.com/Thor_Odinson_(Earth-616)        no     
+##  6 6     url   http://marvel.wikia.com/Richard_Jones_(Earth-616)       no     
+##  7 7     url   http://marvel.wikia.com/Steven_Rogers_(Earth-616)       no     
+##  8 8     url   http://marvel.wikia.com/Clint_Barton_(Earth-616)        no     
+##  9 9     url   http://marvel.wikia.com/Pietro_Maximoff_(Earth-616)     no     
+## 10 10    url   http://marvel.wikia.com/Wanda_Maximoff_(Earth-616)      no     
+## # … with 3,623 more rows</code></pre>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-11-1.png" width="480" /></p>
+<p>We can find that most of missing values appeared in the “death” or “return” columns. These columns represent the number of deaths and returns of characters. In Marvels, it is very common for some superheroes or super devils to resurge many times. Therefore, we can estimate that these missing values may represent the importance or the power of characters. For example, some important or powerful characters may seldom die or could resurge every time they die.</p>
+<p>Therefore, we select all the “death” columns and plot the heatmap.</p>
+<pre><code>## # A tibble: 6 × 4
+##   name_alias                      key    value missing
+##   &lt;chr&gt;                           &lt;chr&gt;  &lt;lgl&gt; &lt;chr&gt;  
+## 1 &quot;Henry Jonathan \&quot;Hank\&quot; Pym&quot;   death1 TRUE  no     
+## 2 &quot;Janet van Dyne&quot;                death1 TRUE  no     
+## 3 &quot;Anthony Edward \&quot;Tony\&quot; Stark&quot; death1 TRUE  no     
+## 4 &quot;Robert Bruce Banner&quot;           death1 TRUE  no     
+## 5 &quot;Thor Odinson&quot;                  death1 TRUE  no     
+## 6 &quot;Richard Milhouse Jones&quot;        death1 FALSE no</code></pre>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-13-1.png" width="480" /></p>
+<p>All the rows (characters) have “True” value in “death1” columns. It means that every character has at least one death, which may represent all the superpowers were born of fire. This is actually how the Marvels start a superhero story. Superhero typically got superpowers by some disasters or accidents at the beginning of the story.</p>
+<p>Then we can check two famous superheroes, Iron man and Jocasta.</p>
+<pre><code>## # A tibble: 1 × 6
+##   name_alias                      death1 death2 death3 death4 death5
+##   &lt;chr&gt;                           &lt;lgl&gt;  &lt;lgl&gt;  &lt;lgl&gt;  &lt;lgl&gt;  &lt;lgl&gt; 
+## 1 &quot;Anthony Edward \&quot;Tony\&quot; Stark&quot; TRUE   NA     NA     NA     NA</code></pre>
+<pre><code>## # A tibble: 1 × 6
+##   name_alias death1 death2 death3 death4 death5
+##   &lt;chr&gt;      &lt;lgl&gt;  &lt;lgl&gt;  &lt;lgl&gt;  &lt;lgl&gt;  &lt;lgl&gt; 
+## 1 Jocasta    TRUE   TRUE   TRUE   TRUE   TRUE</code></pre>
+<p>We can see that Tony only died once. In Marvels, Iron man is one of the most power superhero, and he fight many times successfully.He only died in the fighting with Thanos. He is also the most important in Marvels movies. And Jocasta is a “non-living” construct.She did not has strong power, but she could resurge because she required no food, water, or oxygen to survive and she was also immune to poisons and diseases. She is also one of the most important character of Marvels cartoons. It fits our initial hypothesisfor the number of daeth.</p>
+<p>Then we can also show the heatmap of “return” columns.</p>
+<pre><code>## # A tibble: 6 × 4
+##   name_alias                      key     value missing
+##   &lt;chr&gt;                           &lt;chr&gt;   &lt;lgl&gt; &lt;chr&gt;  
+## 1 &quot;Henry Jonathan \&quot;Hank\&quot; Pym&quot;   return1 FALSE no     
+## 2 &quot;Janet van Dyne&quot;                return1 TRUE  no     
+## 3 &quot;Anthony Edward \&quot;Tony\&quot; Stark&quot; return1 TRUE  no     
+## 4 &quot;Robert Bruce Banner&quot;           return1 TRUE  no     
+## 5 &quot;Thor Odinson&quot;                  return1 TRUE  no     
+## 6 &quot;Richard Milhouse Jones&quot;        return1 NA    yes</code></pre>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-17-1.png" width="480" /></p>
+</div>
+<div id="check-missing-values-by-year" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> Check missing values by year</h2>
+<p>We will check missing values by year. We can find if there is a pattern of the number of death or return.</p>
+<p>There are the years when the Marvels had a new character. We can see that there are some big gaps between certain years. From these years we can know the productive periods of Marvels.</p>
+<pre><code>##  [1] 1900 1963 1964 1965 1967 1968 1969 1973 1975 1976 1978 1979 1981 1982 1983
+## [16] 1984 1985 1986 1987 1988 1989 1990 1991 1992 1993 1996 1998 2000 2001 2003
+## [31] 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015</code></pre>
+<p>We gather all “death” columns into one “death” columns.</p>
+<pre><code>## # A tibble: 6 × 2
+##    year death
+##   &lt;int&gt; &lt;lgl&gt;
+## 1  1963 TRUE 
+## 2  1963 TRUE 
+## 3  1963 TRUE 
+## 4  1963 TRUE 
+## 5  1963 TRUE 
+## 6  1963 FALSE</code></pre>
+<pre><code>##    year death
+## 1  1900    15
+## 2  1963     7
+## 3  1964     1
+## 4  1965     5
+## 5  1967     1
+## 6  1968     2
+## 7  1969     1
+## 8  1973     2
+## 9  1975     2
+## 10 1976     4
+## 11 1978    10
+## 12 1979     3
+## 13 1981     1
+## 14 1982     1
+## 15 1983     1
+## 16 1984     3
+## 17 1985     1
+## 18 1986     1
+## 19 1987     5
+## 20 1988    11
+## 21 1989    11
+## 22 1990     4
+## 23 1991     1
+## 24 1992     6
+## 25 1993     5
+## 26 1996     2
+## 27 1998     2
+## 28 2000     2
+## 29 2001     2
+## 30 2003     1
+## 31 2004     1
+## 32 2005    17
+## 33 2006     2
+## 34 2007     5
+## 35 2008     2
+## 36 2009     2
+## 37 2010    16
+## 38 2011     3
+## 39 2012     4
+## 40 2013    24
+## 41 2014     3
+## 42 2015     2</code></pre>
+<div id="htmlwidget-e646defd1aab832a0afc" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e646defd1aab832a0afc">{"x":{"visdat":{"1465a26c28205":["function () ","plotlyVisDat"]},"cur_data":"1465a26c28205","attrs":{"1465a26c28205":{"x":{},"y":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"The persentage of Missing values in Death","xaxis":{"domain":[0,1],"automargin":true,"title":"The persentage of Missing values"},"yaxis":{"domain":[0,1],"automargin":true,"title":"Year"},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[1900,1963,1964,1965,1967,1968,1969,1973,1975,1976,1978,1979,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1996,1998,2000,2001,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015],"y":[0.785714285714286,0.766666666666667,0.8,0.75,0.8,0.8,0.8,0.8,0.6,0.733333333333333,0.75,0.8,0.8,0.8,0.8,0.8,0.8,0.8,0.666666666666667,0.56,0.8,0.733333333333333,0.8,0.76,0.75,0.8,0.8,0.8,0.6,0.8,0.8,0.7875,0.8,0.75,0.8,0.8,0.8,0.8,0.8,0.8,0.8,0.8],"type":"bar","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-7ac9bf9e3756de2f500a" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-7ac9bf9e3756de2f500a">{"x":{"visdat":{"1465a13d8b800":["function () ","plotlyVisDat"]},"cur_data":"1465a13d8b800","attrs":{"1465a13d8b800":{"x":{},"y":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"The number of Missing values in Death","xaxis":{"domain":[0,1],"automargin":true,"title":"The number of Missing values"},"yaxis":{"domain":[0,1],"automargin":true,"title":"Year"},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[1900,1963,1964,1965,1967,1968,1969,1973,1975,1976,1978,1979,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1996,1998,2000,2001,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015],"y":[15,7,1,5,1,2,1,2,2,4,10,3,1,1,1,3,1,1,5,11,11,4,1,6,5,2,2,2,2,1,1,17,2,5,2,2,16,3,4,24,3,2],"type":"bar","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p>We count the number of characters and the percentage of missing values for each year. We can see that although the number of characters differ greatly each year, the percentage of missing values is pretty stable each year. It means that Marvels will keep certain proportion of character to be alive.</p>
+</div>
+<div id="using-function-from-q2-of-pset4" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> Using function from Q2 of Pset4</h2>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-25-1.png" width="576" /></p>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-26-1.png" width="576" /></p>
+<p>We can see the distribution of missing values by using the function. The result is pretty similar to what we did above. There are only few columns is totally complete and most of missing values are concentrated in “death” and “return” columns. Meanwhile, there is no missing values in some columns including “current”, “year”, “gender”.</p>
 
+</div>
 </div>
             </section>
 

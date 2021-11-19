@@ -18,11 +18,11 @@ library(patchwork)
 library(plotly)
 ```
 
-As what we mentioned in Final Project Data Check, we are working on the financial data, like the open and close prices of stocks. All these data are publicly available, so there is no missing values. Although we can regard non-trading days as missing value, in fact these missing values don’t matter at all because all public marketing behaviors stop at these days. Moreover, we are calculating some technical indicators, like moving average with different time span, so there will be some missing values (Null value) at the beginning of the data because there is not enough data to calculate the sliding window. However, in our trading strategies, we need to drop all Null values at the beginning of our backtesting intervals in order to get accurate technical indicators. Therefore, in this way we don’t have any missing value in our raw data and processed data. We will use "backup" data for this missing value chapter. In this chapter, we will use avengers Dataset.
+As what we mentioned in Final Project Data Check, we are working on the financial data, like the open and close prices of stocks.\n All these data are publicly available, so there is no missing values. Although we can regard non-trading days as missing value, in\n fact these missing values don’t matter at all because all public marketing behaviors stop at these days. Moreover, we are \n calculating some technical indicators, like moving average with different time span, so there will be some missing values (Null\n value) at the beginning of the data because there is not enough data to calculate the sliding window. However, in our trading\n strategies, we need to drop all Null values at the beginning of our backtesting intervals in order to get accurate technical\n indicators. Therefore, in this way we don’t have any missing value in our raw data and processed data. We will use "backup" data\n for this missing value chapter. In this chapter, we will use avengers Dataset.\n
 
 # Basics of avengers Dataset
 
-The first step is to load data and check the basic information about the data. We should know the dimension of the dataset and the meaning of each column.
+The first step is to load data and check the basic information about the data. We should know the dimension of the dataset and the\n meaning of each column.
 
 ```{r}
 head(avengers)
@@ -39,7 +39,7 @@ dim(avengers)
 
 # Check Missing Values
 
-We will check the missing values in the whole data.
+We will check the missing values in the whole data.\n
 
 ```{r}
 colSums(is.na(avengers)) %>%
@@ -49,7 +49,7 @@ rowSums(is.na(avengers)) %>%
   sort(decreasing = TRUE)
 ```
 
-We can see that there are lots of missing values in the data. To better understand there distribution, we will transfer the missing value into a binary variable "missing", then plot a heatmap to show the missing value.
+We can see that there are lots of missing values in the data. To better understand there distribution, we will transfer the missing\n value into a binary variable "missing", then plot a heatmap to show the missing value.\n
 
 ```{r}
 avengers_nan <- avengers %>% 
@@ -69,9 +69,9 @@ ggplot(avengers_nan, aes(x = key, y = fct_rev(id), fill = missing)) +
   theme(legend.position = 'None', axis.text.x = element_text(angle = 60, hjust = 1))
 ```
 
-We can find that most of missing values appeared in the "death" or "return" columns. These columns represent the number of deaths and returns of characters. In Marvels, it is very common for some superheroes or super devils to resurge many times. Therefore, we can estimate that these missing values may represent the importance or the power of characters. For example, some important or powerful characters may seldom die or could resurge every time they die.
+We can find that most of missing values appeared in the "death" or "return" columns. These columns represent the number of deaths\n and returns of characters. In Marvels, it is very common for some superheroes or super devils to resurge many times. Therefore, we\n can estimate that these missing values may represent the importance or the power of characters. For example, some important or\n powerful characters may seldom die or could resurge every time they die.\n
 
-Therefore, we select all the "death" columns and plot the heatmap.
+Therefore, we select all the "death" columns and plot the heatmap.\n
 
 ```{r}
 death <- avengers[, c('name_alias', 'death1', 'death2', 'death3', 'death4', 'death5')]
@@ -91,9 +91,9 @@ ggplot(death_nan, aes(x = key, y = fct_rev(name_alias), fill = missing)) +
   theme(legend.position = 'None', axis.text.x = element_text(angle = 60, hjust = 1))
 ```
 
-All the rows (characters) have "True" value in "death1" columns. It means that every character has at least one death, which may represent all the superpowers were born of fire. This is actually how the Marvels start a superhero story. Superhero typically got superpowers by some disasters or accidents at the beginning of the story.
+All the rows (characters) have "True" value in "death1" columns. It means that every character has at least one death, which may\n represent all the superpowers were born of fire. This is actually how the Marvels start a superhero story. Superhero typically got\n superpowers by some disasters or accidents at the beginning of the story.\n
 
-Then we can check two famous superheroes, Iron man and Jocasta.
+Then we can check two famous superheroes, Iron man and Jocasta.\n
 
 ```{r}
 death %>% filter(name_alias=='Anthony Edward "Tony" Stark')
@@ -103,9 +103,9 @@ death %>% filter(name_alias=='Anthony Edward "Tony" Stark')
 death %>% filter(name_alias=='Jocasta')
 ```
 
-We can see that Tony only died once. In Marvels, Iron man is one of the most power superhero, and he fight many times successfully. He only died in the fighting with Thanos. He is also the most important in Marvels movies. And Jocasta is a "non-living" construct. She did not has strong power, but she could resurge because she required no food, water, or oxygen to survive and she was also immune to poisons and diseases. She is also one of the most important character of Marvels cartoons. It fits our initial hypothesis for the number of daeth.
+We can see that Tony only died once. In Marvels, Iron man is one of the most power superhero, and he fight many times successfully.\n He only died in the fighting with Thanos. He is also the most important in Marvels movies. And Jocasta is a "non-living" construct.\n She did not has strong power, but she could resurge because she required no food, water, or oxygen to survive and she was also \n immune to poisons and diseases. She is also one of the most important character of Marvels cartoons. It fits our initial hypothesis\n for the number of daeth.\n
 
-Then we can also show the heatmap of "return" columns.
+Then we can also show the heatmap of "return" columns.\n
 
 ```{r}
 return <- avengers[, c('name_alias', 'return1', 'return2', 'return3', 'return4', 'return5')]
@@ -127,16 +127,16 @@ ggplot(return_nan, aes(x = key, y = fct_rev(name_alias), fill = missing)) +
 
 # Check missing values by year
 
-We will check missing values by year. We can find if there is a pattern of the number of death or return.
+We will check missing values by year. We can find if there is a pattern of the number of death or return.\n
 
-There are the years when the Marvels had a new character. We can see that there are some big gaps between certain years. From these years we can know the productive periods of Marvels.
+There are the years when the Marvels had a new character. We can see that there are some big gaps between certain years. From these\n years we can know the productive periods of Marvels.\n
 
 ```{r}
 unique(avengers$year) %>%
   sort(decreasing = FALSE)
 ```
 
-We gather all "death" columns into one "death" columns. 
+We gather all "death" columns into one "death" columns. \n
 
 ```{r}
 death <- avengers[, c('year', 'death1', 'death2', 'death3', 'death4', 'death5')]
@@ -189,7 +189,7 @@ fig <- fig %>% layout(title = "The number of Missing values in Death",
 fig
 ```
 
-We count the number of characters and the percentage of missing values for each year. We can see that although the number of characters differ greatly each year, the percentage of missing values is pretty stable each year. It means that Marvels will keep certain proportion of character to be alive.
+We count the number of characters and the percentage of missing values for each year. We can see that although the number of\n characters differ greatly each year, the percentage of missing values is pretty stable each year. It means that Marvels will keep\n certain proportion of character to be alive.\n
 
 # Using function from Q2 of Pset4
 
@@ -281,4 +281,4 @@ missing_plot_function <- function(data, per = FALSE){
 missing_plot_function(avengers, per = TRUE)
 ```
 
-We can see the distribution of missing values by using the function. The result is pretty similar to what we did above. There are only few columns is totally complete and most of missing values are concentrated in "death" and "return" columns. Meanwhile, there is no missing values in some columns including "current", "year", "gender".
+We can see the distribution of missing values by using the function. The result is pretty similar to what we did above. There are\n only few columns is totally complete and most of missing values are concentrated in "death" and "return" columns. Meanwhile, there \n is no missing values in some columns including "current", "year", "gender".\n

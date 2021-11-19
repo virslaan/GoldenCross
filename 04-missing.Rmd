@@ -1,1 +1,10 @@
 # Missing values
+
+
+```{r}
+library(fivethirtyeight)
+library(tidyverse)
+library(patchwork)
+library(plotly)
+```
+

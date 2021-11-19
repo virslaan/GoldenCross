@@ -9,7 +9,7 @@ library(plotly)
 
 As what we mentioned in Final Project Data Check, we are working on the financial data, like the open and close prices of stocks. All these data are publicly available, so there is no missing values. Although we can regard non-trading days as missing value, in fact these missing values don’t matter at all because all public marketing behaviors stop at these days. Moreover, we are calculating some technical indicators, like moving average with different time span, so there will be some missing values (Null value) at the beginning of the data because there is not enough data to calculate the sliding window. However, in our trading strategies, we need to drop all Null values at the beginning of our backtesting intervals in order to get accurate technical indicators. Therefore, in this way we don’t have any missing value in our raw data and processed data. We will use "backup" data for this missing value chapter. In this chapter, we will use avengers Dataset.
 
-## Basics of avengers Dataset
+# Basics of avengers Dataset
 
 The first step is to load data and check the basic information about the data. We should know the dimension of the dataset and the meaning of each column.
 
@@ -26,7 +26,7 @@ dim(avengers)
 ```
 
 
-## Check Missing Values
+# Check Missing Values
 
 We will check the missing values in the whole data.
 
@@ -114,7 +114,7 @@ ggplot(return_nan, aes(x = key, y = fct_rev(name_alias), fill = missing)) +
   theme(legend.position = 'None', axis.text.x = element_text(angle = 60, hjust = 1))
 ```
 
-## Check missing values by year
+# Check missing values by year
 
 We will check missing values by year. We can find if there is a pattern of the number of death or return.
 
@@ -180,7 +180,7 @@ fig
 
 We count the number of characters and the percentage of missing values for each year. We can see that although the number of characters differ greatly each year, the percentage of missing values is pretty stable each year. It means that Marvels will keep certain proportion of character to be alive.
 
-## Using function from Q2 of Pset4
+# Using function from Q2 of Pset4
 
 ```{r}
 #Creation of the Function 

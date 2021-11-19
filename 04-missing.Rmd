@@ -230,8 +230,7 @@ missing_plot_function <- function(data, per = FALSE){
                      label = "Complete Cases") +
                      scale_fill_brewer(palette = "BuPu") +
                      xlab("Variable") +
-                     ylab("Missing Pattern")+
-    theme(axis.text.x = element_text(angle = 60, hjust = 1))
+                     ylab("Missing Pattern")
   
   # Plot the missing values of a column
   top_df_part <- data.frame(as.list(sorted_colnames)) %>% 
@@ -246,9 +245,8 @@ missing_plot_function <- function(data, per = FALSE){
     xlab("Variable") +
     ylab(ifelse(per, "% Rows Missing", "Num Rows\n Missing"))+
      theme(axis.title.x =element_blank(),
-           panel.grid.major.x = element_blank(),
-           panel.grid.minor.x = element_blank(),
-           axis.text.x = element_text(angle = 60, hjust = 1))
+                                    panel.grid.major.x = element_blank(),
+                                    panel.grid.minor.x = element_blank())
       
   
   # plot the row count for patterns
@@ -267,8 +265,7 @@ missing_plot_function <- function(data, per = FALSE){
     ylab(ifelse(per, "% Rows", "Row Count"))+
      theme(axis.title.y =element_blank(),
            panel.grid.major.y = element_blank(),
-           panel.grid.minor.y = element_blank(),
-           axis.text.x = element_text(angle = 60, hjust = 1))
+           panel.grid.minor.y = element_blank())
       
   
   design <- "
@@ -280,11 +277,11 @@ missing_plot_function <- function(data, per = FALSE){
 }
 ```
 
-```{r fig.width=6, fig.height=3}
+```{r}
 missing_plot_function(avengers, per = FALSE)
 ```
 
-```{r fig.width=6, fig.height=3}
+```{r}
 missing_plot_function(avengers, per = TRUE)
 ```
 

@@ -7,7 +7,7 @@ site: bookdown::bookdown_site
 
 # Introduction
 
-EDAV Final Project Assignment
+EDAV Final Project Assignment: Golden Cross
 
 ## Final Project Group: Vipul Harihar, Zhaoyu Wu and Zhirui Yang Introduction
 

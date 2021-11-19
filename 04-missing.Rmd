@@ -1,6 +1,10 @@
 # Missing values
 
 ```{r}
+knitr::opts_chunk$set(fig.width=8, fig.height=12)
+```
+
+```{r}
 library(fivethirtyeight)
 library(tidyverse)
 library(patchwork)

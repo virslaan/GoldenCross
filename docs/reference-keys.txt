@@ -5,7 +5,6 @@ what-does-a-golden-cross-tell-you
 current-questions-under-study-we-are-primarily-focusing-on-these-questions-mentioned-below
 data-sources
 data-transformation
-load-packages
 missing-values
 basics-of-avengers-dataset
 check-missing-values

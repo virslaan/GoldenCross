@@ -1,3 +1,188 @@
 # Interactive component
 
 
+Package 'plotly' and 'quantmod' are necessary for Candlestick visualization. 
+
+The candlestick plots with moving averages are interactive. The
+readers should also be able to zoom in and click on the bar to check
+the detailed information of each 'candle'.
+
+```{r, include=FALSE}
+library(plotly)
+library(quantmod)
+library(ggplot2)
+```
+
+
+```{r, include=FALSE}
+
+AAPL <- read.csv(file = 'AAPL.csv')
+
+fig_aapl <- AAPL %>% plot_ly(x = AAPL$Date, type="candlestick",
+          open = AAPL$Open, close = AAPL$Close,
+          high = AAPL$High, low = AAPL$Low, showlegend = FALSE)
+
+fig_aapl <- fig_aapl %>% layout(title = "AAPL Candlestick Chart",
+         xaxis = list(rangeslider = list(visible = F)),  yaxis = list(title = 'Price ($)'))
+
+
+fig_aapl <- fig_aapl %>% add_lines(x = ~Date, y = ~Open_10 , name = "10 MA",
+            line = list(color = 'blue', width = 1.5),
+            legendgroup = "10 MA",
+            hoverinfo = "none", inherit = F) 
+
+
+fig_aapl <- fig_aapl %>% add_lines(x = ~Date, y = ~Open_20, name = "20 MA",
+            line = list(color =  'purple', width = 1.5),
+            legendgroup = "20 MA", inherit = F, hoverinfo = "none") 
+
+
+```
+
+
+```{r, include=FALSE}
+
+COST <- read.csv(file = 'COST.csv')
+
+fig_cost <- COST %>% plot_ly(x = AAPL$Date, type="candlestick",
+          open = COST$Open, close = COST$Close,
+          high = COST$High, low = COST$Low, showlegend = FALSE)
+
+fig_cost <- fig_cost %>% layout(title = "COST Candlestick Chart",
+         xaxis = list(rangeslider = list(visible = F)),  yaxis = list(title = 'Price ($)'))
+
+
+fig_cost <- fig_cost %>% add_lines(x = ~Date, y = ~Open_10 , name = "10 MA",
+            line = list(color = 'blue', width = 1.5),
+            legendgroup = "10 MA",
+            hoverinfo = "none", inherit = F) 
+
+
+fig_cost <- fig_cost %>% add_lines(x = ~Date, y = ~Open_20, name = "20 MA",
+            line = list(color =  'purple', width = 1.5),
+            legendgroup = "20 MA", inherit = F, hoverinfo = "none") 
+
+```
+
+
+```{r, include=FALSE}
+MSFT <- read.csv(file = 'MSFT.csv')
+
+fig_msft <- MSFT %>% plot_ly(x = MSFT$Date, type="candlestick",
+          open = MSFT$Open, close = MSFT$Close,
+          high = MSFT$High, low = MSFT$Low, showlegend = FALSE)
+
+fig_msft <- fig_msft %>% layout(title = "MSFT Candlestick Chart",
+         xaxis = list(rangeslider = list(visible = F)),  yaxis = list(title = 'Price ($)'))
+
+
+fig_msft <- fig_msft %>% add_lines(x = ~Date, y = ~Open_10 , name = "10 MA",
+            line = list(color = 'blue', width = 1.5),
+            legendgroup = "10 MA",
+            hoverinfo = "none", inherit = F) 
+
+
+fig_msft <- fig_msft%>% add_lines(x = ~Date, y = ~Open_20, name = "20 MA",
+            line = list(color =  'purple', width = 1.5),
+            legendgroup = "20 MA", inherit = F, hoverinfo = "none") 
+
+```
+
+
+```{r, include=FALSE}
+GM <- read.csv(file = 'GM.csv')
+
+fig_gm <- GM %>% plot_ly(x = GM$Date, type="candlestick",
+          open = GM$Open, close = GM$Close,
+          high = GM$High, low = GM$Low, showlegend = FALSE)
+
+fig_gm <- fig_gm %>% layout(title = "GM Candlestick Chart",
+         xaxis = list(rangeslider = list(visible = F)),  yaxis = list(title = 'Price ($)'))
+
+
+fig_gm <- fig_gm %>% add_lines(x = ~Date, y = ~Open_10 , name = "10 MA",
+            line = list(color = 'blue', width = 1.5),
+            legendgroup = "10 MA",
+            hoverinfo = "none", inherit = F) 
+
+
+fig_gm <- fig_gm %>% add_lines(x = ~Date, y = ~Open_20, name = "20 MA",
+            line = list(color =  'purple', width = 1.5),
+            legendgroup = "20 MA", inherit = F, hoverinfo = "none") 
+
+```
+
+```{r, include=FALSE}
+NVDA <- read.csv(file = 'NVDA.csv')
+
+fig_nvda <- NVDA %>% plot_ly(x = NVDA$Date, type="candlestick",
+          open = NVDA$Open, close = NVDA$Close,
+          high = NVDA$High, low = NVDA$Low, showlegend = FALSE)
+
+fig_nvda <- fig_nvda %>% layout(title = "NVDA Candlestick Chart",
+         xaxis = list(rangeslider = list(visible = F)),  yaxis = list(title = 'Price ($)'))
+
+
+fig_nvda <- fig_nvda %>% add_lines(x = ~Date, y = ~Open_10 , name = "10 MA",
+            line = list(color = 'blue', width = 1.5),
+            legendgroup = "10 MA",
+            hoverinfo = "none", inherit = F) 
+
+
+fig_nvda <- fig_nvda %>% add_lines(x = ~Date, y = ~Open_20, name = "20 MA",
+            line = list(color =  'purple', width = 1.5),
+            legendgroup = "20 MA", inherit = F, hoverinfo = "none") 
+
+```
+
+```{r, include=FALSE}
+TSLA <- read.csv(file = 'TSLA.csv')
+
+fig_tsla <- TSLA %>% plot_ly(x = TSLA$Date, type="candlestick",
+          open = TSLA$Open, close = TSLA$Close,
+          high = TSLA$High, low = TSLA$Low, showlegend = FALSE)
+
+fig_tsla <- fig_tsla%>% layout(title = "TSLA Candlestick Chart",
+         xaxis = list(rangeslider = list(visible = F)),  yaxis = list(title = 'Price ($)'))
+
+
+fig_tsla <- fig_tsla %>% add_lines(x = ~Date, y = ~Open_10 , name = "10 MA",
+            line = list(color = 'blue', width = 1.5),
+            legendgroup = "10 MA",
+            hoverinfo = "none", inherit = F) 
+
+
+fig_tsla <- fig_tsla %>% add_lines(x = ~Date, y = ~Open_20, name = "20 MA",
+            line = list(color =  'purple', width = 1.5),
+            legendgroup = "20 MA", inherit = F, hoverinfo = "none") 
+
+```
+
+```{r}
+fig_aapl
+fig_cost
+fig_msft
+fig_tsla
+fig_nvda
+fig_gm
+```
+
+```{r, include=FALSE}
+library(grid)
+library(gridExtra)
+```
+
+```{r}
+fig <- subplot(fig_aapl, fig_cost, fig_msft, fig_tsla, fig_nvda, fig_gm,  nrows=2)  %>%
+  layout(title = list(text = "Stock Price with Moving Average"),
+         plot_bgcolor='#e5ecf6', 
+         xaxis = list( 
+           zerolinecolor = '#ffff', 
+           zerolinewidth = 2, 
+           gridcolor = 'ffff'), 
+         yaxis = list( 
+           zerolinecolor = '#ffff', 
+           zerolinewidth = 2, 
+           gridcolor = 'ffff'))
+fig
+```

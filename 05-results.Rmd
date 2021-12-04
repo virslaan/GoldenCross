@@ -1,6 +1,6 @@
 # Results
 
-The following script demonstrate the product of data visualization and analysis of the actual performance of the Golden Cross Investment scheme
+The following script demonstrates the product of data visualization and analysis of the actual performance of the Golden Cross Investment scheme
 
 Package 'plotly' and 'quantmod' are necessary for Candlestick visualization. 
 

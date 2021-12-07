@@ -1,4 +1,166 @@
 # Data transformation
 
-Please click this link to see our work. Thank you :)
+## Load packages
+
+All the data we need to process in this project is financial data, so it's mainly time series data. It is well known that "pandas" of Python are very powerful for processing such data types and "yfinance" of Python is to access the data, which we want to use for this data transformation chapter. However, most of the project files are .rmd and mainly in the R language. Therefore, we want to call Python from the R studio. The "reticulate" package provides an R interface to Python modules, classes, and functions. 
+
+Install the "reticulate" package as follows:
+
+```{r}
+# install.packages('reticulate')
+```
+
+We can check the version of python, which is Python 3.6.13 in this project. And according to the message, we can enter 'exit' or 'quit' to exit the REPL and return to R. In the following code chunk, we will hide this message by "include = FALSE" to better show the results.
+
+```{python}
+reticulate::py_config()
+```
+
+"yfinance" is a popular open source library developed by Ran Aroussi as a means to access the financial data available on Yahoo Finance. Yahoo Finance offers an excellent range of market data on stocks.
+
+We could install "yfinance" by conda as follows:
+
+```{r}
+# reticulate::py_install('yfinance')
+```
+
+```{python, include = FALSE}
+import yfinance as yf
+import pandas as pd
+```
+
+## Data Grab
+
+stock_name is the code of stock. in this project, we will use MSFT, TSLA, COST, APPL, GM, NVDA.
+start_date is the beginning of our back testing, and end_date is the end of the back testing.
+
+```{python, include = FALSE}
+stock_name = "MSFT"
+start_date = "2019-01-01"
+end_date = "2021-11-01"
+```
+
+Use "Ticker" module of "yfinance" to get the information of the stock we select. "msft" is a object saving all the information of the stock.
+
+```{python, include = FALSE}
+msft = yf.Ticker(stock_name)
+```
+
+In this project, we only use the price of stocks. Therefore, we use "history" method to get price information from "msft" object.
+
+```{python, include = FALSE}
+data = msft.history(start=start_date, end=end_date)[['Open', 'High', 'Low', 'Close', 'Volume']]
+```
+
+
+## Data Processing
+
+We will calculate the moving average (MA) with windows of different length to get trading signals, which is golden cross.
+
+```{python, include = FALSE}
+columns = ['Open', 'High', 'Low', 'Close', 'Volume']
+```
+
+We will follow the below steps:
+- Set short_window and long_window to calculate MA, then get buy and sell signals.
+- Use open prices to calculate, so when the signal appears, we can buy the stocks by using the intraday open price. The difference between the price when the signal appears and the price when we buy it is negligible. (If we use close prices to calculate signal, then we should consider the after-hour trading, which may cause the big difference of the close price of today and the open price of tomorrow.)
+- Buy signal is 1, and sell signal is -1
+- Hold stocks, position is 1, and 0 otherwise.
+
+```{python, include = FALSE}
+short_window = 10
+long_window = 20
+```
+
+```{python, include = FALSE}
+data[list(map(lambda x: x+f"_{short_window}", columns))] = data[columns].rolling(window=short_window).mean()
+data[list(map(lambda x: x+f"_{long_window}", columns))] = data[columns].rolling(window=long_window).mean()
+data = data.dropna(axis=0)
+data[f'position_{short_window}_{long_window}'] = data.apply(lambda x: 1 if x[f"Open_{short_window}"] > x[f"Open_{long_window}"] else 0, axis=1)
+data[f'shift'] = data[f'position_{short_window}_{long_window}'].shift(periods=1)
+data[f'signal_{short_window}_{long_window}'] = data[f'position_{short_window}_{long_window}'] - data[f'shift']
+data = data.fillna(0)
+data = data.drop(columns="shift")
+```
+
+```{python}
+data.head(20)
+```
+
+Save the processed data.
+
+```{python, include = FALSE}
+# data.to_csv(data_dir + f"{stock_name}_{start_date}-{end_date}_S-{short_window}_L-{long_window}.csv")
+```
+
+We want to see how much profit we can make for every selling. Therefore, we only select the days with trade signals. And we calculate the growth by $(OpenPrice_{sell} - OpenPrice_{buy}) / OpenPrice_{buy} $
+
+```{python, include = FALSE}
+signal_growth = data[data['signal_10_20'] != 0].copy()
+signal_growth["Open_last_time"] = signal_growth['Open'].shift(periods=1)
+signal_growth['growth'] = (signal_growth["Open"] - signal_growth["Open_last_time"]) / signal_growth["Open_last_time"]
+```
+
+At the beginning of our trading, if the MA of shorter window is below the MA of longer window, then we will hold our money so the position is 0. Therefore, the first trading signal will be "sell" (-1). Then we can get every profit we make by selling the stock. However, if the MA of shorter window is above the MA of longer window, then we will hold the stock at the beginning. That is to say, we will buy the stock by using all our money. Therefore, when calculate the profit, we need to fill the the first item of "Open_last_time" columns by the first open price of data.
+
+```{python, include = FALSE}
+if signal_growth.iloc[0]["signal_10_20"] == 1:
+  pass
+else:
+  first_buy_price = data.iloc[0]["Open"]
+  print(first_buy_price)
+  first_sell_price = signal_growth.iloc[0]["Open"]
+  print(first_sell_price)
+  growth = (first_sell_price - first_buy_price) / first_buy_price
+  print(growth)
+  signal_growth["growth"] = signal_growth["growth"].fillna(growth)
+sell_signal_growth = signal_growth[signal_growth['signal_10_20'] == -1]
+```
+
+```{python}
+sell_signal_growth[["Open_last_time", "Open", "Open_10", "Open_20", "signal_10_20", "growth"]]
+```
+
+Save the profit data.
+
+```{python, include = FALSE}
+# sell_signal_growth.to_csv(data_dir + f"growth_{stock_name}_{start_date}-{end_date}_S-{short_window}_L-{long_window}.csv")
+```
+
+
+## Data Visualization
+
+We can have a interactive plot to show the processed data, which can help us have a better understanding about what the processed data look like and how our strategy works. Run the codes below, we will have a html website showing the interactive plot.
+
+```{python, include = FALSE}
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+import plotly as py
+```
+
+
+```{python}
+fig = make_subplots(specs=[[{"secondary_y": True}]])
+fig.add_trace(
+    go.Scatter(x=data.index, y=data["Open"], name="Open", mode='lines')
+)
+fig.add_trace(
+    go.Scatter(x=data.index, y=data[f"Open_{short_window}"], name=f"Open_{short_window}", mode='lines')
+)
+fig.add_trace(
+    go.Scatter(x=data.index, y=data[f"Open_{long_window}"], name=f"Open_{long_window}", mode='lines')
+)
+fig.add_trace(
+    go.Scatter(x=data.index, y=data[f"position_{short_window}_{long_window}"], name=f"position_{short_window}_{long_window}", mode='lines'),
+    secondary_y=True
+)
+fig.update_yaxes(title_text="<b>date</b>")
+fig.update_yaxes(title_text="<b>price</b>")
+fig.update_yaxes(title_text="<b>position</b>", secondary_y=True)
+fig.show()
+```
+
+
+Please click this link to see our work more precisely. Thank you :)
 https://github.com/Alex2Yang97/GoldenCross_5702final
+

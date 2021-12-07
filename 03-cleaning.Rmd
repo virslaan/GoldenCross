@@ -7,7 +7,7 @@ All the data we need to process in this project is financial data, so it's mainl
 Install the "reticulate" package as follows:
 
 ```{r}
-# install.packages('reticulate')
+install.packages('reticulate')
 ```
 
 We can check the version of python, which is Python 3.6.13 in this project. And according to the message, we can enter 'exit' or 'quit' to exit the REPL and return to R. In the following code chunk, we will hide this message by "include = FALSE" to better show the results.
@@ -21,7 +21,7 @@ reticulate::py_config()
 We could install "yfinance" by conda as follows:
 
 ```{r}
-# reticulate::py_install('yfinance')
+reticulate::py_install('yfinance')
 ```
 
 ```{python, include = FALSE}

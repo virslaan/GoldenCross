@@ -6,12 +6,11 @@ current-questions-under-study-we-are-primarily-focusing-on-these-questions-menti
 data-sources
 data-transformation
 load-packages
-data-grab
-data-processing
-data-visualization
 missing-values
 basics-of-avengers-dataset
 check-missing-values
 check-missing-values-by-year
 using-function-from-q2-of-pset4
+results
 interactive-component
+conclusion

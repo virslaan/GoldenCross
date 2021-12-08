@@ -11,7 +11,6 @@ library(patchwork)
 library(plotly)
 ```
 
-<<<<<<< HEAD
 
 =======
 As what we mentioned in Final Project Data Check, we are working on the financial data, like the open and close prices of stocks. All these data are publicly available, so there is no missing values. Although we can regard non-trading days as missing value, in fact these missing values don’t matter at all because all public marketing behaviors stop at these days. Moreover, we are calculating some technical indicators, like moving average with different time span, so there will be some missing values (Null value) at the beginning of the data because there is not enough data to calculate the sliding window. However, in our trading strategies, we need to drop all Null values at the beginning of our backtesting intervals in order to get accurate technical indicators. Therefore, in this way we don’t have any missing value in our raw data and processed data. We will use "backup" data for this missing value chapter. In this chapter, we will use avengers Dataset.

@@ -1,4 +1,4 @@
-book# Results
+# Results
 
 The following script demonstrates the product of data visualization and analysis of the actual performance of the Golden Cross Investment scheme
 
@@ -13,7 +13,7 @@ library(ggplot2)
 
 ```{r}
 
-AAPL <- read.csv(file = 'AAPL.csv')
+AAPL <- read.csv(file = 'final_data/AAPL.csv')
 
 fig_aapl <- AAPL %>% plot_ly(x = AAPL$Date, type="candlestick",
           open = AAPL$Open, close = AAPL$Close,
@@ -39,7 +39,7 @@ fig_aapl <- fig_aapl %>% add_lines(x = ~Date, y = ~Open_20, name = "20 MA",
 
 ```{r}
 
-COST <- read.csv(file = 'COST.csv')
+COST <- read.csv(file = 'final_data/COST.csv')
 
 fig_cost <- COST %>% plot_ly(x = AAPL$Date, type="candlestick",
           open = COST$Open, close = COST$Close,
@@ -63,7 +63,7 @@ fig_cost <- fig_cost %>% add_lines(x = ~Date, y = ~Open_20, name = "20 MA",
 
 
 ```{r}
-MSFT <- read.csv(file = 'MSFT.csv')
+MSFT <- read.csv(file = 'final_data/MSFT.csv')
 
 fig_msft <- MSFT %>% plot_ly(x = MSFT$Date, type="candlestick",
           open = MSFT$Open, close = MSFT$Close,
@@ -87,7 +87,7 @@ fig_msft <- fig_msft%>% add_lines(x = ~Date, y = ~Open_20, name = "20 MA",
 
 
 ```{r}
-GM <- read.csv(file = 'GM.csv')
+GM <- read.csv(file = 'final_data/GM.csv')
 
 fig_gm <- GM %>% plot_ly(x = GM$Date, type="candlestick",
           open = GM$Open, close = GM$Close,
@@ -110,7 +110,7 @@ fig_gm <- fig_gm %>% add_lines(x = ~Date, y = ~Open_20, name = "20 MA",
 ```
 
 ```{r}
-NVDA <- read.csv(file = 'NVDA.csv')
+NVDA <- read.csv(file = 'final_data/NVDA.csv')
 
 fig_nvda <- NVDA %>% plot_ly(x = NVDA$Date, type="candlestick",
           open = NVDA$Open, close = NVDA$Close,
@@ -133,7 +133,7 @@ fig_nvda <- fig_nvda %>% add_lines(x = ~Date, y = ~Open_20, name = "20 MA",
 ```
 
 ```{r}
-TSLA <- read.csv(file = 'TSLA.csv')
+TSLA <- read.csv(file = 'final_data/TSLA.csv')
 
 fig_tsla <- TSLA %>% plot_ly(x = TSLA$Date, type="candlestick",
           open = TSLA$Open, close = TSLA$Close,
@@ -189,12 +189,12 @@ Golden Cross Investment Return:
 Componded Return calculated in Excel (INDIRECT(ADDRESS(ROW()-1,COLUMN())) * (1 + T2)), assuming an initial investment of $10000
 
 ```{r}
-aapl_gain = read.csv(file = 'aapl_gain.csv')
-cost_gain = read.csv(file = 'cost_gain.csv')
-msft_gain = read.csv(file = 'msft_gain.csv')
-tsla_gain = read.csv(file = 'tsla_gain.csv')
-nvda_gain = read.csv(file = 'nvda_gain.csv')
-gm_gain = read.csv(file = 'gm_gain.csv')
+aapl_gain = read.csv(file = 'final_data/aapl_gain.csv')
+cost_gain = read.csv(file = 'final_data/cost_gain.csv')
+msft_gain = read.csv(file = 'final_data/msft_gain.csv')
+tsla_gain = read.csv(file = 'final_data/tsla_gain.csv')
+nvda_gain = read.csv(file = 'final_data/nvda_gain.csv')
+gm_gain = read.csv(file = 'final_data/gm_gain.csv')
 
 ```
 

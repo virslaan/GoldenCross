@@ -1,6 +1,5 @@
 **EDAV Final Project Assignment**
 
-Final Project Group: Vipul Harihar, Zhaoyu Wu and Zhirui Yang
 **Introduction**
 
 The world is changing and adapting to cope with the major technological advancements and

@@ -1,22 +1,19 @@
 # Interactive component
 
-
-Package 'plotly' and 'quantmod' are necessary for Candlestick visualization. 
-
-The candlestick plots with moving averages are interactive. The
-readers should also be able to zoom in and click on the bar to check
-the detailed information of each 'candle'.
+Package 'plotly' and 'quantmod' are necessary for interactive Candlestick visualization. 
 
 ```{r, include=FALSE}
 library(plotly)
 library(quantmod)
 library(ggplot2)
+library(dplyr)
 ```
 
+Interactive:
 
 ```{r, include=FALSE}
 
-AAPL <- read.csv(file = 'final_data/AAPL.csv')
+AAPL <- read.csv(file = 'AAPL.csv')
 
 fig_aapl <- AAPL %>% plot_ly(x = AAPL$Date, type="candlestick",
           open = AAPL$Open, close = AAPL$Close,
@@ -39,10 +36,15 @@ fig_aapl <- fig_aapl %>% add_lines(x = ~Date, y = ~Open_20, name = "20 MA",
 
 ```
 
+```{r}
+fig_aapl
+```
+
+The plot above is an interactive candlestick plot demonstrating the price movement of Apple. The plot includes price data from 2019-01-30 to 2021-10-21. Aside from the candle sticks, the 10-day moving average and the 20-day moving average are also displayed. These two moving average lines form vital indicators for the Golden Cross Investing method.
 
 ```{r, include=FALSE}
 
-COST <- read.csv(file = 'final_data/COST.csv')
+COST <- read.csv(file = 'COST.csv')
 
 fig_cost <- COST %>% plot_ly(x = AAPL$Date, type="candlestick",
           open = COST$Open, close = COST$Close,
@@ -62,11 +64,19 @@ fig_cost <- fig_cost %>% add_lines(x = ~Date, y = ~Open_20, name = "20 MA",
             line = list(color =  'purple', width = 1.5),
             legendgroup = "20 MA", inherit = F, hoverinfo = "none") 
 
+
+
 ```
+
+```{r}
+fig_cost
+```
+
+The plot above is an interactive candlestick plot demonstrating the price movement of Costco. The plot includes price data from 2019-01-30 to 2021-10-21. Aside from the candle sticks, the 10-day moving average and the 20-day moving average are also displayed. These two moving average lines form vital indicators for the Golden Cross Investing method.
 
 
 ```{r, include=FALSE}
-MSFT <- read.csv(file = 'final_data/MSFT.csv')
+MSFT <- read.csv(file = 'MSFT.csv')
 
 fig_msft <- MSFT %>% plot_ly(x = MSFT$Date, type="candlestick",
           open = MSFT$Open, close = MSFT$Close,
@@ -86,11 +96,18 @@ fig_msft <- fig_msft%>% add_lines(x = ~Date, y = ~Open_20, name = "20 MA",
             line = list(color =  'purple', width = 1.5),
             legendgroup = "20 MA", inherit = F, hoverinfo = "none") 
 
+
+
 ```
 
+```{r}
+fig_msft
+```
+
+The plot above is an interactive candlestick plot demonstrating the price movement of Microsoft. The plot includes price data from 2019-01-30 to 2021-10-21. Aside from the candle sticks, the 10-day moving average and the 20-day moving average are also displayed. These two moving average lines form vital indicators for the Golden Cross Investing method.
 
 ```{r, include=FALSE}
-GM <- read.csv(file = 'final_data/GM.csv')
+GM <- read.csv(file = 'GM.csv')
 
 fig_gm <- GM %>% plot_ly(x = GM$Date, type="candlestick",
           open = GM$Open, close = GM$Close,
@@ -110,10 +127,18 @@ fig_gm <- fig_gm %>% add_lines(x = ~Date, y = ~Open_20, name = "20 MA",
             line = list(color =  'purple', width = 1.5),
             legendgroup = "20 MA", inherit = F, hoverinfo = "none") 
 
+
+
 ```
 
+```{r}
+fig_gm
+```
+
+The plot above is an interactive candlestick plot demonstrating the price movement of General Motor. The plot includes price data from 2019-01-30 to 2021-10-21. Aside from the candle sticks, the 10-day moving average and the 20-day moving average are also displayed. These two moving average lines form vital indicators for the Golden Cross Investing method. Notice that during the pandamic lockdown, the price of GM decreased significantly. This drasitic decrease could be related to the shutdown of global production lines and travel restrictions.
+
 ```{r, include=FALSE}
-NVDA <- read.csv(file = 'final_data/NVDA.csv')
+NVDA <- read.csv(file = 'NVDA.csv')
 
 fig_nvda <- NVDA %>% plot_ly(x = NVDA$Date, type="candlestick",
           open = NVDA$Open, close = NVDA$Close,
@@ -133,10 +158,18 @@ fig_nvda <- fig_nvda %>% add_lines(x = ~Date, y = ~Open_20, name = "20 MA",
             line = list(color =  'purple', width = 1.5),
             legendgroup = "20 MA", inherit = F, hoverinfo = "none") 
 
+
+
 ```
 
+```{r}
+fig_nvda
+```
+
+The plot above is an interactive candlestick plot demonstrating the price movement of Nvida. The plot includes price data from 2019-01-30 to 2021-10-21. Aside from the candle sticks, the 10-day moving average and the 20-day moving average are also displayed. These two moving average lines form vital indicators for the Golden Cross Investing method.
+
 ```{r, include=FALSE}
-TSLA <- read.csv(file = 'final_data/TSLA.csv')
+TSLA <- read.csv(file = 'TSLA.csv')
 
 fig_tsla <- TSLA %>% plot_ly(x = TSLA$Date, type="candlestick",
           open = TSLA$Open, close = TSLA$Close,
@@ -156,16 +189,15 @@ fig_tsla <- fig_tsla %>% add_lines(x = ~Date, y = ~Open_20, name = "20 MA",
             line = list(color =  'purple', width = 1.5),
             legendgroup = "20 MA", inherit = F, hoverinfo = "none") 
 
+
 ```
 
 ```{r}
-fig_aapl
-fig_cost
-fig_msft
 fig_tsla
-fig_nvda
-fig_gm
 ```
+
+The plot above is an interactive candlestick plot demonstrating the price movement of Tesla. The plot includes price data from 2019-01-30 to 2021-10-21. Aside from the candle sticks, the 10-day moving average and the 20-day moving average are also displayed. These two moving average lines form vital indicators for the Golden Cross Investing method.
+
 
 ```{r, include=FALSE}
 library(grid)
@@ -186,3 +218,5 @@ fig <- subplot(fig_aapl, fig_cost, fig_msft, fig_tsla, fig_nvda, fig_gm,  nrows=
            gridcolor = 'ffff'))
 fig
 ```
+
+The plot above is a combination of all the interactive candlestick plots for six different major stocks traded in the U.S. stock exchange.The plot includes price data from 2019-01-30 to 2021-10-21. 10-day moving average line and 20-day moving average line are plotted on top of each candlestick plot.

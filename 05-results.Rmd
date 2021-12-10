@@ -221,7 +221,85 @@ ggplot(df_stock, aes(x = Close, y = sym, fill = sym)) +
 The ridge plot above demonstrates the distribution of Closing prices for each selected stock over years (2019 to 2021). As expected, the distribution of TSLA is multimodal due to the high volatility of the stock prices of TSLA. The distribution of the closing prices for the other stocks resemble the normal distribution. Apple has a set of overall higher closing prices comparing to the others while GM has an overall lower closing prices comparing to the other stocks.
 
 
+```{r}
+chartSeries(AAPL1, 
+            type = c("auto", "candlestick"), 
+            subset = '2019-01::',
+            show.grid = TRUE,
+            major.ticks='auto', minor.ticks=TRUE,
+            multi.col = FALSE,
+            TA=c(addMACD(),addSMA(n=10,col = 'blue'),addSMA(n=20,col = 'white')))
+```
 
+The plot above is a static candlestick plot demonstrating the price movement of Apple with Moving Average lines and Moving Average Convergence Divergence indicator (MACD). The plot includes price data from 2019-01 to 2021-12. The Convergence and Divergence of the short term moving average and long term moving average can be visualized by the MACD indicator, which is useful for the execution of Golden Cross method.
+
+
+
+```{r}
+
+chartSeries(NVDA1, 
+            type = c("auto", "candlestick"), 
+            subset = '2019-01::',
+            show.grid = TRUE,
+            major.ticks='auto', minor.ticks=TRUE,
+            multi.col = FALSE,
+            TA=c(addMACD(),addSMA(n=10,col = 'blue'),addSMA(n=20,col = 'white')))
+```
+
+The plot above is a static candlestick plot demonstrating the price movement of NVDA with Moving Average lines and Moving Average Convergence Divergence indicator (MACD). The plot includes price data from 2019-01 to 2021-12. The Convergence and Divergence of the short term moving average and long term moving average can be visualized by the MACD indicator, which is useful for the execution of Golden Cross method.
+
+
+```{r}
+chartSeries(GM1, 
+            type = c("auto", "candlestick"), 
+            subset = '2019-01::',
+            show.grid = TRUE,
+            major.ticks='auto', minor.ticks=TRUE,
+            multi.col = FALSE,
+            TA=c(addMACD(),addSMA(n=10,col = 'blue'),addSMA(n=20,col = 'white')))
+```
+
+
+The plot above is a static candlestick plot demonstrating the price movement of GM with Moving Average lines and Moving Average Convergence Divergence indicator (MACD). The plot includes price data from 2019-01 to 2021-12. The Convergence and Divergence of the short term moving average and long term moving average can be visualized by the MACD indicator, which is useful for the execution of Golden Cross method.
+
+```{r}
+chartSeries(COST1, 
+            type = c("auto", "candlestick"), 
+            subset = '2019-01::',
+            show.grid = TRUE,
+            major.ticks='auto', minor.ticks=TRUE,
+            multi.col = FALSE,
+            TA=c(addMACD(),addSMA(n=10,col = 'blue'),addSMA(n=20,col = 'white')))
+```
+
+
+The plot above is a static candlestick plot demonstrating the price movement of COST with Moving Average lines and Moving Average Convergence Divergence indicator (MACD). The plot includes price data from 2019-01 to 2021-12. The Convergence and Divergence of the short term moving average and long term moving average can be visualized by the MACD indicator, which is useful for the execution of Golden Cross method.
+
+```{r}
+chartSeries(MSFT1, 
+            type = c("auto", "candlestick"), 
+            subset = '2019-01::',
+            show.grid = TRUE,
+            major.ticks='auto', minor.ticks=TRUE,
+            multi.col = FALSE,
+            TA=c(addMACD(),addSMA(n=10,col = 'blue'),addSMA(n=20,col = 'white')))
+```
+
+
+The plot above is a static candlestick plot demonstrating the price movement of MSFT with Moving Average lines and Moving Average Convergence Divergence indicator (MACD). The plot includes price data from 2019-01 to 2021-12. The Convergence and Divergence of the short term moving average and long term moving average can be visualized by the MACD indicator, which is useful for the execution of Golden Cross method.
+
+```{r}
+chartSeries(TSLA1, 
+            type = c("auto", "candlestick"), 
+            subset = '2019-01::',
+            show.grid = TRUE,
+            major.ticks='auto', minor.ticks=TRUE,
+            multi.col = FALSE,
+            TA=c(addMACD(),addSMA(n=10,col = 'blue'),addSMA(n=20,col = 'white')))
+```
+
+
+The plot above is a static candlestick plot demonstrating the price movement of TSLA with Moving Average lines and Moving Average Convergence Divergence indicator (MACD). The plot includes price data from 2019-01 to 2021-12. The Convergence and Divergence of the short term moving average and long term moving average can be visualized by the MACD indicator, which is useful for the execution of Golden Cross method.
 
 Golden Cross Investment Return:
 

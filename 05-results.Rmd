@@ -166,6 +166,11 @@ ggplot(tsla_gain, aes(x=Date, y=growth, fill=color))+
 The plot above is a barchart demonstrating the growth rate of the investment in Tesla using Golden Cross Method. Blue bar represents a positive growth while the black bar represents a decline. Within 17 trading days, the golden cross method achieves 8 growth increases. The size of most positive growth bars exceed the size of the negative ones.
 
 
+```{r, include=FALSE}
+df_stock <- rbind(aapl_gain, cost_gain ,msft_gain, tsla_gain,nvda_gain,gm_gain )
+```
+
+
 ```{r}
 df_stock_value <- na.omit(df_stock)
 ```
@@ -196,11 +201,6 @@ The plot above is a mosaic plot demonstrating the Investment Growth Movement on 
 
 
 Golden Cross Investment Return:
-```{r, include=FALSE}
-df_stock <- rbind(aapl_gain, cost_gain ,msft_gain, tsla_gain,nvda_gain,gm_gain )
-```
-
-
 
 
 ```{r}
@@ -251,7 +251,8 @@ ggplot(df_compond, aes(y= df_compond$compond_rate)) +
   labs(title="Golden Cross Investment Componded Return Rate (All the stock combined)")
 
 ```
-```{r}
+
+```{r, include=FALSE}
 df_compond$compond_rate
 ```
 The plot above is a boxplot demonstrating the Golden Cross Investment Componded Return Rate for all the stocks. The red horizontal dash line represent the average S&P 500 growth from 2019 to 2021. The data of the actual return of S&P 500 over years comes from online Stock Broker. The lowest growth rate is 65% while the highest growth rate is 1826%. The median growth rate is slightly higher than the average growth rate of S&P 500 index funds. Since conventionally the S&P 500 index funds represent the performance of the general stock market, we can see that Golden Cross investment method outperform the general market returns when applied on the selected major stocks. 

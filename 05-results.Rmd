@@ -188,12 +188,12 @@ df_stock_value <- mutate(df_stock_value, color = ifelse(growth > 0, 1, 0))
 ```{r}
 
 
-stockcolors <- c("#60BD68", "#F15854")
+stockcolors <- c("#F15854","#60BD68")
 counts <- df_stock_value %>%
   group_by(sym, Days_Movement) %>%
   summarize(Freq = sum(stats_num))
 
-vcd::mosaic(Days_Movement~sym, direction = c("v", "h"), counts,highlighting_fill=stockcolors,
+vcd::mosaic(Days_Movement_sym, direction = c("v", "h"), counts,highlighting_fill=stockcolors,
             main = "Investment Growth Movement on various trading days")
 
 ```
@@ -204,7 +204,7 @@ The plot above is a mosaic plot demonstrating the Investment Growth Movement on 
 
 ```{r}
 
-cbbPalette <- c("#60BD68", "#F15854")
+cbbPalette <- c("#F15854","#60BD68")
 tb3color <- scale_fill_manual(values=c(cbbPalette))
 bp<- ggplot(df_stock_value, aes(x="", y=growth, fill=Days_Movement))+
 geom_bar(width = 1, stat = "identity")+tb3color

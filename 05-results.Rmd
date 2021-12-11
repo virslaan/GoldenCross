@@ -325,7 +325,7 @@ ggplot(df_stock, aes(x=Date, y=X10000, group=sym, color = sym))+
   xlab('Trading Days')+
   ylab('Investment Returns ($)')+
   labs(title="Golden Cross Investment Returns Over time (Start from $10000)")+
-  scale_x_discrete(guide = guide_axis(n.dodge=1))+
+  scale_x_discrete(guide = guide_axis(n.dodge=2))+
   theme(axis.text.x = element_text(angle = 90, vjust = 0.1, hjust=1))
 
 

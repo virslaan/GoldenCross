@@ -46,7 +46,7 @@ names(COST) <- c("COST.Open"   ,  "COST.High"   ,  "COST.Low"   ,   "COST.Close"
 ```
 
 ```{r}
-lineChart(AAPL1, line.type = 'h', subset = '2019-01::', theme = 'white')
+lineChart(AAPL1, line.type = 'h', subset = '2019-01::', theme = chartTheme('white'), up.col = 'sky blue')
 ```
 
 The plot above is a static cumulative market value plot for Apple. The plot includes price data from 2019-01-01 to 2021-12. At the bottom of the plot, the trading volume of the stock for each recorded trading days are demonstrated in the form of histogram. No clear type of distribution of the volume can be easily identified due to the volatile nature of the stock market. Possible inflex and efflux might be found near the day when Apple announces its quarterly sales report or the day when a new Iphone product goes public. 
@@ -72,7 +72,7 @@ The plot above is a static cumulative market value plot for Microsoft. The plot 
 
 
 ```{r}
-lineChart(COST1, line.type = 'h', subset = '2019-01::', theme = 'white')
+lineChart(COST1, line.type = 'h', subset = '2019-01::',theme='white')
 ```
 
 The plot above is a static cumulative market value plot for Costco. The plot includes price data from 2019-01 to 2021-12. At the bottom of the plot, the trading volume of the stock for each recorded trading days are demonstrated in the form of histogram. No clear type of distribution of the volume can be easily identified due to the volatile nature of the stock market. Possible inflex and efflux might be found near the day when Costco announces its quarterly sales report. Inflation could exert significant influence on the stock prices as the rise of price of commodities would push up the total sales figure of the products.
@@ -315,6 +315,7 @@ ggplot(df_stock, aes(x=Date, y=X10000, group=sym, color = sym))+
   xlab('Trading Days')+
   ylab('Investment Returns ($)')+
   labs(title="Golden Cross Investment Returns Over time (Start from $10000)")+
+  scale_x_discrete(guide = guide_axis(check.overlap = TRUE))+
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 ```
 

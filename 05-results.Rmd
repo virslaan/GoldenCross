@@ -193,7 +193,7 @@ counts <- df_stock_value %>%
   group_by(sym, Days_Movement) %>%
   summarize(Freq = sum(stats_num))
 
-vcd::mosaic(Days_Movement_sym, direction = c("v", "h"), counts,highlighting_fill=stockcolors,
+vcd::mosaic(Days_Movement~sym, direction = c("v", "h"), counts,highlighting_fill=stockcolors,
             main = "Investment Growth Movement on various trading days")
 
 ```

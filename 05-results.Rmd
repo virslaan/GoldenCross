@@ -214,12 +214,6 @@ pie
 The piechart above shows that the Golden Cross method produces a positive growth rates roughly 1/9 of the total number of trading attempts. A trading attempt occur when a pair of adjacent buy and sell signals are produces by Golden Cross method. We can also concluded that the Golden Cross investing method has a 11% achieving positive growth on the selected stocks.
 
 
-
-```{r}
-df_stock['Close']
-```
-
-
 ```{r}
 
 ggplot(df_stock, aes(x = Close, y = sym, fill = sym)) +

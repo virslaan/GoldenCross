@@ -46,40 +46,40 @@ names(COST) <- c("COST.Open"   ,  "COST.High"   ,  "COST.Low"   ,   "COST.Close"
 ```
 
 ```{r}
-lineChart(AAPL1, line.type = 'h', subset = '2019-01::', theme = chartTheme('white'), up.col = 'sky blue')
+lineChart(AAPL1, line.type = 'h', subset = '2019-01::', theme = chartTheme('white'), up.col = '#1AA36D')
 ```
 
 The plot above is a static cumulative market value plot for Apple. The plot includes price data from 2019-01-01 to 2021-12. At the bottom of the plot, the trading volume of the stock for each recorded trading days are demonstrated in the form of histogram. No clear type of distribution of the volume can be easily identified due to the volatile nature of the stock market. Possible inflex and efflux might be found near the day when Apple announces its quarterly sales report or the day when a new Iphone product goes public. 
 
 ```{r}
-lineChart(GM1, line.type = 'h', subset = '2019-01::', theme = 'white')
+lineChart(GM1, line.type = 'h', subset = '2019-01::', theme = chartTheme('white'), up.col = '#1AA36D')
 ```
 
 The plot above is a static cumulative market value plot for General Motor. The plot includes price data from 2019-01 to 2021-12. At the bottom of the plot, the trading volume of the stock for each recorded trading days are demonstrated in the form of histogram. No clear type of distribution of the volume can be easily identified due to the volatile nature of the stock market. Possible inflex and efflux might be found near the day when General Motor announces its quarterly sales report. The inflation might also have an effect on the stock price of GM if the price of the raw material go up.
 
 
 ```{r}
-lineChart(TSLA1, line.type = 'h', subset = '2019-01::', theme = 'white')
+lineChart(TSLA1, line.type = 'h', subset = '2019-01::', theme = chartTheme('white'), up.col = '#1AA36D')
 ```
 
 The plot above is a static cumulative market value plot for Tesla. The plot includes price data from 2019-01 to 2021-12. At the bottom of the plot, the trading volume of the stock for each recorded trading days are demonstrated in the form of histogram. No clear type of distribution of the volume can be easily identified due to the volatile nature of the stock market. Possible inflex and efflux might be found near the day when Tesla announces its quarterly sales report. Price could also change rapidly if a new Tesla model is published. The direction of the price changes might depend on the performance of the Tesla Press Conference. Tweets sent by Elon Musk might also have some effects on the stock prices. 
 
 ```{r}
-lineChart(MSFT1, line.type = 'h', subset = '2019-01::', theme="white")
+lineChart(MSFT1, line.type = 'h', subset = '2019-01::', theme = chartTheme('white'), up.col = 'sky blue')
 ```
 
 The plot above is a static cumulative market value plot for Microsoft. The plot includes price data from 2019-01 to 2021-12. At the bottom of the plot, the trading volume of the stock for each recorded trading days are demonstrated in the form of histogram. No clear type of distribution of the volume can be easily identified due to the volatile nature of the stock market. Possible inflex and efflux might be found near the day when Microsoft announces its quarterly sales report. Insider trading that traced back to high executives in Microsoft and alleged or verified scandal of key officials of the Microsoft could exert negative influence on the stock prices.
 
 
 ```{r}
-lineChart(COST1, line.type = 'h', subset = '2019-01::',theme='white')
+lineChart(COST1, line.type = 'h', subset = '2019-01::',theme = chartTheme('white'), up.col = '#1AA36D')
 ```
 
 The plot above is a static cumulative market value plot for Costco. The plot includes price data from 2019-01 to 2021-12. At the bottom of the plot, the trading volume of the stock for each recorded trading days are demonstrated in the form of histogram. No clear type of distribution of the volume can be easily identified due to the volatile nature of the stock market. Possible inflex and efflux might be found near the day when Costco announces its quarterly sales report. Inflation could exert significant influence on the stock prices as the rise of price of commodities would push up the total sales figure of the products.
 
 
 ```{r}
-lineChart(NVDA1, line.type = 'h', subset = '2019-01::', theme = 'white')
+lineChart(NVDA1, line.type = 'h', subset = '2019-01::', theme = chartTheme('white'), up.col = '#1AA36D')
 ```
 
 The plot above is a static cumulative market value plot for Nvidia. The plot includes price data from 2019-01 to 2021-12. At the bottom of the plot, the trading volume of the stock for each recorded trading days are demonstrated in the form of histogram. No clear type of distribution of the volume can be easily identified due to the volatile nature of the stock market. Possible inflex and efflux might be found near the day when Nvidia announces its quarterly sales report. Tech trends such as Metaverse can positively influence the stock price of Nvidia as more buyers hold bullish views on the Tech company. Increasing demand for computational centers could also influence the stock price of Nvidia.   
@@ -188,12 +188,12 @@ df_stock_value <- mutate(df_stock_value, color = ifelse(growth > 0, 1, 0))
 ```{r}
 
 
-stockcolors <- c("#30e33c", "#e01e1b")
+stockcolors <- c("#1AA36D", "#AC0C2D")
 counts <- df_stock_value %>%
   group_by(sym, Days_Movement) %>%
   summarize(Freq = sum(stats_num))
 
-vcd::mosaic(Days_Movement~sym, direction = c("v", "h"), counts, highlighting_fill = stockcolors,
+vcd::mosaic(Days_Movement~sym, direction = c("v", "h"), counts,highlighting_fill=stockcolors,
             main = "Investment Growth Movement on various trading days")
 
 ```
@@ -218,6 +218,7 @@ df_stock['Close']
 
 
 ```{r}
+
 ggplot(df_stock, aes(x = Close, y = sym, fill = sym)) +
   geom_density_ridges() +
   theme_ridges() + 
@@ -231,6 +232,7 @@ chartSeries(AAPL1,
             type = c("auto", "candlestick"), 
             subset = '2019-01::',
             show.grid = TRUE,
+            theme='white',
             major.ticks='auto', minor.ticks=TRUE,
             multi.col = FALSE,
             TA=c(addMACD(),addSMA(n=10,col = 'blue'),addSMA(n=20,col = 'white')))
@@ -246,6 +248,7 @@ chartSeries(NVDA1,
             type = c("auto", "candlestick"), 
             subset = '2019-01::',
             show.grid = TRUE,
+            theme='white',
             major.ticks='auto', minor.ticks=TRUE,
             multi.col = FALSE,
             TA=c(addMACD(),addSMA(n=10,col = 'blue'),addSMA(n=20,col = 'white')))
@@ -259,6 +262,7 @@ chartSeries(GM1,
             type = c("auto", "candlestick"), 
             subset = '2019-01::',
             show.grid = TRUE,
+            theme='white',
             major.ticks='auto', minor.ticks=TRUE,
             multi.col = FALSE,
             TA=c(addMACD(),addSMA(n=10,col = 'blue'),addSMA(n=20,col = 'white')))
@@ -272,6 +276,7 @@ chartSeries(COST1,
             type = c("auto", "candlestick"), 
             subset = '2019-01::',
             show.grid = TRUE,
+            theme='white',
             major.ticks='auto', minor.ticks=TRUE,
             multi.col = FALSE,
             TA=c(addMACD(),addSMA(n=10,col = 'blue'),addSMA(n=20,col = 'white')))
@@ -286,6 +291,7 @@ chartSeries(MSFT1,
             subset = '2019-01::',
             show.grid = TRUE,
             major.ticks='auto', minor.ticks=TRUE,
+            theme='white',
             multi.col = FALSE,
             TA=c(addMACD(),addSMA(n=10,col = 'blue'),addSMA(n=20,col = 'white')))
 ```
@@ -299,6 +305,7 @@ chartSeries(TSLA1,
             subset = '2019-01::',
             show.grid = TRUE,
             major.ticks='auto', minor.ticks=TRUE,
+            theme='white',
             multi.col = FALSE,
             TA=c(addMACD(),addSMA(n=10,col = 'blue'),addSMA(n=20,col = 'white')))
 ```

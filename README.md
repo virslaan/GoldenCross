@@ -38,7 +38,8 @@ investments or still having underperformance in the general market.
 Thus, our team started thinking if there is an investing strategy that can consistently beat the index
 fund return.
 
-**What Does a Golden Cross Tell You?**
+**What is Golden Cross and how does it work?**
+A golden cross is a chart pattern in which a relatively short-term moving average crosses above a long-term moving average. The golden cross is a bullish breakout pattern formed from a crossover involving a security's short-term moving average (such as the 15-day moving average) breaking above its long-term moving average (such as the 50-day moving average) or resistance level. 
 
 There are three stages to a golden cross. The first stage requires that a downtrend eventually bottoms out as selling is depleted. In the second stage, the short term moving average cross the long term moving average, triggering a breakout and confirmation of trend reversal. The moving averages act as support levels on pullbacks until they crossover back down at which point a death cross may form. The death cross is the opposite of the golden cross as the shorter moving average forms a crossover down through the longer moving average.
 

@@ -40,7 +40,7 @@ fund return.
 
 **What Does a Golden Cross Tell You?**
 
-There are three stages to a golden cross. In the second stage, the shorter moving average forms a crossover up through the larger moving average to trigger a breakout and confirmation of trend reversal. The moving averages act as support levels on pullbacks until they crossover back down at which point a death cross may form. The death cross is the opposite of the golden cross as the shorter moving average forms a crossover down through the longer moving average.
+There are three stages to a golden cross. The first stage requires that a downtrend eventually bottoms out as selling is depleted. In the second stage, the short term moving average cross the long term moving average, triggering a breakout and confirmation of trend reversal. The moving averages act as support levels on pullbacks until they crossover back down at which point a death cross may form. The death cross is the opposite of the golden cross as the shorter moving average forms a crossover down through the longer moving average.
 
 With a bellwether index, the motto «A rising tide lifts all boats» applies when a golden cross forms as the buying resonates throughout the index components and sectors. Day traders commonly use smaller time periods like the 5-period and 15-period moving averages to trade intra-day golden cross breakouts. The larger the chart time frame, the stronger and lasting the golden cross breakout tends to be.
 

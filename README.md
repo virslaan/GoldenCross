@@ -2,17 +2,7 @@
 
 **Introduction**
 
-The world is changing and adapting to cope with the major technological advancements and
-changes but we never realized that ‘Data’, the term that used to describe statistics, would be so
-huge by the first quarter of the 21st Century.
-Superficially from a bird's eye view we may say small governments, corporations, and individuals
-focus more on human impact to the environment while international financial markets have
-responded with innovative products to help manage climate risk and invest in mitigating
-technologies.
-Big firms play a key function in markets, committing capital to bridge timing differences between
-buyers and sellers. With the financial industry debating underlying market structure tenets such as
-tick sizes there has been renewed focus on different types of market making activity.
-
+There is a wide variety of ways to generate profits in stock markets. Almost everyone knows how to make a profit from a trade: buy low, sell high. But the true million-dollar questions here are tricky: how do you know the stock price is low enough for you to buy? how do you know the price is high enough for you to sell? How do you determine the timing of the trade? The perfect solutions to these questions might not even exist or at least not widely known, otherwise, most of the people would become millionaires. However, some strategies take the advantage of the power of statistics and data visualization. These strategies do not necessarily guarantee the profits, but they surely do point the direction to the profits based on statistics and probability. One of these strategies is Golden Cross. But before we get into that, let's review some basics: 
 
 ***Why ‘Stocks’ ? What is ‘Stock Exchange’?***
 A stock or the term share is usually used in representing a company's equity. We may understand
@@ -62,14 +52,11 @@ Are Golden Crosses Reliable Indicators?
 Traders often use a golden cross as confirmation of a trend or signal in combination with other indicators.
 
 
-
-
 ***How are we going to Proceed?***
 1. Data Sources- data has to be historical
 2. Data Collection from valid resources
 3. Using Accurate metrics to define our problem questions
 4. Plotting exploratory data analytics visuals, including CAGR (componded annual growth rate) and bootstrap simulation
-5. Using d3.js / plotly.js for better understanding and deeper insights (if time permits)
 
 
 ***EDAV Final Project Assignment 4***

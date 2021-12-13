@@ -94,15 +94,12 @@ actual and relevant data sources from the Yahoo finance website, itself.
 ***Actual price data: https://finance.yahoo.com/
 Stock lists:
 (Index ETF: S&P 500)
-• Alphabet Inc. :https://finance.yahoo.com/quote/GOOG?p=GOOG&.tsrc=fin-srch
 • Apple: https://finance.yahoo.com/quote/AAPL?p=AAPL&.tsrc=fin-srch
 • Tesla: https://finance.yahoo.com/quote/TSLA?p=TSLA&.tsrc=fin-srch
-• Walmart: https://finance.yahoo.com/quote/WMT?p=WMT&.tsrc=fin-srch
-• Wells Fargo & Company: https://finance.yahoo.com/quote/WFC?p=WFC&.tsrc=fin-srch
-• Paypal Holdings & Inc: https://finance.yahoo.com/quote/PYPL?p=PYPL&.tsrc=fin-srch
-• JPM & Chase: https://finance.yahoo.com/quote/JPM?p=JPM&.tsrc=fin-srch
-• McDonald: https://finance.yahoo.com/quote/MCD?p=MCD&.tsrc=fin-srch
-• PepsiCo: https://finance.yahoo.com/quote/PEP?p=PEP&.tsrc=fin-srch
+• COST: https://finance.yahoo.com/quote/COST?p=WMT&.tsrc=fin-srch
+• MSFT: https://finance.yahoo.com/quote/MSFT?p=WFC&.tsrc=fin-srch
+• GM: https://finance.yahoo.com/quote/GM?p=PYPL&.tsrc=fin-srch
+• NVDA: https://finance.yahoo.com/quote/NVDA&.tsrc=fin-srch
 ****
 
 **EDAV Final Project Assignment Footnotes**

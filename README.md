@@ -92,6 +92,8 @@ Stock lists:
 ****
 
 **EDAV Final Project Assignment Footnotes**
+
+
 Sample Data Set (Just for introductory purpose)
 Open: The starting period of trading on a securities exchange or organized over-the-counter market
 High: The high is the highest price at which a stock traded during a period.

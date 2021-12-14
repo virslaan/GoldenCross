@@ -62,8 +62,7 @@ Traders often use a golden cross as confirmation of a trend or signal in combina
 
 ***Allocation of Duties***
 
-Zhaoyu Wu chose the topic of the project and is responsible for data visualization and text composition. He created the interactive candlestick plots and other static data visualization. Vipul Harihar worked on github script managing, book rendering and text composition. He also contributed to the D3 interactive line plot. Zhirui Yang
-worked on data cleaning and preprocessing.
+Zhaoyu Wu chose the topic of the project and is responsible for data visualization and text composition. He created the interactive candlestick plots and other static data visualization and interpretations. Vipul Harihar worked on github script managing, book rendering and text composition. He also contributed to the D3 interactive line plot. Zhirui Yang worked on data cleaning and preprocessing.
 
 
 

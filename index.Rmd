@@ -59,9 +59,15 @@ Traders often use a golden cross as confirmation of a trend or signal in combina
 • Report writing and visuals finalization 
 
 
-**Allocation of Duties**
+**Duties of Team Members**
 
-Zhaoyu Wu chose the topic of the project and worked on data visualization and text composition. He created interactive candlestick plots and other static data visualization and interpretations. Vipul Harihar worked on GitHub script managing, book rendering, and text composition. He also worked on the D3 interactive plots. Zhirui Yang worked on data cleaning and preprocessing.
+**Vipul H Harihar** (worked in-person) mananged and took care of the entire GitHub script management and book rendering, and text composition of the entire chapters. He worked on the D3 interactive plots and enhanced the data visualizations and color schemes as required by the industry. He included all the resources and marked and wrote the chapters subsequentially in the complete project. He took active efforts to make this project to reach its completion by giving and showing it on time to the respected professor and TAs for suggestions and improvements.
+
+**Zhaoyu Wu** (worked remotely) suggested the project topic and worked on data visualizations and text composition. He created interactive candlestick plots and other static data visualizations using plotly.js and also wrote their interpretations.
+
+**Zhirui Yang** (worked remotely) worked on active data collection, data cleaning and preprocessing which became foundation of the other interactive plots made by the users.
+
+
 
 ##  Goal of our Golden Cross Project: We built a project on these questions:
 

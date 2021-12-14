@@ -1,4 +1,4 @@
-# Whats' Next?
+# Conclusion 
 
 In this project, we looked into the historical price data of several popular stocks with billion-dollar market capitalization and examine the golden cross pattern. Golden Cross is a chart pattern in which a relatively short-term moving average crosses above a long-term moving average. Eventually, we would like to test whether an investment plan based on the Golden Cross indicator can generate profits for the investors and outperform the general stock market returns. 
 
@@ -14,7 +14,7 @@ To test the golden cross investment plan, we assumed an initial investment of $1
 
 On average, the Golden Cross investment plan has around 11% possibility to achieve positive growth for one completed trade. One completed trade is defined as buying the stock when the buy signal is given and then selling it when a sell signal is given. The Golden Cross investment plan reached the highest returns on TSLA since TSLA price is very volatile and the stock experienced several waves of rapid growth in the past. On the contrary, GM provides the lowest returns because the price movement in GM is weak. The volatility of the prices of stocks was illustrated by the ridge plots. In the ridge plot, we can find the multimodal distribution pattern for TSLA, which proves the great volatility in its stock prices over the years. 
 
-## Conclusion
+## Conclusion and What's Next?
 
 The final compounded growth rates were calculated and were compared to the average return rate of S&P 500 index funds. Conventionally, the S&P 500 represents the general stock market returns. The distribution of the compounded growth rates was demonstrated by a boxplot. A red horizontal dash line was drawn to represent the average S&P 500 growth from 2019 to 2021, which is 82.94%. The data of the actual return of S&P 500 over years comes from online Stock Broker. The lowest growth rate is 65% while the highest growth rate is 1826%. The median growth rate is higher than the average growth rate of S&P 500 index funds. 
 
@@ -25,7 +25,11 @@ Based on all the visualizations and the statistics we had, we concluded that the
 
 Dear Reader,
 
-We would like to express my special thanks of gratitude to our Professor Joyce Robbins as well as our helpful TAs **(Bridget Ratcliffe, Ari Blau, Saloni Gupta, Ajay Kumar and Smarth Gupta)** who gave us the golden opportunity to do this wonderful project on the topic**Golden Cross: Golden Cross : An Interactive & Insightful Study on Stock Market"** , which also helped us in doing a lot of Research and we came to know about so many new things, we are really thankful to them from the bottom of our hearts
+We would like to express my special thanks of gratitude to our Professor Joyce Robbins as well as our helpful TAs **(Bridget Ratcliffe, Ari Blau, Saloni Gupta, Ajay Kumar and Smarth Gupta)** who gave us the golden opportunity to do this wonderful project on the topic 
+
+**Golden Cross: Golden Cross : An Interactive & Insightful Study on Stock Market"** ,
+
+This project helped us in unerstanding and doing a lot of Research and we came to know about so many new things, we are really thankful to them from the bottom of our hearts
 Secondly we would also like to thank our parents and friends who helped us a lot in finalizing this project within the limited time frame.
 We will really be grateful if we could make the reader understand and realize the efforts we have put in  so that out project might serve it's purpose.
 
@@ -35,4 +39,5 @@ Thank you so much for this wonderful class and experience!
 Best Regards,
 
 Project Team
+
 ***Vipul H Harihar, Zhaoyu Wu and Zhirui Yang ***

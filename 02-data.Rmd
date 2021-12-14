@@ -82,7 +82,7 @@ trading session in the financial markets when the markets close for the day.
 
 **Volume:** Is the measure of how much of a given financial asset has traded in a period of time.
 
-### Resources: 
+### Resources: We looked for our project !
 
 The external resources used for our project can be found on the following links:
 

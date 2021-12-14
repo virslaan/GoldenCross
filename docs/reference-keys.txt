@@ -7,7 +7,7 @@ goal-of-our-golden-cross-project-we-built-a-project-on-these-questions
 data-sources
 what-is-a-good-data-resource
 edav-final-project-assignment-footnotes-sample-data-set
-resources
+resources-we-looked-for-our-project
 data-cleaning
 what-is-data-cleaning
 what-are-the-benefits-of-data-cleaning
@@ -31,8 +31,8 @@ interactive-component
 d3-visualization
 plotly-and-d3-visulaizations
 the-link-to-the-code-of-d3-part-is-available-here
-whats-next
+conclusion
 data-visualizations-interpretation
 golden-cross-comprehension
-conclusion
+conclusion-and-whats-next
 acknowledgement

@@ -1,6 +1,5 @@
 **EDAV Final Project Assignment**
 
-Final Project Group: Zhaoyu Wu Vipul Harihar, and Zhirui Yang
 
 **Introduction**
 

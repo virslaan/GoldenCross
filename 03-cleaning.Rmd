@@ -1,7 +1,87 @@
-# Data transformation
+# Data Cleaning
 
-## Load packages
+Data cleaning is the process of ensuring that the data is 
 
-Please click this link to see our work more precisely. Thank you :)
-https://github.com/Alex2Yang97/GoldenCross_5702final
+1) Correct
 
+2) Consistent 
+
+3) Usable
+
+Professor Joyce Robbins have taught us. it is not the **'Data quantity but the data quality which is the most important part of any project**. Let us brief down the teachings from her lectures and lay out the process we came through to perform data cleaning in our project.
+
+
+### What is data cleaning?
+
+Data cleaning is the process of ensuring data is correct, consistent and usable, as stated above. We must clean data by identifying and looking up for errors or corruptions, correcting or deleting them, or manually processing data as needed to prevent the same errors from occurring when we use the data for exploratory data analysis or visualizations.
+ 
+Most aspects of data cleaning nowadays are performed through software tools usage, but nevertheless it always have some portion of it which must be done manually. Although as we felt data cleaning is an overwhelming task, it is an essential part of managing the data and making it great enough to be used under study and practise.
+
+### What are the benefits of data cleaning?
+
+There are many benefits to having clean data:
+
+1) It removes majorly all kind of errors and inconsistencies, that are inevitable when multiple sources of data are being pulled and merged into single dataset.
+
+2) Using tools to clean up data usually make everyone in the team more efficient as we were able to quickly get what we need from the data available to us and use it as soon as possible for visualizations and insight generations.
+
+3) It is obvious if we have fewer errors, it would mean happier customers and fewer frustrated employees.
+
+It also allows us to map different data functions, and better understand what our data is intended to do, and learn where the data source lies.
+
+These are the 6 steps we used for cleaning our data which we learnt in the classroom lectures.
+
+### Data cleaning in six steps
+
+The first step before starting data cleaning project of Golden Cross Project was to first look at the big picture. Thus we asked the question ***What are your goals and expectations?*** from ourselves before begining the data cleaning tasks.
+
+To achieve these goals as you might have seen in the previous chapter we had set, the next thing was to plan a data cleanup strategy. Thus the team looked into and came across a great guideline to focus on our top metrics related to stock market data and trends. Some questions that we kept on asking to ourselves during this data cleaning journey were:
+
+What is our highest metric in stock data we looking forward to achieve?
+
+What is our teams' overall goal and what is each member looking to achieve from it?
+
+For these questions we decided with the key stakeholders together and brainstormed and progressed with the strategy.
+
+We got the data from the data sources and digged deeper to create the data cleaning process to be clean and efficient:
+
+**1. Monitor errors**
+
+We kept a record of trends where most of our errors were coming from.This made it a lot easier to identify and fix incorrect or corrupt data. Records were especially important when we were integrating other solutions with our R and Python tools to clean up the data, it was all done to avoid clogging up the work performed by us (the three teammates).
+
+**2. Standardize your process**
+Standardization to the point of entry of every stock we had considered was essential to help reduce the risk of duplication.
+
+**3. Validate data accuracy**
+Once we had cleaned our existing data, we validate the accuracy of our data. We performed the various techniques to clean our data in real-time which the reader can find and formatted sufficiently in the code base. 
+
+Nevertheless we were aware that some tools even use AI or machine learning to better test for accuracy, we tried to perform eeverything from scrtach and thus it was a fun adventure for all of us.
+
+**4. Scrub for duplicate data**
+We came across duplicates which was mostly due to manual error, but to help save time when analyzing data the repeated data was avoided by researching and investing our individual times so that we can analyze raw data in bulk and speed up the process for our insights derivation.
+
+**5. Analyze your data**
+After our data was standardized, validated and scrubbed for duplicates, we created an interactove graph to check it's reliability and correctness. It's link can be found in the end of this chapter.
+
+**6. Communicate with your team**
+The most important thing in the team project development during these processes is to **Communicate**. We had to share the new standardized cleaning process with our team to promote adoption of the new protocol that we had used throughout project. Keeping our team in the loop in each and every step helped us develop and strengthen client segmentation (which was Professor Joyce Robbins in our case) and in more general format could have been used to send more targeted information to customers and prospects.
+
+ 
+
+***Finally we continued to monitor and review data regularly from September to December to catch inconsistencies on weekly basis to get the best data for our project***
+
+### Codework in the Data Cleaning
+
+The reader can check our whole work by visiting the link: https://github.com/virslaan/GoldenCross . In data cleaning (data transformation) chapter, we have used reticulate package in R studio, so we could write python in a .rmd file. When building the book, Python chunk has some problems with compiling. Therefore, we have pushed all my work in this repository.
+
+**03-cleaning.Rmd** is the data cleaning part. index.html is html file by knitting the .rmd file.
+interactive_plot_for_processed_data.html is the interactive plot to show our processed data, which can help us have a better understanding about what the processed data look like and how our strategy works.
+Other files are necessary for this repository, which one can ignore.
+If you want to see the diagram, you can check this link to see a static picture. https://raw.githubusercontent.com/Alex2Yang97/GoldenCross_5702final/main/diagram.png
+
+
+## Interactive Data Visual Used for checking Data Consistency
+
+The interactive plot after cleaning of the data is available on the following link, one can see how is the data distributed and well formatted for our project by interactively looking into the last 10 years all in just one plot
+
+https://virslaan.github.io/GoldenCrossDataCleaningPlot/

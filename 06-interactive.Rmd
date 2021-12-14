@@ -1,5 +1,14 @@
 # Interactive component
 
+### D3 Visualization
+
+We are quite aware of the fact that the d3 component had to be included in the project, it was due to the time constraints and other subject deadlines that we still manage dto make an interactive plot that works somehow and illustrates purpose we are wanting through the interactive line-chart.
+
+We have plotted the line chart for three companies and their respective stock values for the month of October against the time using some sample data of a month to create the graph fun to play with and the client may be able to hover over the lines and understand the trend of moving average by seeing where is the point of intersection where the values of the three companies might collide and he may buy or sell the stock accordingly. It is quite intutive in nature as exploratory data analytics has been used in it and it took us a lot of time to built everything from the scratch. Though the graph is insightful in itself but we wanted the project to be more indulging so we have included the plotly interactive candlestick and line charts as well so as to give the project the complete visualistic feel and interpretation. We hope the reader understands and see the efforts we have put in to make this project a success. Please click  this link to see the interactive plot:
+
+***https://virslaan.github.io/Interactive-d3-Linechart/***
+
+## Plotly and D3 Visulaizations
 Package 'plotly' and 'quantmod' are necessary for interactive Candlestick visualization. 
 
 ```{r, include=FALSE}
@@ -19,7 +28,7 @@ fig_aapl <- AAPL %>% plot_ly(x = AAPL$Date, type="candlestick",
           open = AAPL$Open, close = AAPL$Close,
           high = AAPL$High, low = AAPL$Low, showlegend = FALSE)
 
-fig_aapl <- fig_aapl %>% layout(title = "AAPL Candlestick Chart",
+fig_aapl <- fig_aapl %>% layout(title = "Apple Candlestick Chart",
          xaxis = list(rangeslider = list(visible = F)),  yaxis = list(title = 'Price ($)'))
 
 
@@ -50,7 +59,7 @@ fig_cost <- COST %>% plot_ly(x = AAPL$Date, type="candlestick",
           open = COST$Open, close = COST$Close,
           high = COST$High, low = COST$Low, showlegend = FALSE)
 
-fig_cost <- fig_cost %>% layout(title = "COST Candlestick Chart",
+fig_cost <- fig_cost %>% layout(title = "Costco Candlestick Chart",
          xaxis = list(rangeslider = list(visible = F)),  yaxis = list(title = 'Price ($)'))
 
 
@@ -82,7 +91,7 @@ fig_msft <- MSFT %>% plot_ly(x = MSFT$Date, type="candlestick",
           open = MSFT$Open, close = MSFT$Close,
           high = MSFT$High, low = MSFT$Low, showlegend = FALSE)
 
-fig_msft <- fig_msft %>% layout(title = "MSFT Candlestick Chart",
+fig_msft <- fig_msft %>% layout(title = "Microsoft Candlestick Chart",
          xaxis = list(rangeslider = list(visible = F)),  yaxis = list(title = 'Price ($)'))
 
 
@@ -113,7 +122,7 @@ fig_gm <- GM %>% plot_ly(x = GM$Date, type="candlestick",
           open = GM$Open, close = GM$Close,
           high = GM$High, low = GM$Low, showlegend = FALSE)
 
-fig_gm <- fig_gm %>% layout(title = "GM Candlestick Chart",
+fig_gm <- fig_gm %>% layout(title = "General Motors Candlestick Chart",
          xaxis = list(rangeslider = list(visible = F)),  yaxis = list(title = 'Price ($)'))
 
 
@@ -135,7 +144,7 @@ fig_gm <- fig_gm %>% add_lines(x = ~Date, y = ~Open_20, name = "20 MA",
 fig_gm
 ```
 
-The plot above is an interactive candlestick plot demonstrating the price movement of General Motor. The plot includes price data from 2019-01-30 to 2021-10-21. Aside from the candle sticks, the 10-day moving average and the 20-day moving average are also displayed. These two moving average lines form vital indicators for the Golden Cross Investing method. Notice that during the pandamic lockdown, the price of GM decreased significantly. This drasitic decrease could be related to the shutdown of global production lines and travel restrictions.
+The plot above is an interactive candlestick plot demonstrating the price movement of General Motors. The plot includes price data from 2019-01-30 to 2021-10-21. Aside from the candle sticks, the 10-day moving average and the 20-day moving average are also displayed. These two moving average lines form vital indicators for the Golden Cross Investing method. Notice that during the pandamic lockdown, the price of GM decreased significantly. This drasitic decrease could be related to the shutdown of global production lines and travel restrictions.
 
 ```{r, include=FALSE}
 NVDA <- read.csv(file = 'final_data/NVDA.csv')
@@ -144,7 +153,7 @@ fig_nvda <- NVDA %>% plot_ly(x = NVDA$Date, type="candlestick",
           open = NVDA$Open, close = NVDA$Close,
           high = NVDA$High, low = NVDA$Low, showlegend = FALSE)
 
-fig_nvda <- fig_nvda %>% layout(title = "NVDA Candlestick Chart",
+fig_nvda <- fig_nvda %>% layout(title = "Nvida Candlestick Chart",
          xaxis = list(rangeslider = list(visible = F)),  yaxis = list(title = 'Price ($)'))
 
 
@@ -175,7 +184,7 @@ fig_tsla <- TSLA %>% plot_ly(x = TSLA$Date, type="candlestick",
           open = TSLA$Open, close = TSLA$Close,
           high = TSLA$High, low = TSLA$Low, showlegend = FALSE)
 
-fig_tsla <- fig_tsla%>% layout(title = "TSLA Candlestick Chart",
+fig_tsla <- fig_tsla%>% layout(title = "Tesla Candlestick Chart",
          xaxis = list(rangeslider = list(visible = F)),  yaxis = list(title = 'Price ($)'))
 
 
@@ -205,8 +214,8 @@ library(gridExtra)
 ```
 
 ```{r}
-fig <- subplot(fig_aapl, fig_cost, fig_msft, fig_tsla, fig_nvda, fig_gm,  nrows=2)  %>%
-  layout(title = list(text = "Stock Price with Moving Average"),
+fig <- subplot(fig_aapl, fig_cost, fig_msft, fig_tsla, fig_nvda, fig_gm,  nrows=3,margin = 0.1)  %>%
+  layout(title = list(text = "Stock Price Faceted Charts with Moving Average"),
          plot_bgcolor='#e5ecf6', 
          xaxis = list( 
            zerolinecolor = '#ffff', 
@@ -219,4 +228,16 @@ fig <- subplot(fig_aapl, fig_cost, fig_msft, fig_tsla, fig_nvda, fig_gm,  nrows=
 fig
 ```
 
-The plot above is a combination of all the interactive candlestick plots for six different major stocks traded in the U.S. stock exchange.The plot includes price data from 2019-01-30 to 2021-10-21. 10-day moving average line and 20-day moving average line are plotted on top of each candlestick plot.
+The plot above is a combination of all the interactive candlestick plots for six different major stocks traded in the U.S. stock exchange.The plot includes price data from 2019-01-30 to 2021-10-21. 10-day moving average line and 20-day moving average line are plotted on top of each candlestick plot. The reader must zoom in to the particular sections to understand the trends and read the insights illustrated through the diffrent sections as one zooms into the chart.
+
+**Note**
+
+*We had tried to fix the overlapping of the plots, but as discussed with Professor Joyce Robbins, and due to limitations of time, we couldn't make it look much neater, we tried to fix the height and width but at the moment we are not able to fix it, but it serves the purpose as we zoom on the plots*
+
+```{r setup}
+library(r2d3)
+```
+
+### The Link to the code of d3 part is available here:
+The code to this d3 visual is available on the following link:
+https://github.com/virslaan/Interactive-d3-Linechart/blob/main/index.html

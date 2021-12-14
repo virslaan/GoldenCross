@@ -162,8 +162,8 @@ fig <- plot_ly(
   y = ~death,
   type = "bar"
 )
-fig <- fig %>% layout(title = "The persentage of Missing values in Death",
-         xaxis = list(title = "The persentage of Missing values"),
+fig <- fig %>% layout(title = "The percentage of Missing values in Death",
+         xaxis = list(title = "The percentage of Missing values"),
          yaxis = list(title = "Year"))
 fig
 ```
@@ -288,8 +288,3 @@ missing_plot_function(avengers, per = TRUE)
 
 
 We can see the distribution of missing values by using the function. The result is pretty similar to what we did above. There are only few columns is totally complete and most of missing values are concentrated in "death" and "return" columns. Meanwhile, there is no missing values in some columns including "current", "year", "gender".
-<<<<<<< HEAD
->>>>>>> Stashed changes
->>>>>>> 07b14f4bcc72b559dff4a997ba31f1f64cde01c1
-=======
->>>>>>> 2b7893f12026372d5019bd7e224f9ffdc53594bc

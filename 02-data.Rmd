@@ -1,2 +1,93 @@
 # Data sources
 
+## What is a Good Data Resource?
+Whenever we are working with data, the type to support our claims enhances the validity and impact of whatever you are communicating -- but only if your data comes from a reliable source. 
+Whether we’re communicating to our client, all data starts with a good data source.
+The Components of a Good Data Source
+We have taken the following teachings taught by our Professor Joyce Robbins, for the good data source  
+
+**Originality**
+
+Whether we are working with internal or external data, we need to make sure it is always coming from the primary source. If we run across an interesting data set on Wikipedia or in a magazine article or news media (Economic Times in our project), always try to track down the original data source.
+Without reviewing the primary data ourselves,  we can never know if the methods were flawed, the sample size too small, or the questionnaire biased. And as taught by our professor never cite Wikipedia. 
+The Data Scientist must remember: It's our responsibility to represent the data as close to its original context as possible.
+
+**Understandable**
+
+If we have questions unanswered by your data, our audience/client will, too. The data source should provide sufficient information to get the big picture as well as any appropriate context. 
+For example, let's say your sales metrics show a significant jump in units sold between April and May. But looking at the larger set, we saw that jump came after a general decline. That’s the full story we wanted our data to show without any doubtful areas.
+
+**Currentness**
+
+The world is changing quickly. Oftentimes, data that was produced or collected ten years, five years, or even a year ago is obsolete. Thus our data source needs to always use the most recently published version of the data available. 
+Some data producers, such as the Department of Labor, revise their data on an annual or even monthly basis. And in our case, Yahoo Finance has been very current.  Ideally, we wanted our data to be at least 5 years old, in our goodwill we got much more than that. Our data comprises stock data for at most 10 years and that it has all significant features and currentness that we were interested in getting for our "Golden Cross" Project.
+ 
+**Reliability**
+
+Verifying that the source you choose is relevant, legitimate, and as unbiased as possible is also important. Strong sources include data collected/produced by government agencies, such as the statistics compiled by the U.S. Census Bureau or the Department of Labor. 
+Other top-tier data sources can include industry white papers or academic publications. 
+We need to remember that surveys conducted by polling agencies or think tanks, while usable, will often have a political agenda. Therefore, as with the case of aged data, use discretion. Avoid data that is anecdotal, user-generated, or based on hearsay.
+To judge whether or not a source is appropriate, we asked these questions to ourselves as we learned from the Professor:
+
+a) Who wrote the web page? Does the author have credentials?
+
+b) Is this web page affiliated with a credible organization?
+
+c) When was the website with data last updated?
+
+d) What is the purpose of the organization that is hosting the website?
+
+e) Does the author of the webpage provide a bibliography?
+
+Data Sources- data has to be historical and the data collection from valid resources
+Using Accurate metrics to define our problem questions,Plotting exploratory data analytics visuals, including CAGR (componded annual growth rate) and bootstrap simulation
+Using d3.js / plotly.js for better understanding and deeper insights (if time permits)
+
+
+We have a variety of data sources available to us. But as we are aware of this data being so valuable we couldn’t get it for free thus on digging up deep, we found the Yahoo Finance Website. (The Yahoo! Finance is a media property that is part of the Yahoo! network. It provides financial news, data and commentary including stock quotes, press releases, financial reports, and original content. It also offers some online tools for personal finance management.) We are going to work and cover the industrial giants in the stock market and provide and collate actual and relevant data sources from the Yahoo finance website, itself. 
+
+Actual price data: https://finance.yahoo.com/ 
+
+Stock lists: (Index ETF: S&P 500)
+
+• Alphabet Inc. :https://finance.yahoo.com/quote/GOOG?p=GOOG&.tsrc=fin-srch
+
+• Apple: https://finance.yahoo.com/quote/AAPL?p=AAPL&.tsrc=fin-srch 
+
+• Tesla: https://finance.yahoo.com/quote/TSLA?p=TSLA&.tsrc=fin-srch 
+
+• Walmart: https://finance.yahoo.com/quote/WMT?p=WMT&.tsrc=fin-srch 
+
+• Wells Fargo & Company: https://finance.yahoo.com/quote/WFC?p=WFC&.tsrc=fin-srch 
+
+• Paypal Holdings & Inc: https://finance.yahoo.com/quote/PYPL?p=PYPL&.tsrc=fin-srch 
+
+• JPM & Chase: https://finance.yahoo.com/quote/JPM?p=JPM&.tsrc=fin-srch 
+
+• McDonald: https://finance.yahoo.com/quote/MCD?p=MCD&.tsrc=fin-srch 
+
+• PepsiCo: https://finance.yahoo.com/quote/PEP?p=PEP&.tsrc=fin-srch
+
+### EDAV Final Project Assignment Footnotes Sample Data Set
+(Understanding the Stock Data we have used ) 
+
+**Open:** The starting period of trading on a securities exchange or organized over-the-counter market
+
+**High:** The high is the highest price at which a stock traded during a period. 
+
+**Low:** The low is the lowest price of the period. Close: The close is a reference to the end of a 
+trading session in the financial markets when the markets close for the day. 
+
+**Adj Close:** The adjusted closing price amends a stock's closing price to reflect that stock's value after accounting for any corporate actions. 
+
+**Volume:** Is the measure of how much of a given financial asset has traded in a period of time.
+
+### Resources: 
+
+The external resources used for our project can be found on the following links:
+
+https://www.docdroid.net/5gM68EW/barclays-us-equity-derivatives-strategy-impact-of-retailoptions-trading-pdf 
+
+https://www.investopedia.com/articles/investing/082614/how-stock-market-works.asp
+
+https://www.investopedia.com/terms/i/iv.asp

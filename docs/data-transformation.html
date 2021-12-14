@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Data transformation | Golden Cross</title>
-  <meta name="description" content="Chapter 3 Data transformation | Golden Cross" />
+  <title> Data transformation  | Golden Cross</title>
+  <meta name="description" content=" Data transformation  | Golden Cross" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Data transformation | Golden Cross" />
+  <meta property="og:title" content=" Data transformation  | Golden Cross" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Data transformation | Golden Cross" />
+  <meta name="twitter:title" content=" Data transformation  | Golden Cross" />
   
   
   
@@ -24,14 +24,14 @@
 <meta name="author" content="Vipul H Harihar, Zhaoyu Wu, Zhirui Yang" />
 
 
-<meta name="date" content="2021-12-11" />
+<meta name="date" content="2021-12-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="data-sources.html"/>
+<link rel="prev" href="data-transformation.html"/>
 <link rel="next" href="missing-values.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -53,13 +53,6 @@
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
-<script src="libs/plotly-binding-4.10.0/plotly.js"></script>
-<script src="libs/typedarray-0.1/typedarray.min.js"></script>
-<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
-<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
-<link href="libs/plotly-htmlwidgets-css-2.5.1/plotly-htmlwidgets.css" rel="stylesheet" />
-<script src="libs/plotly-main-2.5.1/plotly-latest.min.js"></script>
 
 
 
@@ -82,15 +75,22 @@
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#final-project-group-vipul-harihar-zhaoyu-wu-and-zhirui-yang-introduction"><i class="fa fa-check"></i><b>1.1</b> Final Project Group: Vipul Harihar, Zhaoyu Wu and Zhirui Yang Introduction</a></li>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#project-team-vipul-harihar-zhaoyu-wu-and-zhirui-yang-introduction"><i class="fa fa-check"></i><b>1.1</b> Project Team : Vipul Harihar, Zhaoyu Wu and Zhirui Yang Introduction</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#why-stocks-what-is-stock-exchange"><i class="fa fa-check"></i><b>1.2</b> Why ‘Stocks’ ? What is ‘Stock Exchange’?</a></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#what-does-a-golden-cross-tell-you"><i class="fa fa-check"></i><b>1.3</b> What Does a Golden Cross Tell You?</a></li>
-<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#current-questions-under-study-we-are-primarily-focusing-on-these-questions-mentioned-below"><i class="fa fa-check"></i><b>1.4</b> Current Questions under study: We are primarily focusing on these questions mentioned below:</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#golden-cross-whats-that"><i class="fa fa-check"></i><b>1.3</b> Golden Cross, What’s That?</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#the-difference-between-a-golden-cross-and-a-death-cross"><i class="fa fa-check"></i><b>1.3.1</b> The Difference Between a Golden Cross and a Death Cross</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="data-sources.html"><a href="data-sources.html"><i class="fa fa-check"></i><b>2</b> Data sources</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="data-sources.html"><a href="data-sources.html"><i class="fa fa-check"></i><b>2</b> Data sources</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="data-sources.html"><a href="data-sources.html#what-is-a-good-data-resource"><i class="fa fa-check"></i><b>2.1</b> What is a Good Data Resource?</a></li>
+<li class="chapter" data-level="2.2" data-path="data-sources.html"><a href="data-sources.html#goal-of-our-golden-cross-project-we-built-a-project-on-these-questions"><i class="fa fa-check"></i><b>2.2</b> Goal of our Golden Cross Project: We built a project on these questions:</a></li>
+</ul></li>
 <li class="chapter" data-level="3" data-path="data-transformation.html"><a href="data-transformation.html"><i class="fa fa-check"></i><b>3</b> Data transformation</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="data-transformation.html"><a href="data-transformation.html#load-packages"><i class="fa fa-check"></i><b>3.1</b> Load packages</a></li>
+<li class="chapter" data-level="3.1" data-path="data-transformation.html"><a href="data-transformation.html#links-to-important-data-cleaning-processes."><i class="fa fa-check"></i><b>3.1</b> Links to Important Data Cleaning Processes.</a></li>
+<li class="chapter" data-level="3.2" data-path="data-transformation.html"><a href="data-transformation.html#data-cleaning-code-and-processes"><i class="fa fa-check"></i><b>3.2</b> Data Cleaning Code and Processes</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>4</b> Missing values</a>
 <ul>
@@ -121,12 +121,608 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="data-transformation" class="section level1" number="3">
-<h1><span class="header-section-number">Chapter 3</span> Data transformation</h1>
-<div id="load-packages" class="section level2" number="3.1">
-<h2><span class="header-section-number">3.1</span> Load packages</h2>
-<p>Please click this link to see our work more precisely. Thank you :)
-<a href="https://github.com/Alex2Yang97/GoldenCross_5702final" class="uri">https://github.com/Alex2Yang97/GoldenCross_5702final</a></p>
+<div id="data-transformation" class="section level1">
+<h1>
+Data transformation
+</h1>
+<div id="load-packages" class="section level2">
+<h2>
+Load packages
+</h2>
+<p>
+All the data we need to process in this project is financial data, so it’s mainly time series data. It is well known that “pandas” of Python are very powerful for processing such data types and “yfinance” of Python is to access the data, which we want to use for this data transformation chapter. However, most of the project files are .rmd and mainly in the R language. Therefore, we want to call Python from the R studio. The “reticulate” package provides an R interface to Python modules, classes, and functions.
+</p>
+<p>
+Install the “reticulate” package as follows:
+</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBpbnN0YWxsLnBhY2thZ2VzKCdyZXRpY3VsYXRlJylcbmBgYCJ9 -->
+<pre class="r"><code># install.packages(&#39;reticulate&#39;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>
+We can check the version of python, which is Python 3.6.13 in this project. And according to the message, we can enter ‘exit’ or ‘quit’ to exit the REPL and return to R. In the following code chunk, we will hide this message by “include = FALSE” to better show the results.
+</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgcHl0aG9uXG5yZXRpY3VsYXRlOjpyZXBsX3B5dGhvbigpXG5gYGAifQ== -->
+<pre class="python"><code>reticulate::repl_python()</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUHl0aG9uIDMuNi4xMyAoL1VzZXJzL3pyeWFuZy9MaWJyYXJ5L3ItbWluaWNvbmRhL2VudnMvci1yZXRpY3VsYXRlL2Jpbi9weXRob24pXG5SZXRpY3VsYXRlIDEuMjIgUkVQTCAtLSBBIFB5dGhvbiBpbnRlcnByZXRlciBpbiBSLlxuRW50ZXIgJ2V4aXQnIG9yICdxdWl0JyB0byBleGl0IHRoZSBSRVBMIGFuZCByZXR1cm4gdG8gUi5cbiJ9 -->
+<pre><code>Python 3.6.13 (/Users/zryang/Library/r-miniconda/envs/r-reticulate/bin/python)
+Reticulate 1.22 REPL -- A Python interpreter in R.
+Enter &#39;exit&#39; or &#39;quit&#39; to exit the REPL and return to R.</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgcHl0aG9uXG5yZXRpY3VsYXRlOjpweV9jb25maWcoKVxuYGBgIn0= -->
+<pre class="python"><code>reticulate::py_config()</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiU3ludGF4RXJyb3I6IGludmFsaWQgc3ludGF4ICg8c3RyaW5nPiwgbGluZSAxKVxuIn0= -->
+<pre><code>SyntaxError: invalid syntax (&lt;string&gt;, line 1)</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>
+“yfinance” is a popular open source library developed by Ran Aroussi as a means to access the financial data available on Yahoo Finance. Yahoo Finance offers an excellent range of market data on stocks.
+</p>
+<p>
+We could install “yfinance” by conda as follows:
+</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyByZXRpY3VsYXRlOjpweV9pbnN0YWxsKCd5ZmluYW5jZScpXG5gYGAifQ== -->
+<pre class="r"><code># reticulate::py_install(&#39;yfinance&#39;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="data-grab" class="section level2">
+<h2>
+Data Grab
+</h2>
+<p>
+stock_name is the code of stock. in this project, we will use MSFT, TSLA, COST, APPL, GM, NVDA. start_date is the beginning of our back testing, and end_date is the end of the back testing.
+</p>
+<!-- rnb-text-end -->
+<!-- rnb-text-begin -->
+<p>
+Use “Ticker” module of “yfinance” to get the information of the stock we select. “msft” is a object saving all the information of the stock.
+</p>
+<!-- rnb-text-end -->
+<!-- rnb-text-begin -->
+<p>
+In this project, we only use the price of stocks. Therefore, we use “history” method to get price information from “msft” object.
+</p>
+<!-- rnb-text-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="data-processing" class="section level2">
+<h2>
+Data Processing
+</h2>
+<p>
+We will calculate the moving average (MA) with windows of different length to get trading signals, which is golden cross.
+</p>
+<!-- rnb-text-end -->
+<!-- rnb-text-begin -->
+<p>
+We will follow the below steps: - Set short_window and long_window to calculate MA, then get buy and sell signals. - Use open prices to calculate, so when the signal appears, we can buy the stocks by using the intraday open price. The difference between the price when the signal appears and the price when we buy it is negligible. (If we use close prices to calculate signal, then we should consider the after-hour trading, which may cause the big difference of the close price of today and the open price of tomorrow.) - Buy signal is 1, and sell signal is -1 - Hold stocks, position is 1, and 0 otherwise.
+</p>
+<!-- rnb-text-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgcHl0aG9uXG5yZXRpY3VsYXRlOjpyZXBsX3B5dGhvbigpXG5gYGAifQ== -->
+<pre class="python"><code>reticulate::repl_python()</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUHl0aG9uIDMuNi4xMyAoL1VzZXJzL3pyeWFuZy9MaWJyYXJ5L3ItbWluaWNvbmRhL2VudnMvci1yZXRpY3VsYXRlL2Jpbi9weXRob24pXG5SZXRpY3VsYXRlIDEuMjIgUkVQTCAtLSBBIFB5dGhvbiBpbnRlcnByZXRlciBpbiBSLlxuRW50ZXIgJ2V4aXQnIG9yICdxdWl0JyB0byBleGl0IHRoZSBSRVBMIGFuZCByZXR1cm4gdG8gUi5cbiJ9 -->
+<pre><code>Python 3.6.13 (/Users/zryang/Library/r-miniconda/envs/r-reticulate/bin/python)
+Reticulate 1.22 REPL -- A Python interpreter in R.
+Enter &#39;exit&#39; or &#39;quit&#39; to exit the REPL and return to R.</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgcHl0aG9uXG5kYXRhLmhlYWQoMjApXG5gYGAifQ== -->
+<pre class="python"><code>data.head(20)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICAgICAgICAgT3BlbiAgICAgICAgSGlnaCAgLi4uICBwb3NpdGlvbl8xMF8yMCAgc2lnbmFsXzEwXzIwXG5EYXRlICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAuLi4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbjIwMTktMDEtMzAgIDEwMS4xNjY5MDkgIDEwMi44Njg4MTMgIC4uLiAgICAgICAgICAgICAgIDEgICAgICAgICAgIDAuMFxuMjAxOS0wMS0zMSAgMTAwLjM3Mzk3NCAgMTAxLjc0NzEwMyAgLi4uICAgICAgICAgICAgICAgMSAgICAgICAgICAgMC4wXG4yMDE5LTAyLTAxICAxMDAuMzU0NjIwICAxMDAuNjY0MDU4ICAuLi4gICAgICAgICAgICAgICAxICAgICAgICAgICAwLjBcbjIwMTktMDItMDQgICA5OS40NzQ2NjQgIDEwMi4zMDc5NTYgIC4uLiAgICAgICAgICAgICAgIDEgICAgICAgICAgIDAuMFxuMjAxOS0wMi0wNSAgMTAyLjU1OTM2MCAgMTAzLjcyOTQyMSAgLi4uICAgICAgICAgICAgICAgMSAgICAgICAgICAgMC4wXG4yMDE5LTAyLTA2ICAxMDMuNDY4MzM1ICAxMDMuNDY4MzM1ICAuLi4gICAgICAgICAgICAgICAxICAgICAgICAgICAwLjBcbjIwMTktMDItMDcgIDEwMS43MTgxMDIgIDEwMi4xMDQ4OTQgIC4uLiAgICAgICAgICAgICAgIDEgICAgICAgICAgIDAuMFxuMjAxOS0wMi0wOCAgMTAwLjk0NDQ4NSAgMTAyLjI4ODYwNiAgLi4uICAgICAgICAgICAgICAgMCAgICAgICAgICAtMS4wXG4yMDE5LTAyLTExICAxMDIuNjk0NzQ5ICAxMDMuMDYyMjExICAuLi4gICAgICAgICAgICAgICAwICAgICAgICAgICAwLjBcbjIwMTktMDItMTIgIDEwMi42MzY3MzEgIDEwMy42MDM3MjUgIC4uLiAgICAgICAgICAgICAgIDAgICAgICAgICAgIDAuMFxuMjAxOS0wMi0xMyAgMTAzLjk1MTgzNSAgMTA0LjIyMjU5MiAgLi4uICAgICAgICAgICAgICAgMCAgICAgICAgICAgMC4wXG4yMDE5LTAyLTE0ICAxMDIuODAxMTM2ICAxMDMuNzQ4NzkzICAuLi4gICAgICAgICAgICAgICAwICAgICAgICAgICAwLjBcbjIwMTktMDItMTUgIDEwNC4zNDgzMjEgIDEwNC43MjU0NDggIC4uLiAgICAgICAgICAgICAgIDEgICAgICAgICAgIDEuMFxuMjAxOS0wMi0xOSAgMTA0LjIzMjI5MiAgMTA1LjA3MzU3OSAgLi4uICAgICAgICAgICAgICAgMSAgICAgICAgICAgMC4wXG4yMDE5LTAyLTIwICAxMDQuNzQ1NDA1ICAxMDQuODIzMDk3ICAuLi4gICAgICAgICAgICAgICAxICAgICAgICAgICAwLjBcbjIwMTktMDItMjEgIDEwMy44MTMxMzMgIDEwNi4zMTg2MzQgIC4uLiAgICAgICAgICAgICAgIDEgICAgICAgICAgIDAuMFxuMjAxOS0wMi0yMiAgMTA2Ljg3MjE1NSAgMTA3Ljk4ODk0MSAgLi4uICAgICAgICAgICAgICAgMSAgICAgICAgICAgMC4wXG4yMDE5LTAyLTI1ICAxMDguNTMyNzk1ICAxMDguOTQwNjY2ICAuLi4gICAgICAgICAgICAgICAxICAgICAgICAgICAwLjBcbjIwMTktMDItMjYgIDEwOC4wNDcyMjEgIDEwOS45NzAwNDIgIC4uLiAgICAgICAgICAgICAgIDEgICAgICAgICAgIDAuMFxuMjAxOS0wMi0yNyAgMTA4LjQ2NDgwNCAgMTA5LjExNTQ1NSAgLi4uICAgICAgICAgICAgICAgMSAgICAgICAgICAgMC4wXG5cblsyMCByb3dzIHggMTcgY29sdW1uc11cbiJ9 -->
+<pre><code>                  Open        High  ...  position_10_20  signal_10_20
+Date                                ...                              
+2019-01-30  101.166909  102.868813  ...               1           0.0
+2019-01-31  100.373974  101.747103  ...               1           0.0
+2019-02-01  100.354620  100.664058  ...               1           0.0
+2019-02-04   99.474664  102.307956  ...               1           0.0
+2019-02-05  102.559360  103.729421  ...               1           0.0
+2019-02-06  103.468335  103.468335  ...               1           0.0
+2019-02-07  101.718102  102.104894  ...               1           0.0
+2019-02-08  100.944485  102.288606  ...               0          -1.0
+2019-02-11  102.694749  103.062211  ...               0           0.0
+2019-02-12  102.636731  103.603725  ...               0           0.0
+2019-02-13  103.951835  104.222592  ...               0           0.0
+2019-02-14  102.801136  103.748793  ...               0           0.0
+2019-02-15  104.348321  104.725448  ...               1           1.0
+2019-02-19  104.232292  105.073579  ...               1           0.0
+2019-02-20  104.745405  104.823097  ...               1           0.0
+2019-02-21  103.813133  106.318634  ...               1           0.0
+2019-02-22  106.872155  107.988941  ...               1           0.0
+2019-02-25  108.532795  108.940666  ...               1           0.0
+2019-02-26  108.047221  109.970042  ...               1           0.0
+2019-02-27  108.464804  109.115455  ...               1           0.0
+
+[20 rows x 17 columns]</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>
+Save the processed data.
+</p>
+<!-- rnb-text-end -->
+<!-- rnb-text-begin -->
+<p>
+We want to see how much profit we can make for every selling. Therefore, we only select the days with trade signals. And we calculate the growth by $(OpenPrice_{sell} - OpenPrice_{buy}) / OpenPrice_{buy} $
+</p>
+<!-- rnb-text-end -->
+<!-- rnb-text-begin -->
+<p>
+At the beginning of our trading, if the MA of shorter window is below the MA of longer window, then we will hold our money so the position is 0. Therefore, the first trading signal will be “sell” (-1). Then we can get every profit we make by selling the stock. However, if the MA of shorter window is above the MA of longer window, then we will hold the stock at the beginning. That is to say, we will buy the stock by using all our money. Therefore, when calculate the profit, we need to fill the the first item of “Open_last_time” columns by the first open price of data.
+</p>
+<!-- rnb-text-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgcHl0aG9uXG5yZXRpY3VsYXRlOjpyZXBsX3B5dGhvbigpXG5gYGAifQ== -->
+<pre class="python"><code>reticulate::repl_python()</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUHl0aG9uIDMuNi4xMyAoL1VzZXJzL3pyeWFuZy9MaWJyYXJ5L3ItbWluaWNvbmRhL2VudnMvci1yZXRpY3VsYXRlL2Jpbi9weXRob24pXG5SZXRpY3VsYXRlIDEuMjIgUkVQTCAtLSBBIFB5dGhvbiBpbnRlcnByZXRlciBpbiBSLlxuRW50ZXIgJ2V4aXQnIG9yICdxdWl0JyB0byBleGl0IHRoZSBSRVBMIGFuZCByZXR1cm4gdG8gUi5cbiJ9 -->
+<pre><code>Python 3.6.13 (/Users/zryang/Library/r-miniconda/envs/r-reticulate/bin/python)
+Reticulate 1.22 REPL -- A Python interpreter in R.
+Enter &#39;exit&#39; or &#39;quit&#39; to exit the REPL and return to R.</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgcHl0aG9uXG5zZWxsX3NpZ25hbF9ncm93dGhbW1wiT3Blbl9sYXN0X3RpbWVcIiwgXCJPcGVuXCIsIFwiT3Blbl8xMFwiLCBcIk9wZW5fMjBcIiwgXCJzaWduYWxfMTBfMjBcIiwgXCJncm93dGhcIl1dXG5gYGAifQ== -->
+<pre class="python"><code>sell_signal_growth[[&quot;Open_last_time&quot;, &quot;Open&quot;, &quot;Open_10&quot;, &quot;Open_20&quot;, &quot;signal_10_20&quot;, &quot;growth&quot;]]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICAgT3Blbl9sYXN0X3RpbWUgICAgICAgIE9wZW4gIC4uLiAgc2lnbmFsXzEwXzIwICAgIGdyb3d0aFxuRGF0ZSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIC4uLiAgICAgICAgICAgICAgICAgICAgICAgIFxuMjAxOS0wMi0wOCAgICAgICAgICAgICBOYU4gIDEwMC45NDQ0ODUgIC4uLiAgICAgICAgICAtMS4wIC0wLjAwMjE5OVxuMjAxOS0wNS0xNSAgICAgIDEwNC4zNDgzMjEgIDEyMS4xMTg1MDggIC4uLiAgICAgICAgICAtMS4wICAwLjE2MDcxNFxuMjAxOS0wNi0wNSAgICAgIDEyMy43Njk3NDMgIDEyMS43OTEwNjIgIC4uLiAgICAgICAgICAtMS4wIC0wLjAxNTk4N1xuMjAxOS0wOC0wNyAgICAgIDEzMC40OTUzMTMgIDEzMC40MDc1NTggIC4uLiAgICAgICAgICAtMS4wIC0wLjAwMDY3MlxuMjAxOS0xMC0wOCAgICAgIDEzMi4wMTU0MTYgIDEzNC4wNTkzNTMgIC4uLiAgICAgICAgICAtMS4wICAwLjAxNTQ4M1xuMjAyMC0wMi0yNyAgICAgIDEzNy44NDQwNDYgIDE2MC43MDIzMzAgIC4uLiAgICAgICAgICAtMS4wICAwLjE2NTgyN1xuMjAyMC0wNy0yNyAgICAgIDE0OS40MjYwNDUgIDE5OC43OTI5OTIgIC4uLiAgICAgICAgICAtMS4wICAwLjMzMDM3N1xuMjAyMC0wOS0xNSAgICAgIDIxMS45OTUyMTIgIDIwNi4xNDc3NjkgIC4uLiAgICAgICAgICAtMS4wIC0wLjAyNzU4M1xuMjAyMC0xMC0zMCAgICAgIDIwNC45NjA4NTggIDIwMS4yODE0MDQgIC4uLiAgICAgICAgICAtMS4wIC0wLjAxNzk1MlxuMjAyMC0xMS0zMCAgICAgIDIxNC44NDE5NTUgIDIxMi4zMjAyNjEgIC4uLiAgICAgICAgICAtMS4wIC0wLjAxMTczN1xuMjAyMS0wMS0xMyAgICAgIDIxMi4xOTEzNTAgIDIxMi4yNDA5NTAgIC4uLiAgICAgICAgICAtMS4wICAwLjAwMDIzNFxuMjAyMS0wMi0yNSAgICAgIDIyOS45MzI2NDggIDIzMC42ODA4ODAgIC4uLiAgICAgICAgICAtMS4wICAwLjAwMzI1NFxuMjAyMS0wNS0wNSAgICAgIDIzMS4xNTc5OTAgIDI0Ny41NTg1MTMgIC4uLiAgICAgICAgICAtMS4wICAwLjA3MDk0OVxuMjAyMS0wOS0xNiAgICAgIDI1MC4wNjI4OTcgIDMwMy4yMDUzMDMgIC4uLiAgICAgICAgICAtMS4wICAwLjIxMjUxNlxuXG5bMTQgcm93cyB4IDYgY29sdW1uc11cbiJ9 -->
+<pre><code>            Open_last_time        Open  ...  signal_10_20    growth
+Date                                    ...                        
+2019-02-08             NaN  100.944485  ...          -1.0 -0.002199
+2019-05-15      104.348321  121.118508  ...          -1.0  0.160714
+2019-06-05      123.769743  121.791062  ...          -1.0 -0.015987
+2019-08-07      130.495313  130.407558  ...          -1.0 -0.000672
+2019-10-08      132.015416  134.059353  ...          -1.0  0.015483
+2020-02-27      137.844046  160.702330  ...          -1.0  0.165827
+2020-07-27      149.426045  198.792992  ...          -1.0  0.330377
+2020-09-15      211.995212  206.147769  ...          -1.0 -0.027583
+2020-10-30      204.960858  201.281404  ...          -1.0 -0.017952
+2020-11-30      214.841955  212.320261  ...          -1.0 -0.011737
+2021-01-13      212.191350  212.240950  ...          -1.0  0.000234
+2021-02-25      229.932648  230.680880  ...          -1.0  0.003254
+2021-05-05      231.157990  247.558513  ...          -1.0  0.070949
+2021-09-16      250.062897  303.205303  ...          -1.0  0.212516
+
+[14 rows x 6 columns]</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>
+Save the profit data.
+</p>
+<!-- rnb-text-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="data-visualization" class="section level2">
+<h2>
+Data Visualization
+</h2>
+<p>
+We can have a interactive plot to show the processed data, which can help us have a better understanding about what the processed data look like and how our strategy works. Run the codes below, we will have a html website showing the interactive plot.
+</p>
+<!-- rnb-text-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgcHl0aG9uXG5yZXRpY3VsYXRlOjpyZXBsX3B5dGhvbigpXG5gYGAifQ== -->
+<pre class="python"><code>reticulate::repl_python()</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUHl0aG9uIDMuNi4xMyAoL1VzZXJzL3pyeWFuZy9MaWJyYXJ5L3ItbWluaWNvbmRhL2VudnMvci1yZXRpY3VsYXRlL2Jpbi9weXRob24pXG5SZXRpY3VsYXRlIDEuMjIgUkVQTCAtLSBBIFB5dGhvbiBpbnRlcnByZXRlciBpbiBSLlxuRW50ZXIgJ2V4aXQnIG9yICdxdWl0JyB0byBleGl0IHRoZSBSRVBMIGFuZCByZXR1cm4gdG8gUi5cbiJ9 -->
+<pre><code>Python 3.6.13 (/Users/zryang/Library/r-miniconda/envs/r-reticulate/bin/python)
+Reticulate 1.22 REPL -- A Python interpreter in R.
+Enter &#39;exit&#39; or &#39;quit&#39; to exit the REPL and return to R.</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgcHl0aG9uXG5maWcgPSBtYWtlX3N1YnBsb3RzKHNwZWNzPVtbe1wic2Vjb25kYXJ5X3lcIjogVHJ1ZX1dXSlcbmZpZy5hZGRfdHJhY2UoXG4gICAgZ28uU2NhdHRlcih4PWRhdGEuaW5kZXgsIHk9ZGF0YVtcIk9wZW5cIl0sIG5hbWU9XCJPcGVuXCIsIG1vZGU9J2xpbmVzJylcbilcbmBgYCJ9 -->
+<pre class="python"><code>fig = make_subplots(specs=[[{&quot;secondary_y&quot;: True}]])
+fig.add_trace(
+    go.Scatter(x=data.index, y=data[&quot;Open&quot;], name=&quot;Open&quot;, mode=&#39;lines&#39;)
+)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiRmlndXJlKHtcbiAgICAnZGF0YSc6IFt7J21vZGUnOiAnbGluZXMnLFxuICAgICAgICAgICAgICAnbmFtZSc6ICdPcGVuJyxcbiAgICAgICAgICAgICAgJ3R5cGUnOiAnc2NhdHRlcicsXG4gICAgICAgICAgICAgICd4JzogYXJyYXkoW2RhdGV0aW1lLmRhdGV0aW1lKDIwMTksIDEsIDMwLCAwLCAwKSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0ZXRpbWUuZGF0ZXRpbWUoMjAxOSwgMSwgMzEsIDAsIDApLFxuICAgICAgICAgICAgICAgICAgICAgICAgICBkYXRldGltZS5kYXRldGltZSgyMDE5LCAyLCAxLCAwLCAwKSwgLi4uLFxuICAgICAgICAgICAgICAgICAgICAgICAgICBkYXRldGltZS5kYXRldGltZSgyMDIxLCAxMCwgMjcsIDAsIDApLFxuICAgICAgICAgICAgICAgICAgICAgICAgICBkYXRldGltZS5kYXRldGltZSgyMDIxLCAxMCwgMjgsIDAsIDApLFxuICAgICAgICAgICAgICAgICAgICAgICAgICBkYXRldGltZS5kYXRldGltZSgyMDIxLCAxMCwgMjksIDAsIDApXSwgZHR5cGU9b2JqZWN0KSxcbiAgICAgICAgICAgICAgJ3knOiBhcnJheShbMTAxLjE2NjkwODU0LCAxMDAuMzczOTczNjYsIDEwMC4zNTQ2MjA1ICwgLi4uLCAzMTUuNDIyOTQ0NDIsXG4gICAgICAgICAgICAgICAgICAgICAgICAgIDMyMy43Mzc3MDc0NiwgMzIzLjUzODA5MTk4XSl9XSxcbiAgICAnbGF5b3V0Jzogeyd0ZW1wbGF0ZSc6ICcuLi4nLFxuICAgICAgICAgICAgICAgJ3hheGlzJzogeydhbmNob3InOiAneScsICdkb21haW4nOiBbMC4wLCAwLjk0XX0sXG4gICAgICAgICAgICAgICAneWF4aXMnOiB7J2FuY2hvcic6ICd4JywgJ2RvbWFpbic6IFswLjAsIDEuMF19LFxuICAgICAgICAgICAgICAgJ3lheGlzMic6IHsnYW5jaG9yJzogJ3gnLCAnb3ZlcmxheWluZyc6ICd5JywgJ3NpZGUnOiAncmlnaHQnfX1cbn0pXG4ifQ== -->
+<pre><code>Figure({
+    &#39;data&#39;: [{&#39;mode&#39;: &#39;lines&#39;,
+              &#39;name&#39;: &#39;Open&#39;,
+              &#39;type&#39;: &#39;scatter&#39;,
+              &#39;x&#39;: array([datetime.datetime(2019, 1, 30, 0, 0),
+                          datetime.datetime(2019, 1, 31, 0, 0),
+                          datetime.datetime(2019, 2, 1, 0, 0), ...,
+                          datetime.datetime(2021, 10, 27, 0, 0),
+                          datetime.datetime(2021, 10, 28, 0, 0),
+                          datetime.datetime(2021, 10, 29, 0, 0)], dtype=object),
+              &#39;y&#39;: array([101.16690854, 100.37397366, 100.3546205 , ..., 315.42294442,
+                          323.73770746, 323.53809198])}],
+    &#39;layout&#39;: {&#39;template&#39;: &#39;...&#39;,
+               &#39;xaxis&#39;: {&#39;anchor&#39;: &#39;y&#39;, &#39;domain&#39;: [0.0, 0.94]},
+               &#39;yaxis&#39;: {&#39;anchor&#39;: &#39;x&#39;, &#39;domain&#39;: [0.0, 1.0]},
+               &#39;yaxis2&#39;: {&#39;anchor&#39;: &#39;x&#39;, &#39;overlaying&#39;: &#39;y&#39;, &#39;side&#39;: &#39;right&#39;}}
+})</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgcHl0aG9uXG5maWcuYWRkX3RyYWNlKFxuICAgIGdvLlNjYXR0ZXIoeD1kYXRhLmluZGV4LCB5PWRhdGFbZlwiT3Blbl97c2hvcnRfd2luZG93fVwiXSwgbmFtZT1mXCJPcGVuX3tzaG9ydF93aW5kb3d9XCIsIG1vZGU9J2xpbmVzJylcbilcbmBgYCJ9 -->
+<pre class="python"><code>fig.add_trace(
+    go.Scatter(x=data.index, y=data[f&quot;Open_{short_window}&quot;], name=f&quot;Open_{short_window}&quot;, mode=&#39;lines&#39;)
+)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiRmlndXJlKHtcbiAgICAnZGF0YSc6IFt7J21vZGUnOiAnbGluZXMnLFxuICAgICAgICAgICAgICAnbmFtZSc6ICdPcGVuJyxcbiAgICAgICAgICAgICAgJ3R5cGUnOiAnc2NhdHRlcicsXG4gICAgICAgICAgICAgICd4JzogYXJyYXkoW2RhdGV0aW1lLmRhdGV0aW1lKDIwMTksIDEsIDMwLCAwLCAwKSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0ZXRpbWUuZGF0ZXRpbWUoMjAxOSwgMSwgMzEsIDAsIDApLFxuICAgICAgICAgICAgICAgICAgICAgICAgICBkYXRldGltZS5kYXRldGltZSgyMDE5LCAyLCAxLCAwLCAwKSwgLi4uLFxuICAgICAgICAgICAgICAgICAgICAgICAgICBkYXRldGltZS5kYXRldGltZSgyMDIxLCAxMCwgMjcsIDAsIDApLFxuICAgICAgICAgICAgICAgICAgICAgICAgICBkYXRldGltZS5kYXRldGltZSgyMDIxLCAxMCwgMjgsIDAsIDApLFxuICAgICAgICAgICAgICAgICAgICAgICAgICBkYXRldGltZS5kYXRldGltZSgyMDIxLCAxMCwgMjksIDAsIDApXSwgZHR5cGU9b2JqZWN0KSxcbiAgICAgICAgICAgICAgJ3knOiBhcnJheShbMTAxLjE2NjkwODU0LCAxMDAuMzczOTczNjYsIDEwMC4zNTQ2MjA1ICwgLi4uLCAzMTUuNDIyOTQ0NDIsXG4gICAgICAgICAgICAgICAgICAgICAgICAgIDMyMy43Mzc3MDc0NiwgMzIzLjUzODA5MTk4XSl9LFxuICAgICAgICAgICAgIHsnbW9kZSc6ICdsaW5lcycsXG4gICAgICAgICAgICAgICduYW1lJzogJ09wZW5fMTAnLFxuICAgICAgICAgICAgICAndHlwZSc6ICdzY2F0dGVyJyxcbiAgICAgICAgICAgICAgJ3gnOiBhcnJheShbZGF0ZXRpbWUuZGF0ZXRpbWUoMjAxOSwgMSwgMzAsIDAsIDApLFxuICAgICAgICAgICAgICAgICAgICAgICAgICBkYXRldGltZS5kYXRldGltZSgyMDE5LCAxLCAzMSwgMCwgMCksXG4gICAgICAgICAgICAgICAgICAgICAgICAgIGRhdGV0aW1lLmRhdGV0aW1lKDIwMTksIDIsIDEsIDAsIDApLCAuLi4sXG4gICAgICAgICAgICAgICAgICAgICAgICAgIGRhdGV0aW1lLmRhdGV0aW1lKDIwMjEsIDEwLCAyNywgMCwgMCksXG4gICAgICAgICAgICAgICAgICAgICAgICAgIGRhdGV0aW1lLmRhdGV0aW1lKDIwMjEsIDEwLCAyOCwgMCwgMCksXG4gICAgICAgICAgICAgICAgICAgICAgICAgIGRhdGV0aW1lLmRhdGV0aW1lKDIwMjEsIDEwLCAyOSwgMCwgMCldLCBkdHlwZT1vYmplY3QpLFxuICAgICAgICAgICAgICAneSc6IGFycmF5KFsxMDIuNTQ0ODcxMzMsIDEwMi40MDM2OTExOCwgMTAyLjI4NTcxNzQ2LCAuLi4sIDMwNy4wOTkxNjE1NyxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgMzA5LjYwNjU3NTM5LCAzMTEuNzgxNTk3NjVdKX1dLFxuICAgICdsYXlvdXQnOiB7J3RlbXBsYXRlJzogJy4uLicsXG4gICAgICAgICAgICAgICAneGF4aXMnOiB7J2FuY2hvcic6ICd5JywgJ2RvbWFpbic6IFswLjAsIDAuOTRdfSxcbiAgICAgICAgICAgICAgICd5YXhpcyc6IHsnYW5jaG9yJzogJ3gnLCAnZG9tYWluJzogWzAuMCwgMS4wXX0sXG4gICAgICAgICAgICAgICAneWF4aXMyJzogeydhbmNob3InOiAneCcsICdvdmVybGF5aW5nJzogJ3knLCAnc2lkZSc6ICdyaWdodCd9fVxufSlcbiJ9 -->
+<pre><code>Figure({
+    &#39;data&#39;: [{&#39;mode&#39;: &#39;lines&#39;,
+              &#39;name&#39;: &#39;Open&#39;,
+              &#39;type&#39;: &#39;scatter&#39;,
+              &#39;x&#39;: array([datetime.datetime(2019, 1, 30, 0, 0),
+                          datetime.datetime(2019, 1, 31, 0, 0),
+                          datetime.datetime(2019, 2, 1, 0, 0), ...,
+                          datetime.datetime(2021, 10, 27, 0, 0),
+                          datetime.datetime(2021, 10, 28, 0, 0),
+                          datetime.datetime(2021, 10, 29, 0, 0)], dtype=object),
+              &#39;y&#39;: array([101.16690854, 100.37397366, 100.3546205 , ..., 315.42294442,
+                          323.73770746, 323.53809198])},
+             {&#39;mode&#39;: &#39;lines&#39;,
+              &#39;name&#39;: &#39;Open_10&#39;,
+              &#39;type&#39;: &#39;scatter&#39;,
+              &#39;x&#39;: array([datetime.datetime(2019, 1, 30, 0, 0),
+                          datetime.datetime(2019, 1, 31, 0, 0),
+                          datetime.datetime(2019, 2, 1, 0, 0), ...,
+                          datetime.datetime(2021, 10, 27, 0, 0),
+                          datetime.datetime(2021, 10, 28, 0, 0),
+                          datetime.datetime(2021, 10, 29, 0, 0)], dtype=object),
+              &#39;y&#39;: array([102.54487133, 102.40369118, 102.28571746, ..., 307.09916157,
+                          309.60657539, 311.78159765])}],
+    &#39;layout&#39;: {&#39;template&#39;: &#39;...&#39;,
+               &#39;xaxis&#39;: {&#39;anchor&#39;: &#39;y&#39;, &#39;domain&#39;: [0.0, 0.94]},
+               &#39;yaxis&#39;: {&#39;anchor&#39;: &#39;x&#39;, &#39;domain&#39;: [0.0, 1.0]},
+               &#39;yaxis2&#39;: {&#39;anchor&#39;: &#39;x&#39;, &#39;overlaying&#39;: &#39;y&#39;, &#39;side&#39;: &#39;right&#39;}}
+})</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgcHl0aG9uXG5maWcuYWRkX3RyYWNlKFxuICAgIGdvLlNjYXR0ZXIoeD1kYXRhLmluZGV4LCB5PWRhdGFbZlwiT3Blbl97bG9uZ193aW5kb3d9XCJdLCBuYW1lPWZcIk9wZW5fe2xvbmdfd2luZG93fVwiLCBtb2RlPSdsaW5lcycpXG4pXG5gYGAifQ== -->
+<pre class="python"><code>fig.add_trace(
+    go.Scatter(x=data.index, y=data[f&quot;Open_{long_window}&quot;], name=f&quot;Open_{long_window}&quot;, mode=&#39;lines&#39;)
+)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiRmlndXJlKHtcbiAgICAnZGF0YSc6IFt7J21vZGUnOiAnbGluZXMnLFxuICAgICAgICAgICAgICAnbmFtZSc6ICdPcGVuJyxcbiAgICAgICAgICAgICAgJ3R5cGUnOiAnc2NhdHRlcicsXG4gICAgICAgICAgICAgICd4JzogYXJyYXkoW2RhdGV0aW1lLmRhdGV0aW1lKDIwMTksIDEsIDMwLCAwLCAwKSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0ZXRpbWUuZGF0ZXRpbWUoMjAxOSwgMSwgMzEsIDAsIDApLFxuICAgICAgICAgICAgICAgICAgICAgICAgICBkYXRldGltZS5kYXRldGltZSgyMDE5LCAyLCAxLCAwLCAwKSwgLi4uLFxuICAgICAgICAgICAgICAgICAgICAgICAgICBkYXRldGltZS5kYXRldGltZSgyMDIxLCAxMCwgMjcsIDAsIDApLFxuICAgICAgICAgICAgICAgICAgICAgICAgICBkYXRldGltZS5kYXRldGltZSgyMDIxLCAxMCwgMjgsIDAsIDApLFxuICAgICAgICAgICAgICAgICAgICAgICAgICBkYXRldGltZS5kYXRldGltZSgyMDIxLCAxMCwgMjksIDAsIDApXSwgZHR5cGU9b2JqZWN0KSxcbiAgICAgICAgICAgICAgJ3knOiBhcnJheShbMTAxLjE2NjkwODU0LCAxMDAuMzczOTczNjYsIDEwMC4zNTQ2MjA1ICwgLi4uLCAzMTUuNDIyOTQ0NDIsXG4gICAgICAgICAgICAgICAgICAgICAgICAgIDMyMy43Mzc3MDc0NiwgMzIzLjUzODA5MTk4XSl9LFxuICAgICAgICAgICAgIHsnbW9kZSc6ICdsaW5lcycsXG4gICAgICAgICAgICAgICduYW1lJzogJ09wZW5fMTAnLFxuICAgICAgICAgICAgICAndHlwZSc6ICdzY2F0dGVyJyxcbiAgICAgICAgICAgICAgJ3gnOiBhcnJheShbZGF0ZXRpbWUuZGF0ZXRpbWUoMjAxOSwgMSwgMzAsIDAsIDApLFxuICAgICAgICAgICAgICAgICAgICAgICAgICBkYXRldGltZS5kYXRldGltZSgyMDE5LCAxLCAzMSwgMCwgMCksXG4gICAgICAgICAgICAgICAgICAgICAgICAgIGRhdGV0aW1lLmRhdGV0aW1lKDIwMTksIDIsIDEsIDAsIDApLCAuLi4sXG4gICAgICAgICAgICAgICAgICAgICAgICAgIGRhdGV0aW1lLmRhdGV0aW1lKDIwMjEsIDEwLCAyNywgMCwgMCksXG4gICAgICAgICAgICAgICAgICAgICAgICAgIGRhdGV0aW1lLmRhdGV0aW1lKDIwMjEsIDEwLCAyOCwgMCwgMCksXG4gICAgICAgICAgICAgICAgICAgICAgICAgIGRhdGV0aW1lLmRhdGV0aW1lKDIwMjEsIDEwLCAyOSwgMCwgMCldLCBkdHlwZT1vYmplY3QpLFxuICAgICAgICAgICAgICAneSc6IGFycmF5KFsxMDIuNTQ0ODcxMzMsIDEwMi40MDM2OTExOCwgMTAyLjI4NTcxNzQ2LCAuLi4sIDMwNy4wOTkxNjE1NyxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgMzA5LjYwNjU3NTM5LCAzMTEuNzgxNTk3NjVdKX0sXG4gICAgICAgICAgICAgeydtb2RlJzogJ2xpbmVzJyxcbiAgICAgICAgICAgICAgJ25hbWUnOiAnT3Blbl8yMCcsXG4gICAgICAgICAgICAgICd0eXBlJzogJ3NjYXR0ZXInLFxuICAgICAgICAgICAgICAneCc6IGFycmF5KFtkYXRldGltZS5kYXRldGltZSgyMDE5LCAxLCAzMCwgMCwgMCksXG4gICAgICAgICAgICAgICAgICAgICAgICAgIGRhdGV0aW1lLmRhdGV0aW1lKDIwMTksIDEsIDMxLCAwLCAwKSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0ZXRpbWUuZGF0ZXRpbWUoMjAxOSwgMiwgMSwgMCwgMCksIC4uLixcbiAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0ZXRpbWUuZGF0ZXRpbWUoMjAyMSwgMTAsIDI3LCAwLCAwKSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0ZXRpbWUuZGF0ZXRpbWUoMjAyMSwgMTAsIDI4LCAwLCAwKSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0ZXRpbWUuZGF0ZXRpbWUoMjAyMSwgMTAsIDI5LCAwLCAwKV0sIGR0eXBlPW9iamVjdCksXG4gICAgICAgICAgICAgICd5JzogYXJyYXkoWzEwMC41Mjc3MjM5ICwgMTAwLjczMzIwOTk3LCAxMDAuOTExMTM2MDEsIC4uLiwgMjk4LjI2NjMxNzk5LFxuICAgICAgICAgICAgICAgICAgICAgICAgICAzMDAuMTkzNzkxNDMsIDMwMi4yOTA0NTY2M10pfV0sXG4gICAgJ2xheW91dCc6IHsndGVtcGxhdGUnOiAnLi4uJyxcbiAgICAgICAgICAgICAgICd4YXhpcyc6IHsnYW5jaG9yJzogJ3knLCAnZG9tYWluJzogWzAuMCwgMC45NF19LFxuICAgICAgICAgICAgICAgJ3lheGlzJzogeydhbmNob3InOiAneCcsICdkb21haW4nOiBbMC4wLCAxLjBdfSxcbiAgICAgICAgICAgICAgICd5YXhpczInOiB7J2FuY2hvcic6ICd4JywgJ292ZXJsYXlpbmcnOiAneScsICdzaWRlJzogJ3JpZ2h0J319XG59KVxuIn0= -->
+<pre><code>Figure({
+    &#39;data&#39;: [{&#39;mode&#39;: &#39;lines&#39;,
+              &#39;name&#39;: &#39;Open&#39;,
+              &#39;type&#39;: &#39;scatter&#39;,
+              &#39;x&#39;: array([datetime.datetime(2019, 1, 30, 0, 0),
+                          datetime.datetime(2019, 1, 31, 0, 0),
+                          datetime.datetime(2019, 2, 1, 0, 0), ...,
+                          datetime.datetime(2021, 10, 27, 0, 0),
+                          datetime.datetime(2021, 10, 28, 0, 0),
+                          datetime.datetime(2021, 10, 29, 0, 0)], dtype=object),
+              &#39;y&#39;: array([101.16690854, 100.37397366, 100.3546205 , ..., 315.42294442,
+                          323.73770746, 323.53809198])},
+             {&#39;mode&#39;: &#39;lines&#39;,
+              &#39;name&#39;: &#39;Open_10&#39;,
+              &#39;type&#39;: &#39;scatter&#39;,
+              &#39;x&#39;: array([datetime.datetime(2019, 1, 30, 0, 0),
+                          datetime.datetime(2019, 1, 31, 0, 0),
+                          datetime.datetime(2019, 2, 1, 0, 0), ...,
+                          datetime.datetime(2021, 10, 27, 0, 0),
+                          datetime.datetime(2021, 10, 28, 0, 0),
+                          datetime.datetime(2021, 10, 29, 0, 0)], dtype=object),
+              &#39;y&#39;: array([102.54487133, 102.40369118, 102.28571746, ..., 307.09916157,
+                          309.60657539, 311.78159765])},
+             {&#39;mode&#39;: &#39;lines&#39;,
+              &#39;name&#39;: &#39;Open_20&#39;,
+              &#39;type&#39;: &#39;scatter&#39;,
+              &#39;x&#39;: array([datetime.datetime(2019, 1, 30, 0, 0),
+                          datetime.datetime(2019, 1, 31, 0, 0),
+                          datetime.datetime(2019, 2, 1, 0, 0), ...,
+                          datetime.datetime(2021, 10, 27, 0, 0),
+                          datetime.datetime(2021, 10, 28, 0, 0),
+                          datetime.datetime(2021, 10, 29, 0, 0)], dtype=object),
+              &#39;y&#39;: array([100.5277239 , 100.73320997, 100.91113601, ..., 298.26631799,
+                          300.19379143, 302.29045663])}],
+    &#39;layout&#39;: {&#39;template&#39;: &#39;...&#39;,
+               &#39;xaxis&#39;: {&#39;anchor&#39;: &#39;y&#39;, &#39;domain&#39;: [0.0, 0.94]},
+               &#39;yaxis&#39;: {&#39;anchor&#39;: &#39;x&#39;, &#39;domain&#39;: [0.0, 1.0]},
+               &#39;yaxis2&#39;: {&#39;anchor&#39;: &#39;x&#39;, &#39;overlaying&#39;: &#39;y&#39;, &#39;side&#39;: &#39;right&#39;}}
+})</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgcHl0aG9uXG5maWcuYWRkX3RyYWNlKFxuICAgIGdvLlNjYXR0ZXIoeD1kYXRhLmluZGV4LCB5PWRhdGFbZlwicG9zaXRpb25fe3Nob3J0X3dpbmRvd31fe2xvbmdfd2luZG93fVwiXSwgbmFtZT1mXCJwb3NpdGlvbl97c2hvcnRfd2luZG93fV97bG9uZ193aW5kb3d9XCIsIG1vZGU9J2xpbmVzJyksXG4gICAgc2Vjb25kYXJ5X3k9VHJ1ZVxuKVxuYGBgIn0= -->
+<pre class="python"><code>fig.add_trace(
+    go.Scatter(x=data.index, y=data[f&quot;position_{short_window}_{long_window}&quot;], name=f&quot;position_{short_window}_{long_window}&quot;, mode=&#39;lines&#39;),
+    secondary_y=True
+)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiRmlndXJlKHtcbiAgICAnZGF0YSc6IFt7J21vZGUnOiAnbGluZXMnLFxuICAgICAgICAgICAgICAnbmFtZSc6ICdPcGVuJyxcbiAgICAgICAgICAgICAgJ3R5cGUnOiAnc2NhdHRlcicsXG4gICAgICAgICAgICAgICd4JzogYXJyYXkoW2RhdGV0aW1lLmRhdGV0aW1lKDIwMTksIDEsIDMwLCAwLCAwKSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0ZXRpbWUuZGF0ZXRpbWUoMjAxOSwgMSwgMzEsIDAsIDApLFxuICAgICAgICAgICAgICAgICAgICAgICAgICBkYXRldGltZS5kYXRldGltZSgyMDE5LCAyLCAxLCAwLCAwKSwgLi4uLFxuICAgICAgICAgICAgICAgICAgICAgICAgICBkYXRldGltZS5kYXRldGltZSgyMDIxLCAxMCwgMjcsIDAsIDApLFxuICAgICAgICAgICAgICAgICAgICAgICAgICBkYXRldGltZS5kYXRldGltZSgyMDIxLCAxMCwgMjgsIDAsIDApLFxuICAgICAgICAgICAgICAgICAgICAgICAgICBkYXRldGltZS5kYXRldGltZSgyMDIxLCAxMCwgMjksIDAsIDApXSwgZHR5cGU9b2JqZWN0KSxcbiAgICAgICAgICAgICAgJ3knOiBhcnJheShbMTAxLjE2NjkwODU0LCAxMDAuMzczOTczNjYsIDEwMC4zNTQ2MjA1ICwgLi4uLCAzMTUuNDIyOTQ0NDIsXG4gICAgICAgICAgICAgICAgICAgICAgICAgIDMyMy43Mzc3MDc0NiwgMzIzLjUzODA5MTk4XSl9LFxuICAgICAgICAgICAgIHsnbW9kZSc6ICdsaW5lcycsXG4gICAgICAgICAgICAgICduYW1lJzogJ09wZW5fMTAnLFxuICAgICAgICAgICAgICAndHlwZSc6ICdzY2F0dGVyJyxcbiAgICAgICAgICAgICAgJ3gnOiBhcnJheShbZGF0ZXRpbWUuZGF0ZXRpbWUoMjAxOSwgMSwgMzAsIDAsIDApLFxuICAgICAgICAgICAgICAgICAgICAgICAgICBkYXRldGltZS5kYXRldGltZSgyMDE5LCAxLCAzMSwgMCwgMCksXG4gICAgICAgICAgICAgICAgICAgICAgICAgIGRhdGV0aW1lLmRhdGV0aW1lKDIwMTksIDIsIDEsIDAsIDApLCAuLi4sXG4gICAgICAgICAgICAgICAgICAgICAgICAgIGRhdGV0aW1lLmRhdGV0aW1lKDIwMjEsIDEwLCAyNywgMCwgMCksXG4gICAgICAgICAgICAgICAgICAgICAgICAgIGRhdGV0aW1lLmRhdGV0aW1lKDIwMjEsIDEwLCAyOCwgMCwgMCksXG4gICAgICAgICAgICAgICAgICAgICAgICAgIGRhdGV0aW1lLmRhdGV0aW1lKDIwMjEsIDEwLCAyOSwgMCwgMCldLCBkdHlwZT1vYmplY3QpLFxuICAgICAgICAgICAgICAneSc6IGFycmF5KFsxMDIuNTQ0ODcxMzMsIDEwMi40MDM2OTExOCwgMTAyLjI4NTcxNzQ2LCAuLi4sIDMwNy4wOTkxNjE1NyxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgMzA5LjYwNjU3NTM5LCAzMTEuNzgxNTk3NjVdKX0sXG4gICAgICAgICAgICAgeydtb2RlJzogJ2xpbmVzJyxcbiAgICAgICAgICAgICAgJ25hbWUnOiAnT3Blbl8yMCcsXG4gICAgICAgICAgICAgICd0eXBlJzogJ3NjYXR0ZXInLFxuICAgICAgICAgICAgICAneCc6IGFycmF5KFtkYXRldGltZS5kYXRldGltZSgyMDE5LCAxLCAzMCwgMCwgMCksXG4gICAgICAgICAgICAgICAgICAgICAgICAgIGRhdGV0aW1lLmRhdGV0aW1lKDIwMTksIDEsIDMxLCAwLCAwKSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0ZXRpbWUuZGF0ZXRpbWUoMjAxOSwgMiwgMSwgMCwgMCksIC4uLixcbiAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0ZXRpbWUuZGF0ZXRpbWUoMjAyMSwgMTAsIDI3LCAwLCAwKSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0ZXRpbWUuZGF0ZXRpbWUoMjAyMSwgMTAsIDI4LCAwLCAwKSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0ZXRpbWUuZGF0ZXRpbWUoMjAyMSwgMTAsIDI5LCAwLCAwKV0sIGR0eXBlPW9iamVjdCksXG4gICAgICAgICAgICAgICd5JzogYXJyYXkoWzEwMC41Mjc3MjM5ICwgMTAwLjczMzIwOTk3LCAxMDAuOTExMTM2MDEsIC4uLiwgMjk4LjI2NjMxNzk5LFxuICAgICAgICAgICAgICAgICAgICAgICAgICAzMDAuMTkzNzkxNDMsIDMwMi4yOTA0NTY2M10pfSxcbiAgICAgICAgICAgICB7J21vZGUnOiAnbGluZXMnLFxuICAgICAgICAgICAgICAnbmFtZSc6ICdwb3NpdGlvbl8xMF8yMCcsXG4gICAgICAgICAgICAgICd0eXBlJzogJ3NjYXR0ZXInLFxuICAgICAgICAgICAgICAneCc6IGFycmF5KFtkYXRldGltZS5kYXRldGltZSgyMDE5LCAxLCAzMCwgMCwgMCksXG4gICAgICAgICAgICAgICAgICAgICAgICAgIGRhdGV0aW1lLmRhdGV0aW1lKDIwMTksIDEsIDMxLCAwLCAwKSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0ZXRpbWUuZGF0ZXRpbWUoMjAxOSwgMiwgMSwgMCwgMCksIC4uLixcbiAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0ZXRpbWUuZGF0ZXRpbWUoMjAyMSwgMTAsIDI3LCAwLCAwKSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0ZXRpbWUuZGF0ZXRpbWUoMjAyMSwgMTAsIDI4LCAwLCAwKSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0ZXRpbWUuZGF0ZXRpbWUoMjAyMSwgMTAsIDI5LCAwLCAwKV0sIGR0eXBlPW9iamVjdCksXG4gICAgICAgICAgICAgICd4YXhpcyc6ICd4JyxcbiAgICAgICAgICAgICAgJ3knOiBhcnJheShbMSwgMSwgMSwgLi4uLCAxLCAxLCAxXSksXG4gICAgICAgICAgICAgICd5YXhpcyc6ICd5Mid9XSxcbiAgICAnbGF5b3V0Jzogeyd0ZW1wbGF0ZSc6ICcuLi4nLFxuICAgICAgICAgICAgICAgJ3hheGlzJzogeydhbmNob3InOiAneScsICdkb21haW4nOiBbMC4wLCAwLjk0XX0sXG4gICAgICAgICAgICAgICAneWF4aXMnOiB7J2FuY2hvcic6ICd4JywgJ2RvbWFpbic6IFswLjAsIDEuMF19LFxuICAgICAgICAgICAgICAgJ3lheGlzMic6IHsnYW5jaG9yJzogJ3gnLCAnb3ZlcmxheWluZyc6ICd5JywgJ3NpZGUnOiAncmlnaHQnfX1cbn0pXG4ifQ== -->
+<pre><code>Figure({
+    &#39;data&#39;: [{&#39;mode&#39;: &#39;lines&#39;,
+              &#39;name&#39;: &#39;Open&#39;,
+              &#39;type&#39;: &#39;scatter&#39;,
+              &#39;x&#39;: array([datetime.datetime(2019, 1, 30, 0, 0),
+                          datetime.datetime(2019, 1, 31, 0, 0),
+                          datetime.datetime(2019, 2, 1, 0, 0), ...,
+                          datetime.datetime(2021, 10, 27, 0, 0),
+                          datetime.datetime(2021, 10, 28, 0, 0),
+                          datetime.datetime(2021, 10, 29, 0, 0)], dtype=object),
+              &#39;y&#39;: array([101.16690854, 100.37397366, 100.3546205 , ..., 315.42294442,
+                          323.73770746, 323.53809198])},
+             {&#39;mode&#39;: &#39;lines&#39;,
+              &#39;name&#39;: &#39;Open_10&#39;,
+              &#39;type&#39;: &#39;scatter&#39;,
+              &#39;x&#39;: array([datetime.datetime(2019, 1, 30, 0, 0),
+                          datetime.datetime(2019, 1, 31, 0, 0),
+                          datetime.datetime(2019, 2, 1, 0, 0), ...,
+                          datetime.datetime(2021, 10, 27, 0, 0),
+                          datetime.datetime(2021, 10, 28, 0, 0),
+                          datetime.datetime(2021, 10, 29, 0, 0)], dtype=object),
+              &#39;y&#39;: array([102.54487133, 102.40369118, 102.28571746, ..., 307.09916157,
+                          309.60657539, 311.78159765])},
+             {&#39;mode&#39;: &#39;lines&#39;,
+              &#39;name&#39;: &#39;Open_20&#39;,
+              &#39;type&#39;: &#39;scatter&#39;,
+              &#39;x&#39;: array([datetime.datetime(2019, 1, 30, 0, 0),
+                          datetime.datetime(2019, 1, 31, 0, 0),
+                          datetime.datetime(2019, 2, 1, 0, 0), ...,
+                          datetime.datetime(2021, 10, 27, 0, 0),
+                          datetime.datetime(2021, 10, 28, 0, 0),
+                          datetime.datetime(2021, 10, 29, 0, 0)], dtype=object),
+              &#39;y&#39;: array([100.5277239 , 100.73320997, 100.91113601, ..., 298.26631799,
+                          300.19379143, 302.29045663])},
+             {&#39;mode&#39;: &#39;lines&#39;,
+              &#39;name&#39;: &#39;position_10_20&#39;,
+              &#39;type&#39;: &#39;scatter&#39;,
+              &#39;x&#39;: array([datetime.datetime(2019, 1, 30, 0, 0),
+                          datetime.datetime(2019, 1, 31, 0, 0),
+                          datetime.datetime(2019, 2, 1, 0, 0), ...,
+                          datetime.datetime(2021, 10, 27, 0, 0),
+                          datetime.datetime(2021, 10, 28, 0, 0),
+                          datetime.datetime(2021, 10, 29, 0, 0)], dtype=object),
+              &#39;xaxis&#39;: &#39;x&#39;,
+              &#39;y&#39;: array([1, 1, 1, ..., 1, 1, 1]),
+              &#39;yaxis&#39;: &#39;y2&#39;}],
+    &#39;layout&#39;: {&#39;template&#39;: &#39;...&#39;,
+               &#39;xaxis&#39;: {&#39;anchor&#39;: &#39;y&#39;, &#39;domain&#39;: [0.0, 0.94]},
+               &#39;yaxis&#39;: {&#39;anchor&#39;: &#39;x&#39;, &#39;domain&#39;: [0.0, 1.0]},
+               &#39;yaxis2&#39;: {&#39;anchor&#39;: &#39;x&#39;, &#39;overlaying&#39;: &#39;y&#39;, &#39;side&#39;: &#39;right&#39;}}
+})</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgcHl0aG9uXG5maWcudXBkYXRlX3lheGVzKHRpdGxlX3RleHQ9XCI8Yj5kYXRlPFwvYj5cIilcbmBgYCJ9 -->
+<pre class="python"><code>fig.update_yaxes(title_text=&quot;&lt;b&gt;date&lt;/b&gt;&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiRmlndXJlKHtcbiAgICAnZGF0YSc6IFt7J21vZGUnOiAnbGluZXMnLFxuICAgICAgICAgICAgICAnbmFtZSc6ICdPcGVuJyxcbiAgICAgICAgICAgICAgJ3R5cGUnOiAnc2NhdHRlcicsXG4gICAgICAgICAgICAgICd4JzogYXJyYXkoW2RhdGV0aW1lLmRhdGV0aW1lKDIwMTksIDEsIDMwLCAwLCAwKSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0ZXRpbWUuZGF0ZXRpbWUoMjAxOSwgMSwgMzEsIDAsIDApLFxuICAgICAgICAgICAgICAgICAgICAgICAgICBkYXRldGltZS5kYXRldGltZSgyMDE5LCAyLCAxLCAwLCAwKSwgLi4uLFxuICAgICAgICAgICAgICAgICAgICAgICAgICBkYXRldGltZS5kYXRldGltZSgyMDIxLCAxMCwgMjcsIDAsIDApLFxuICAgICAgICAgICAgICAgICAgICAgICAgICBkYXRldGltZS5kYXRldGltZSgyMDIxLCAxMCwgMjgsIDAsIDApLFxuICAgICAgICAgICAgICAgICAgICAgICAgICBkYXRldGltZS5kYXRldGltZSgyMDIxLCAxMCwgMjksIDAsIDApXSwgZHR5cGU9b2JqZWN0KSxcbiAgICAgICAgICAgICAgJ3knOiBhcnJheShbMTAxLjE2NjkwODU0LCAxMDAuMzczOTczNjYsIDEwMC4zNTQ2MjA1ICwgLi4uLCAzMTUuNDIyOTQ0NDIsXG4gICAgICAgICAgICAgICAgICAgICAgICAgIDMyMy43Mzc3MDc0NiwgMzIzLjUzODA5MTk4XSl9LFxuICAgICAgICAgICAgIHsnbW9kZSc6ICdsaW5lcycsXG4gICAgICAgICAgICAgICduYW1lJzogJ09wZW5fMTAnLFxuICAgICAgICAgICAgICAndHlwZSc6ICdzY2F0dGVyJyxcbiAgICAgICAgICAgICAgJ3gnOiBhcnJheShbZGF0ZXRpbWUuZGF0ZXRpbWUoMjAxOSwgMSwgMzAsIDAsIDApLFxuICAgICAgICAgICAgICAgICAgICAgICAgICBkYXRldGltZS5kYXRldGltZSgyMDE5LCAxLCAzMSwgMCwgMCksXG4gICAgICAgICAgICAgICAgICAgICAgICAgIGRhdGV0aW1lLmRhdGV0aW1lKDIwMTksIDIsIDEsIDAsIDApLCAuLi4sXG4gICAgICAgICAgICAgICAgICAgICAgICAgIGRhdGV0aW1lLmRhdGV0aW1lKDIwMjEsIDEwLCAyNywgMCwgMCksXG4gICAgICAgICAgICAgICAgICAgICAgICAgIGRhdGV0aW1lLmRhdGV0aW1lKDIwMjEsIDEwLCAyOCwgMCwgMCksXG4gICAgICAgICAgICAgICAgICAgICAgICAgIGRhdGV0aW1lLmRhdGV0aW1lKDIwMjEsIDEwLCAyOSwgMCwgMCldLCBkdHlwZT1vYmplY3QpLFxuICAgICAgICAgICAgICAneSc6IGFycmF5KFsxMDIuNTQ0ODcxMzMsIDEwMi40MDM2OTExOCwgMTAyLjI4NTcxNzQ2LCAuLi4sIDMwNy4wOTkxNjE1NyxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgMzA5LjYwNjU3NTM5LCAzMTEuNzgxNTk3NjVdKX0sXG4gICAgICAgICAgICAgeydtb2RlJzogJ2xpbmVzJyxcbiAgICAgICAgICAgICAgJ25hbWUnOiAnT3Blbl8yMCcsXG4gICAgICAgICAgICAgICd0eXBlJzogJ3NjYXR0ZXInLFxuICAgICAgICAgICAgICAneCc6IGFycmF5KFtkYXRldGltZS5kYXRldGltZSgyMDE5LCAxLCAzMCwgMCwgMCksXG4gICAgICAgICAgICAgICAgICAgICAgICAgIGRhdGV0aW1lLmRhdGV0aW1lKDIwMTksIDEsIDMxLCAwLCAwKSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0ZXRpbWUuZGF0ZXRpbWUoMjAxOSwgMiwgMSwgMCwgMCksIC4uLixcbiAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0ZXRpbWUuZGF0ZXRpbWUoMjAyMSwgMTAsIDI3LCAwLCAwKSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0ZXRpbWUuZGF0ZXRpbWUoMjAyMSwgMTAsIDI4LCAwLCAwKSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0ZXRpbWUuZGF0ZXRpbWUoMjAyMSwgMTAsIDI5LCAwLCAwKV0sIGR0eXBlPW9iamVjdCksXG4gICAgICAgICAgICAgICd5JzogYXJyYXkoWzEwMC41Mjc3MjM5ICwgMTAwLjczMzIwOTk3LCAxMDAuOTExMTM2MDEsIC4uLiwgMjk4LjI2NjMxNzk5LFxuICAgICAgICAgICAgICAgICAgICAgICAgICAzMDAuMTkzNzkxNDMsIDMwMi4yOTA0NTY2M10pfSxcbiAgICAgICAgICAgICB7J21vZGUnOiAnbGluZXMnLFxuICAgICAgICAgICAgICAnbmFtZSc6ICdwb3NpdGlvbl8xMF8yMCcsXG4gICAgICAgICAgICAgICd0eXBlJzogJ3NjYXR0ZXInLFxuICAgICAgICAgICAgICAneCc6IGFycmF5KFtkYXRldGltZS5kYXRldGltZSgyMDE5LCAxLCAzMCwgMCwgMCksXG4gICAgICAgICAgICAgICAgICAgICAgICAgIGRhdGV0aW1lLmRhdGV0aW1lKDIwMTksIDEsIDMxLCAwLCAwKSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0ZXRpbWUuZGF0ZXRpbWUoMjAxOSwgMiwgMSwgMCwgMCksIC4uLixcbiAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0ZXRpbWUuZGF0ZXRpbWUoMjAyMSwgMTAsIDI3LCAwLCAwKSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0ZXRpbWUuZGF0ZXRpbWUoMjAyMSwgMTAsIDI4LCAwLCAwKSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0ZXRpbWUuZGF0ZXRpbWUoMjAyMSwgMTAsIDI5LCAwLCAwKV0sIGR0eXBlPW9iamVjdCksXG4gICAgICAgICAgICAgICd4YXhpcyc6ICd4JyxcbiAgICAgICAgICAgICAgJ3knOiBhcnJheShbMSwgMSwgMSwgLi4uLCAxLCAxLCAxXSksXG4gICAgICAgICAgICAgICd5YXhpcyc6ICd5Mid9XSxcbiAgICAnbGF5b3V0Jzogeyd0ZW1wbGF0ZSc6ICcuLi4nLFxuICAgICAgICAgICAgICAgJ3hheGlzJzogeydhbmNob3InOiAneScsICdkb21haW4nOiBbMC4wLCAwLjk0XX0sXG4gICAgICAgICAgICAgICAneWF4aXMnOiB7J2FuY2hvcic6ICd4JywgJ2RvbWFpbic6IFswLjAsIDEuMF0sICd0aXRsZSc6IHsndGV4dCc6ICc8Yj5kYXRlPFwvYj4nfX0sXG4gICAgICAgICAgICAgICAneWF4aXMyJzogeydhbmNob3InOiAneCcsICdvdmVybGF5aW5nJzogJ3knLCAnc2lkZSc6ICdyaWdodCcsICd0aXRsZSc6IHsndGV4dCc6ICc8Yj5kYXRlPFwvYj4nfX19XG59KVxuIn0= -->
+<pre><code>Figure({
+    &#39;data&#39;: [{&#39;mode&#39;: &#39;lines&#39;,
+              &#39;name&#39;: &#39;Open&#39;,
+              &#39;type&#39;: &#39;scatter&#39;,
+              &#39;x&#39;: array([datetime.datetime(2019, 1, 30, 0, 0),
+                          datetime.datetime(2019, 1, 31, 0, 0),
+                          datetime.datetime(2019, 2, 1, 0, 0), ...,
+                          datetime.datetime(2021, 10, 27, 0, 0),
+                          datetime.datetime(2021, 10, 28, 0, 0),
+                          datetime.datetime(2021, 10, 29, 0, 0)], dtype=object),
+              &#39;y&#39;: array([101.16690854, 100.37397366, 100.3546205 , ..., 315.42294442,
+                          323.73770746, 323.53809198])},
+             {&#39;mode&#39;: &#39;lines&#39;,
+              &#39;name&#39;: &#39;Open_10&#39;,
+              &#39;type&#39;: &#39;scatter&#39;,
+              &#39;x&#39;: array([datetime.datetime(2019, 1, 30, 0, 0),
+                          datetime.datetime(2019, 1, 31, 0, 0),
+                          datetime.datetime(2019, 2, 1, 0, 0), ...,
+                          datetime.datetime(2021, 10, 27, 0, 0),
+                          datetime.datetime(2021, 10, 28, 0, 0),
+                          datetime.datetime(2021, 10, 29, 0, 0)], dtype=object),
+              &#39;y&#39;: array([102.54487133, 102.40369118, 102.28571746, ..., 307.09916157,
+                          309.60657539, 311.78159765])},
+             {&#39;mode&#39;: &#39;lines&#39;,
+              &#39;name&#39;: &#39;Open_20&#39;,
+              &#39;type&#39;: &#39;scatter&#39;,
+              &#39;x&#39;: array([datetime.datetime(2019, 1, 30, 0, 0),
+                          datetime.datetime(2019, 1, 31, 0, 0),
+                          datetime.datetime(2019, 2, 1, 0, 0), ...,
+                          datetime.datetime(2021, 10, 27, 0, 0),
+                          datetime.datetime(2021, 10, 28, 0, 0),
+                          datetime.datetime(2021, 10, 29, 0, 0)], dtype=object),
+              &#39;y&#39;: array([100.5277239 , 100.73320997, 100.91113601, ..., 298.26631799,
+                          300.19379143, 302.29045663])},
+             {&#39;mode&#39;: &#39;lines&#39;,
+              &#39;name&#39;: &#39;position_10_20&#39;,
+              &#39;type&#39;: &#39;scatter&#39;,
+              &#39;x&#39;: array([datetime.datetime(2019, 1, 30, 0, 0),
+                          datetime.datetime(2019, 1, 31, 0, 0),
+                          datetime.datetime(2019, 2, 1, 0, 0), ...,
+                          datetime.datetime(2021, 10, 27, 0, 0),
+                          datetime.datetime(2021, 10, 28, 0, 0),
+                          datetime.datetime(2021, 10, 29, 0, 0)], dtype=object),
+              &#39;xaxis&#39;: &#39;x&#39;,
+              &#39;y&#39;: array([1, 1, 1, ..., 1, 1, 1]),
+              &#39;yaxis&#39;: &#39;y2&#39;}],
+    &#39;layout&#39;: {&#39;template&#39;: &#39;...&#39;,
+               &#39;xaxis&#39;: {&#39;anchor&#39;: &#39;y&#39;, &#39;domain&#39;: [0.0, 0.94]},
+               &#39;yaxis&#39;: {&#39;anchor&#39;: &#39;x&#39;, &#39;domain&#39;: [0.0, 1.0], &#39;title&#39;: {&#39;text&#39;: &#39;&lt;b&gt;date&lt;/b&gt;&#39;}},
+               &#39;yaxis2&#39;: {&#39;anchor&#39;: &#39;x&#39;, &#39;overlaying&#39;: &#39;y&#39;, &#39;side&#39;: &#39;right&#39;, &#39;title&#39;: {&#39;text&#39;: &#39;&lt;b&gt;date&lt;/b&gt;&#39;}}}
+})</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgcHl0aG9uXG5maWcudXBkYXRlX3lheGVzKHRpdGxlX3RleHQ9XCI8Yj5wcmljZTxcL2I+XCIpXG5gYGAifQ== -->
+<pre class="python"><code>fig.update_yaxes(title_text=&quot;&lt;b&gt;price&lt;/b&gt;&quot;)</code></pre>
+<pre><code>Figure({
+    &#39;data&#39;: [{&#39;mode&#39;: &#39;lines&#39;,
+              &#39;name&#39;: &#39;Open&#39;,
+              &#39;type&#39;: &#39;scatter&#39;,
+              &#39;x&#39;: array([datetime.datetime(2019, 1, 30, 0, 0),
+                          datetime.datetime(2019, 1, 31, 0, 0),
+                          datetime.datetime(2019, 2, 1, 0, 0), ...,
+                          datetime.datetime(2021, 10, 27, 0, 0),
+                          datetime.datetime(2021, 10, 28, 0, 0),
+                          datetime.datetime(2021, 10, 29, 0, 0)], dtype=object),
+              &#39;y&#39;: array([101.16690854, 100.37397366, 100.3546205 , ..., 315.42294442,
+                          323.73770746, 323.53809198])},
+             {&#39;mode&#39;: &#39;lines&#39;,
+              &#39;name&#39;: &#39;Open_10&#39;,
+              &#39;type&#39;: &#39;scatter&#39;,
+              &#39;x&#39;: array([datetime.datetime(2019, 1, 30, 0, 0),
+                          datetime.datetime(2019, 1, 31, 0, 0),
+                          datetime.datetime(2019, 2, 1, 0, 0), ...,
+                          datetime.datetime(2021, 10, 27, 0, 0),
+                          datetime.datetime(2021, 10, 28, 0, 0),
+                          datetime.datetime(2021, 10, 29, 0, 0)], dtype=object),
+              &#39;y&#39;: array([102.54487133, 102.40369118, 102.28571746, ..., 307.09916157,
+                          309.60657539, 311.78159765])},
+             {&#39;mode&#39;: &#39;lines&#39;,
+              &#39;name&#39;: &#39;Open_20&#39;,
+              &#39;type&#39;: &#39;scatter&#39;,
+              &#39;x&#39;: array([datetime.datetime(2019, 1, 30, 0, 0),
+                          datetime.datetime(2019, 1, 31, 0, 0),
+                          datetime.datetime(2019, 2, 1, 0, 0), ...,
+                          datetime.datetime(2021, 10, 27, 0, 0),
+                          datetime.datetime(2021, 10, 28, 0, 0),
+                          datetime.datetime(2021, 10, 29, 0, 0)], dtype=object),
+              &#39;y&#39;: array([100.5277239 , 100.73320997, 100.91113601, ..., 298.26631799,
+                          300.19379143, 302.29045663])},
+             {&#39;mode&#39;: &#39;lines&#39;,
+              &#39;name&#39;: &#39;position_10_20&#39;,
+              &#39;type&#39;: &#39;scatter&#39;,
+              &#39;x&#39;: array([datetime.datetime(2019, 1, 30, 0, 0),
+                          datetime.datetime(2019, 1, 31, 0, 0),
+                          datetime.datetime(2019, 2, 1, 0, 0), ...,
+                          datetime.datetime(2021, 10, 27, 0, 0),
+                          datetime.datetime(2021, 10, 28, 0, 0),
+                          datetime.datetime(2021, 10, 29, 0, 0)], dtype=object),
+              &#39;xaxis&#39;: &#39;x&#39;,
+              &#39;y&#39;: array([1, 1, 1, ..., 1, 1, 1]),
+              &#39;yaxis&#39;: &#39;y2&#39;}],
+    &#39;layout&#39;: {&#39;template&#39;: &#39;...&#39;,
+               &#39;xaxis&#39;: {&#39;anchor&#39;: &#39;y&#39;, &#39;domain&#39;: [0.0, 0.94]},
+               &#39;yaxis&#39;: {&#39;anchor&#39;: &#39;x&#39;, &#39;domain&#39;: [0.0, 1.0], &#39;title&#39;: {&#39;text&#39;: &#39;&lt;b&gt;price&lt;/b&gt;&#39;}},
+               &#39;yaxis2&#39;: {&#39;anchor&#39;: &#39;x&#39;, &#39;overlaying&#39;: &#39;y&#39;, &#39;side&#39;: &#39;right&#39;, &#39;title&#39;: {&#39;text&#39;: &#39;&lt;b&gt;price&lt;/b&gt;&#39;}}}
+})</code></pre>
+<pre class="python"><code>fig.update_yaxes(title_text=&quot;&lt;b&gt;position&lt;/b&gt;&quot;, secondary_y=True)</code></pre>
+<pre><code>Figure({
+    &#39;data&#39;: [{&#39;mode&#39;: &#39;lines&#39;,
+              &#39;name&#39;: &#39;Open&#39;,
+              &#39;type&#39;: &#39;scatter&#39;,
+              &#39;x&#39;: array([datetime.datetime(2019, 1, 30, 0, 0),
+                          datetime.datetime(2019, 1, 31, 0, 0),
+                          datetime.datetime(2019, 2, 1, 0, 0), ...,
+                          datetime.datetime(2021, 10, 27, 0, 0),
+                          datetime.datetime(2021, 10, 28, 0, 0),
+                          datetime.datetime(2021, 10, 29, 0, 0)], dtype=object),
+              &#39;y&#39;: array([101.16690854, 100.37397366, 100.3546205 , ..., 315.42294442,
+                          323.73770746, 323.53809198])},
+             {&#39;mode&#39;: &#39;lines&#39;,
+              &#39;name&#39;: &#39;Open_10&#39;,
+              &#39;type&#39;: &#39;scatter&#39;,
+              &#39;x&#39;: array([datetime.datetime(2019, 1, 30, 0, 0),
+                          datetime.datetime(2019, 1, 31, 0, 0),
+                          datetime.datetime(2019, 2, 1, 0, 0), ...,
+                          datetime.datetime(2021, 10, 27, 0, 0),
+                          datetime.datetime(2021, 10, 28, 0, 0),
+                          datetime.datetime(2021, 10, 29, 0, 0)], dtype=object),
+              &#39;y&#39;: array([102.54487133, 102.40369118, 102.28571746, ..., 307.09916157,
+                          309.60657539, 311.78159765])},
+             {&#39;mode&#39;: &#39;lines&#39;,
+              &#39;name&#39;: &#39;Open_20&#39;,
+              &#39;type&#39;: &#39;scatter&#39;,
+              &#39;x&#39;: array([datetime.datetime(2019, 1, 30, 0, 0),
+                          datetime.datetime(2019, 1, 31, 0, 0),
+                          datetime.datetime(2019, 2, 1, 0, 0), ...,
+                          datetime.datetime(2021, 10, 27, 0, 0),
+                          datetime.datetime(2021, 10, 28, 0, 0),
+                          datetime.datetime(2021, 10, 29, 0, 0)], dtype=object),
+              &#39;y&#39;: array([100.5277239 , 100.73320997, 100.91113601, ..., 298.26631799,
+                          300.19379143, 302.29045663])},
+             {&#39;mode&#39;: &#39;lines&#39;,
+              &#39;name&#39;: &#39;position_10_20&#39;,
+              &#39;type&#39;: &#39;scatter&#39;,
+              &#39;x&#39;: array([datetime.datetime(2019, 1, 30, 0, 0),
+                          datetime.datetime(2019, 1, 31, 0, 0),
+                          datetime.datetime(2019, 2, 1, 0, 0), ...,
+                          datetime.datetime(2021, 10, 27, 0, 0),
+                          datetime.datetime(2021, 10, 28, 0, 0),
+                          datetime.datetime(2021, 10, 29, 0, 0)], dtype=object),
+              &#39;xaxis&#39;: &#39;x&#39;,
+              &#39;y&#39;: array([1, 1, 1, ..., 1, 1, 1]),
+              &#39;yaxis&#39;: &#39;y2&#39;}],
+    &#39;layout&#39;: {&#39;template&#39;: &#39;...&#39;,
+               &#39;xaxis&#39;: {&#39;anchor&#39;: &#39;y&#39;, &#39;domain&#39;: [0.0, 0.94]},
+               &#39;yaxis&#39;: {&#39;anchor&#39;: &#39;x&#39;, &#39;domain&#39;: [0.0, 1.0], &#39;title&#39;: {&#39;text&#39;: &#39;&lt;b&gt;price&lt;/b&gt;&#39;}},
+               &#39;yaxis2&#39;: {&#39;anchor&#39;: &#39;x&#39;, &#39;overlaying&#39;: &#39;y&#39;, &#39;side&#39;: &#39;right&#39;, &#39;title&#39;: {&#39;text&#39;: &#39;&lt;b&gt;position&lt;/b&gt;&#39;}}}
+})</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgcHl0aG9uXG5maWcuc2hvdygpXG5gYGAifQ== -->
+<pre class="python"><code>fig.show()</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>
+Reference: <a href="https://www.jianshu.com/p/248fe95548a6" class="uri">https://www.jianshu.com/p/248fe95548a6</a> <a href="https://rstudio.github.io/reticulate/" class="uri">https://rstudio.github.io/reticulate/</a> <a href="https://pypi.org/project/yfinance/" class="uri">https://pypi.org/project/yfinance/</a>
+</p>
+<!-- rnb-text-end -->
+</div>
+</div>
+</div>
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+$(document).ready(function () {
+  $('.knitsql-table').addClass('kable-table');
+  var container = $('.kable-table');
+  container.each(function() {
+
+    // move the caption out of the table
+    var table = $(this).children('table');
+    var caption = table.children('caption').detach();
+    caption.insertBefore($(this)).css('display', 'inherit');
+  });
+});
+
+</script>
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeSourceEmbed("03_backup.Rmd");
+  window.initializeCodeFolding("show" === "show");
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+</html>
 
 </div>
 </div>
@@ -135,7 +731,7 @@
           </div>
         </div>
       </div>
-<a href="data-sources.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-transformation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="missing-values.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

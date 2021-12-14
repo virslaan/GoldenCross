@@ -1,5 +1,5 @@
 # Interactive component
-
+By Zhaoyu Wu, Vipul Harihar
 ### D3 Visualization
 
 We are quite aware of the fact that the d3 component had to be included in the project, it was due to the time constraints and other subject deadlines that we still manage dto make an interactive plot that works somehow and illustrates purpose we are wanting through the interactive line-chart.

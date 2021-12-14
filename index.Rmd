@@ -16,6 +16,7 @@ Vipul H Harihar, Zhaoyu Wu and Zhirui Yang
 We have have put all our classroom teachings and honest hardwork so as to make this project to reach its conclusion. We hopr the user enjoys it as much as we did building and developing it. 
 
 ***Sit for a while because this Project will embrace your knowledge with the unknown of Stock Markets and Golden Cross which is majestic in itself!***
+
 ### Introduction
 
 The world is changing and adapting to cope with the major technological advancements and changes but we never realized that ‘Data’, the term that used to describe statistics, would be so huge by the first quarter of the 21st Century. Superficially from a bird's eye view we may say small governments, corporations, and individuals focus more on human impact to the environment while international financial markets have responded with innovative products to help manage climate risk and invest in mitigating technologies. Big firms play a key function in markets, committing capital to bridge timing differences between buyers and sellers. With the financial industry debating underlying market structure tenets such as tick sizes there has been renewed focus on different types of market making activity.

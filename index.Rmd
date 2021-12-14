@@ -10,7 +10,7 @@ site: bookdown::bookdown_site
 **Golden Cross: EDAV Final Project Assignment**
 
 Golden Cross Project is using relevant stock market data for interactive study and conclusions. In this project, the reader might feel free to explore the study performed at subsequent levels to understand that how we came to find the golden cross and the various insights which are accessible in the upcoming chapters. The project team comprises:Vipul H Harihar, Zhaoyu Wu and Zhirui Yang 
-We have have put all our classroom teachings and honest hardwork so as to make this project to reach its conclusion. We hopr the user enjoys it as much as we did building and developing it. 
+We have have put all our classroom teachings and honest hardwork so as to make this project to reach its conclusion. We hope the user enjoys it as much as we did building and developing it. 
 
 ***Sit for a while because this Project will embrace your knowledge with the unknown of Stock Markets and Golden Cross which is majestic in itself!***
 
@@ -23,15 +23,14 @@ A stock or the term share is usually used in representing a company's equity. We
 
 Project Problem Statement There are numerous people in the market who want to invest in the stock market are way too afraid to put their life’s savings at stake. Many people pour their life savings and dump their 401K (contribution retirement plan) into the stock and option market. They perform various strategies and financial maneuvers, hoping to gain massive profits but generally end up losing most of their investments or still having underperformance in the general market. Thus, our team started thinking if there is an investing strategy that can consistently beat the index fund return.
 
-**EDAV Final Project Assignment**
+### What is Golden Cross and how does it work? 
 
-A recently published article by Barclays on Impact of Retail Options Trading (https://www.docdroid.net/5gM68EW/barclays-us-equity-derivatives-strategy-impact-of-retailoptions-trading-pdf) raised an interesting theory: the market participation of the retail traders (the ordinary traders like us) creates a systematic dislocation between the implied volatility and the actual price volatility of stocks. The article also claims that there are two possible ways to generate profits from this dislocation: • Hedged straddle • Call spreads
+A golden cross is a chart pattern in which a relatively short-term moving average crosses above a long-term moving average. The golden cross is a bullish breakout pattern formed from a crossover involving a security's short-term moving average (such as the 15-day moving average) breaking above its long-term moving average (such as the 50-day moving average) or resistance level.
 
-##  Golden Cross, What's That?
-
-There are three stages to a golden cross. In the second stage, the shorter moving average forms a crossover up through the larger moving average to trigger a breakout and confirmation of trend reversal. The moving averages act as support levels on pullbacks until they crossover back down at which point a death cross may form. The death cross is the opposite of the golden cross as the shorter moving average forms a crossover down through the longer moving average.
+There are three stages to a golden cross. The first stage requires that a downtrend eventually bottoms out as selling is depleted. In the second stage, the short term moving average cross the long term moving average, triggering a breakout and confirmation of trend reversal. The moving averages act as support levels on pullbacks until they crossover back down at which point a death cross may form. The death cross is the opposite of the golden cross as the shorter moving average forms a crossover down through the longer moving average.
 
 With a bellwether index, the motto «A rising tide lifts all boats» applies when a golden cross forms as the buying resonates throughout the index components and sectors. Day traders commonly use smaller time periods like the 5-period and 15-period moving averages to trade intra-day golden cross breakouts. The larger the chart time frame, the stronger and lasting the golden cross breakout tends to be.
+
 
 ### The Difference Between a Golden Cross and a Death Cross
 

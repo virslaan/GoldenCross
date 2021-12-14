@@ -43,7 +43,7 @@ A golden cross indicates a long-term bull market going forward, while a death cr
 
 **Limitations of Using the Golden Cross**
 
-Many times, an observed golden cross produces a false signal. Despite its apparent predictive power in forecasting prior large bull markets, golden crosses also do regularly fail to manifest. Therefore, a golden cross should always be confirmed with other signals and indicators before putting on a trade.
+Golden Cross does not necessarily guarantee the profits due to the voliatility of the stock market. But they do show insights into the direction of price changes of the underling assets. Therefore, a golden cross should always be confirmed with other signals and indicators before putting on a trade, such as RSI and MACD.
 
 **What Does a Golden Cross Indicate?**
 

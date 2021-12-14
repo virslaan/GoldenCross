@@ -1,5 +1,5 @@
 **EDAV Final Project Assignment**
-
+Final Project Group: Zhaoyu Wu Vipul Harihar, and Zhirui Yang
 **Introduction**
 
 There is a wide variety of ways to generate profits in stock markets. Almost everyone knows how to make a profit from a trade: buy low, sell high. But the true million-dollar questions here are tricky: how do you know the stock price is low enough for you to buy? how do you know the price is high enough for you to sell? How do you determine the timing of the trade? The perfect solutions to these questions might not even exist or at least not widely known, otherwise, most of the people would become millionaires. However, some strategies take the advantage of the power of statistics and data visualization. These strategies do not necessarily guarantee the profits, but they surely do point the direction to the profits based on statistics and probability. One of these strategies is Golden Cross. But before we get into that, let's review some basics: 

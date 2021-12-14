@@ -60,6 +60,10 @@ Traders often use a golden cross as confirmation of a trend or signal in combina
 
 • Study on the paper published by Barclay Equity Research: Impact of Retail Options Trading
 
+***Allocation of Duties***
+
+Zhaoyu Wu chose the topic of the project and is responsible for data visualization and text composition. He created the interactive candlestick plots and other static data visualization and interpretations. Vipul Harihar worked on github script managing, book rendering and text composition. He also contributed to the D3 interactive line plot. Zhirui Yang worked on data cleaning and preprocessing.
+
 ##  Goal of our Golden Cross Project: We built a project on these questions:
 
 Data Investigation and checking if ‘Golden Cross’ exists by analyzing the trends in the past 10 years data?

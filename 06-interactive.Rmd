@@ -1,6 +1,6 @@
 # Interactive component
 
-By Zhaoyu Wu, Vipul Harihar
+
 
 ### D3 Visualization
 

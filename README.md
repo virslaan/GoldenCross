@@ -92,6 +92,8 @@ Stock lists:
 ****
 
 **EDAV Final Project Assignment Footnotes**
+
+
 Sample Data Set (Just for introductory purpose)
 Open: The starting period of trading on a securities exchange or organized over-the-counter market
 High: The high is the highest price at which a stock traded during a period.
@@ -101,6 +103,9 @@ markets close for the day.
 Adj Close: The adjusted closing price amends a stock's closing price to reflect that stock's value
 after accounting for any corporate actions.
 Volume: Is the measure of how much of a given financial asset has traded in a period of time.
+Duty allocation: Zhaoyu Wu chose the topic of the project and is responsible for data visualization and text composition. He created the interactive candlestick plots and other static data visualization. Vipul Harihar worked on github script managing, book rendering and text composition. He also contributed to the D3 interactive line plot. Zhirui Yang
+worked on data cleaning and preprocessing.
+
 Resources:
 https://www.docdroid.net/5gM68EW/barclays-us-equity-derivatives-strategy-impact-of-retailoptions-trading-pdf
 https://www.investopedia.com/articles/investing/082614/how-stock-market-works.asp

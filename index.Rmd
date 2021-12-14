@@ -1,6 +1,6 @@
 --- 
 title: "Golden Cross : An Interactive & Insightful Study on Stock Market"
-author: "Vipul H Harihar, Zhaoyu Wu, Zhirui Yang"
+author: "By Vipul H Harihar, Zhaoyu Wu, Zhirui Yang"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
@@ -9,13 +9,11 @@ site: bookdown::bookdown_site
 
 **Golden Cross: EDAV Final Project Assignment**
 
-Golden Cross Project is using relevant stock market data for interactive study and conclusions. In this project, the reader might feel free to explore the study performed at subsequent levels to understand that how we came to find the golden cross and the various insights which are accessible in the upcoming chapters. The project team comprises:
-
-Vipul H Harihar, Zhaoyu Wu and Zhirui Yang 
-
+Golden Cross Project is using relevant stock market data for interactive study and conclusions. In this project, the reader might feel free to explore the study performed at subsequent levels to understand that how we came to find the golden cross and the various insights which are accessible in the upcoming chapters. The project team comprises:Vipul H Harihar, Zhaoyu Wu and Zhirui Yang 
 We have have put all our classroom teachings and honest hardwork so as to make this project to reach its conclusion. We hopr the user enjoys it as much as we did building and developing it. 
 
 ***Sit for a while because this Project will embrace your knowledge with the unknown of Stock Markets and Golden Cross which is majestic in itself!***
+
 ### Introduction
 
 The world is changing and adapting to cope with the major technological advancements and changes but we never realized that ‘Data’, the term that used to describe statistics, would be so huge by the first quarter of the 21st Century. Superficially from a bird's eye view we may say small governments, corporations, and individuals focus more on human impact to the environment while international financial markets have responded with innovative products to help manage climate risk and invest in mitigating technologies. Big firms play a key function in markets, committing capital to bridge timing differences between buyers and sellers. With the financial industry debating underlying market structure tenets such as tick sizes there has been renewed focus on different types of market making activity.

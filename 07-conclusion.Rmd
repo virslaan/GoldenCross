@@ -1,9 +1,9 @@
-# Conclusion
+# Whats' Next?
 
 In this project, we looked into the historical price data of several popular stocks with billion-dollar market capitalization and examine the golden cross pattern. Golden Cross is a chart pattern in which a relatively short-term moving average crosses above a long-term moving average. Eventually, we would like to test whether an investment plan based on the Golden Cross indicator can generate profits for the investors and outperform the general stock market returns. 
 
 The investment plan is designed as the following: When the short-term moving average line crosses the long-term moving average line from below, a buy signal is generated. When the long-term moving average line crosses the long-term moving average line from above, a sell signal is generated. We tested this investment plan on selected stocks with the historical stocks price movement data. 
-
+We look forward that this project would help us in exploring the wonderful world of data exploration and analytics.
 
 ## Data Visualizations Interpretation
 The interactive candlestick plots and static cumulative market value plots were first generated. They help us to visualize the actual price movement of the stocks during the selected period (2019-2021). The Moving average convergence divergence(MACD) subplots were also created to help determine different signal points in the golden cross plan. Besides MACD also serve as a momentum indicator, demonstrating the volatile price changes in several selected stocks.
@@ -23,13 +23,16 @@ Based on all the visualizations and the statistics we had, we concluded that the
 
 # Acknowledgement
 
-We would like to express my special thanks of gratitude to our Professor Joyce Robbins as well as our helpful TAs (Bridget Ratcliffe, Ari Blau, Saloni Gupta, Ajay Kumar and Smarth Gupta) who gave us the golden opportunity to do this wonderful project on the topic **Golden Cross: Golden Cross : An Interactive & Insightful Study on Stock Market"** , which also helped us in doing a lot of Research and we came to know about so many new things, we are really thankful to them from the bottom of our hearts
+Dear Reader,
+
+We would like to express my special thanks of gratitude to our Professor Joyce Robbins as well as our helpful TAs **(Bridget Ratcliffe, Ari Blau, Saloni Gupta, Ajay Kumar and Smarth Gupta)** who gave us the golden opportunity to do this wonderful project on the topic**Golden Cross: Golden Cross : An Interactive & Insightful Study on Stock Market"** , which also helped us in doing a lot of Research and we came to know about so many new things, we are really thankful to them from the bottom of our hearts
 Secondly we would also like to thank our parents and friends who helped us a lot in finalizing this project within the limited time frame.
 We will really be grateful if we could make the reader understand and realize the efforts we have put in  so that out project might serve it's purpose.
 
 
 Thank you so much for this wonderful class and experience!
 
+Best Regards,
 
 Project Team
-Vipul H Harihar, Zhaoyu Wu and Zhirui Yang 
+***Vipul H Harihar, Zhaoyu Wu and Zhirui Yang ***

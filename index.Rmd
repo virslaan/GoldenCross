@@ -69,6 +69,7 @@ Traders often use a golden cross as confirmation of a trend or signal in combina
 
 
 
+
 ##  Goal of our Golden Cross Project: We built a project on these questions:
 
 Data Investigation and checking if ‘Golden Cross’ exists by analyzing the trends in the past 10 years data?

@@ -1,6 +1,6 @@
 --- 
 title: "Golden Cross : An Interactive & Insightful Study on Stock Market"
-author: "Zhaoyu Wu, Vipul H Harihar, Zhirui Yang"
+author: "Vipul H Harihar, Zhaoyu Wu, Zhirui Yang"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
@@ -59,13 +59,13 @@ Traders often use a golden cross as confirmation of a trend or signal in combina
 • Report writing and visuals finalization 
 
 
-**Duties of Team Members**
+**Duties Performed by Team Members**
 
-**Vipul H Harihar** (worked in-person) mananged and took care of the entire GitHub script management and book rendering, and text composition of the entire chapters. He worked on the D3 interactive plots and enhanced the data visualizations and color schemes as required by the industry. He included all the resources and marked and wrote the chapters subsequentially in the complete project. He took active efforts to make this project to reach its completion by giving and showing it on time to the respected professor and TAs for suggestions and improvements.
+**Vipul H Harihar** (worked in-person) mananged and took care of the entire GitHub Management, book rendering, and text composition of the entire chapters. He worked on the D3 interactive plots and enhanced the data visualizations and color schemes and layed down stress on descriptive analysis of the project as required by the industry. He included all the resources, marked, editted and wrote all the chapters subsequentially. He put in active efforts to make this project to reach its completion by giving his major portions of time and showing it on time, to the respected professor and TAs for regular suggestions and improvements.
 
-**Zhaoyu Wu** (worked remotely) suggested the project topic and worked on data visualizations and text composition. He created interactive candlestick plots and other static data visualizations using plotly.js and also wrote their interpretations.
+**Zhaoyu Wu** (worked remotely) suggested the project topic and worked on data visualizations. He created interactive candlestick plots and other static data visualizations using plotly.js and also wrote their interpretations. He also contributed in ediiting the chapters and deriving insights from visulas for the conclusion of the project.
 
-**Zhirui Yang** (worked remotely) worked on active data collection, data cleaning and preprocessing which became foundation of the other interactive plots made by the users.
+**Zhirui Yang** (worked remotely) worked on active data collection, data cleaning and preprocessing which became foundation of the other interactive plots made by the users. He also created an interactive plot available in the chapter 3 which layed an stress on visualizing the data being used for the data that was efficient and reliable. It helped the other team mates to use data for their processes.
 
 
 

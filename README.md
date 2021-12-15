@@ -86,15 +86,25 @@ data and commentary including stock quotes, press releases, financial reports, a
 It also offers some online tools for personal finance management.)
 We are going to work and cover the industrial giants in the stock market and provide and collate
 actual and relevant data sources from the Yahoo finance website, itself.
-***Actual price data: https://finance.yahoo.com/
-Stock lists:
+
+Actual price data: https://finance.yahoo.com/
+
+****Stock lists:
+
 (Index ETF: S&P 500)
+
 • Apple: https://finance.yahoo.com/quote/AAPL?p=AAPL&.tsrc=fin-srch
+
 • Tesla: https://finance.yahoo.com/quote/TSLA?p=TSLA&.tsrc=fin-srch
+
 • COST: https://finance.yahoo.com/quote/COST?p=WMT&.tsrc=fin-srch
+
 • MSFT: https://finance.yahoo.com/quote/MSFT?p=WFC&.tsrc=fin-srch
+
 • GM: https://finance.yahoo.com/quote/GM?p=PYPL&.tsrc=fin-srch
+
 • NVDA: https://finance.yahoo.com/quote/NVDA&.tsrc=fin-srch
+
 ****
 
 **EDAV Final Project Assignment Footnotes**
@@ -113,6 +123,10 @@ Duty allocation: Zhaoyu Wu chose the topic of the project and is responsible for
 worked on data cleaning and preprocessing.
 
 Resources:
+
 https://www.docdroid.net/5gM68EW/barclays-us-equity-derivatives-strategy-impact-of-retailoptions-trading-pdf
+
 https://www.investopedia.com/articles/investing/082614/how-stock-market-works.asp
+
 https://www.investopedia.com/terms/i/iv.asp
+

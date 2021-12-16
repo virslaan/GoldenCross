@@ -125,8 +125,15 @@ markets close for the day.
 Adj Close: The adjusted closing price amends a stock's closing price to reflect that stock's value
 after accounting for any corporate actions.
 Volume: Is the measure of how much of a given financial asset has traded in a period of time.
-Duty allocation: Zhaoyu Wu chose the topic of the project and is responsible for data visualization and text composition. He created the interactive candlestick plots and other static data visualization. Vipul Harihar worked on github script managing, book rendering and text composition. He also contributed to the D3 interactive line plot. Zhirui Yang
-worked on data cleaning and preprocessing.
+
+Final Tasks Performed by the Project Team
+
+**Vipul H Harihar** (worked in-person) mananged and took care of the entire GitHub Management, book rendering, and text composition of the entire chapters. He worked on the D3 interactive plots and enhanced the data visualizations and color schemes and layed down stress on descriptive analysis of the project as required by the industry. He included all the resources, marked, editted and wrote all the chapters subsequentially. He put in active efforts to make this project to reach its completion by giving his major portions of time and showing it to the respected professor and TAs for regular suggestions and improvements.
+
+**Zhaoyu Wu** (worked remotely) suggested the project topic and worked on data visualizations. He created interactive candlestick plots and other static data visualizations using plotly.js and also wrote their interpretations. He also contributed in ediiting the chapters and deriving insights from visulas for the conclusion of the project.
+
+**Zhirui Yang** (worked remotely) worked on active data collection, data cleaning and preprocessing which became foundation of the other interactive plots made by the users. He also created an interactive plot available in the chapter 3 which layed an stress on visualizing the data being used for the data that was efficient and reliable. It helped the other team mates to use data for their processes.
+
 
 Resources:
 
